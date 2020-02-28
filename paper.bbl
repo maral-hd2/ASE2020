@@ -1,0 +1,226 @@
+\begin{thebibliography}{10}
+
+\bibitem{nop}
+hhttp://www.nopcommerce.com/.
+\newblock [\relax{Accessed: Jan. 26, 2017}].
+
+\bibitem{umbraco}
+https://umbraco.com/.
+\newblock [\relax{Accessed: Oct. 06, 2017}].
+
+\bibitem{defects4j}
+https://github.com/rjust/defects4j.
+\newblock [\relax{Accessed: Jan. 25, 2018}].
+
+\bibitem{nopCommerceIssues}
+https://github.com/nopSolutions/nopCommerce/issues//.
+\newblock [\relax{Accessed: Oct. 06, 2017}].
+
+\bibitem{umbracoIssues}
+http://issues.umbraco.org/issues//.
+\newblock [\relax{Accessed: Oct. 06, 2017}].
+
+\bibitem{jacoco}
+http://www.eclemma.org/jacoco/trunk/doc/maven.html/.
+\newblock [\relax{Accessed: Feb. 08, 2018}].
+
+\bibitem{aggrawal04}
+K.~K. Aggrawal, Yogesh Singh, and A.~Kaur.
+\newblock Code coverage based technique for prioritizing test cases for
+  regression testing.
+\newblock In {\em { ACM SIGSOFT Software Engineering Notes}}. ACM, 2004.
+
+\bibitem{bavota13}
+Gabriele Bavota, Andrea~De Lucia, Rocco Oliveto, and Genoveffa Tortora.
+\newblock {Enhancing software artefact traceability recovery processes with
+  link count information}.
+\newblock {\em Information and Software Technology}, August 2013.
+
+\bibitem{agile07}
+K.~Beck, M.~Beedle, A.~van Bennekum, A.~Cockburn, W.~Cunningham, M.~Fowler,
+  J.~Grenning, J.~Highsmith, A.~Hunt, R.~Jeffries, J.~Kern, B.~Marick, R.~C.
+  Martin, S.~Mellor, K.~Schwaber, J.~Sutherland, and D.~Thomas.
+\newblock {\em Manifesto for agile software development}.
+\newblock 2007.
+
+\bibitem{treeedit}
+P.~Bille.
+\newblock {A Survey on Tree Edit Distance and Related Problems}.
+\newblock {\em Theoretical Computer Science}, June 2005.
+
+\bibitem{biswas011}
+S.~Biswas, R.~Mall, M.~Satpathy, , and S.~Sukumaran.
+\newblock Regression test selection techniques: A survey.
+\newblock {\em Informatica (Slovenia)}, 35(3):289--321, 2011.
+
+\bibitem{ryan}
+R.~Carlson, H.~Do, , and A.~Denton.
+\newblock A clustering approach to improving test case prioritization: An
+  industrial case study.
+\newblock In {\em {ICSM '11 Proceedings of the 2011 27th IEEE International
+  Conference on Software Maintenanc}}, pages 382--391. IEEE-ACM, 2011.
+
+\bibitem{ambros10}
+M.~D'Ambros, M.~Lanza, and R.~Robbes.
+\newblock An extensive comparison of bug prediction approaches.
+\newblock In {\em {Conference on Mining Software Repositories (MSR)}}, pages
+  31--41. IEEE, 2010.
+
+\bibitem{cost3}
+H.~Do, S.~Mirarab, L.~Tahvildari, and G.~Rothermel.
+\newblock An empirical study of the effect of time constraints on the
+  cost-benefits of regression testing.
+\newblock In {\em Proceedings of the ACM SIGSOFT Symposium on Foundations of
+  Software Engineering (FSE)}. IEEE-ACM, 2008.
+
+\bibitem{cost1}
+H.~Do, S.~Mirarab, L.~Tahvildari, and G.~Rothermel.
+\newblock The effects of time constraints on test case prioritization: A series
+  of controlled experiments.
+\newblock 36(5), 2010.
+
+\bibitem{elbaum02feb}
+S.~Elbaum, A.~G. Malishevsky, and G.~Rothermel.
+\newblock {Test case prioritization: A family of empirical studies}.
+\newblock {\em {IEEE Transactions on Software Engineering}}, 28(2):159--182,
+  February 2002.
+
+\bibitem{hemmati15}
+H.~Hemmati, Z.~Fang, and M.~V. Mantyla.
+
+\bibitem{huang14}
+P.~Huang, X.~Ma, D.~Shen, and Y.~Zhou.
+\newblock {Performance Regression Testing Target Prioritization via Performance
+  Risk Analysis}.
+\newblock In {\em Proceedings of the International Conference on Software
+  Engineering}, pages 221--230, April 2014.
+
+\bibitem{jenkins11}
+J.~Jenkins.
+\newblock Velocity culture (the unmet challenge in ops).
+\newblock In {\em {Presentationat O'Reilly Velocity Conference}}. IEEE, 2011.
+
+\bibitem{leon03}
+D.~Leon and A.~Podgurski.
+\newblock A comparison of coverage-based and distribution-based techniques for
+  filtering and prioritizing test cases.
+\newblock In {\em { in Proceedings of the 14th International Symposium on
+  Software Reliability Engineering (ISSRE)}}, pages 442--456. IEEE, 2003.
+
+\bibitem{mader11}
+Patrick Mader and Orlena Gotel.
+\newblock {Towards automated traceability maintenance}.
+\newblock {\em The Journal of Systems and Software}, October 2011.
+
+\bibitem{marijan13}
+Dusica Marijan, Arnaud Gotlieb, and Sagar Sen.
+\newblock Test case prioritization for continuous regression testing an
+  industrial case study.
+\newblock In {\em {International Conference on Software Maintenance}}, 2013.
+
+\bibitem{mei12}
+H.~Mei, D.~Hao, L.~Zhang, L.~Zhang, J.~Zhou, and G.~Rothermel.
+\newblock A static approach to prioritizing junit test cases.
+\newblock {\em IEEE Transactions on Software Engineering}, 38(6):1258--1275,
+  2012.
+
+\bibitem{mondal15}
+D.~Mondal, H.~Hemmati, and S.~Durocher.
+\newblock Exploring test suite diversification and code coverage in
+  multi-objective test case selection.
+\newblock In {\em {International Conference in Software Testing Verification
+  and Validation (ICST)}}. IEEE, 2015.
+
+\bibitem{noor15}
+T.~Bin Noor and H.~Hemmati.
+\newblock A similarity-based approach for test case prioritization using
+  historical failure data.
+\newblock In {\em { International Conference in Software Reliability
+  Engineering (ISSRE)}}. IEEE, 2015.
+
+\bibitem{myra}
+X.~Qu, M.B. Cohen, and G.Rothermel.
+\newblock Configuration-aware regression testing: an empirical study of
+  sampling and prioritization.
+\newblock In {\em International Symposium on Software Testing and Analysis
+  (ISSTA)}, pages 75--85. IEEE-ACM, 2008.
+
+\bibitem{qusef13}
+Abdallah Qusef, Gabriele Bavota, Rocco Oliveto, Andrea~De Lucia, and Dave
+  Binkley.
+\newblock {Recovering test-to-code traceability using slicing and textual
+  analysis}.
+\newblock {\em The Journal of Systems and Software}, September 2013.
+
+\bibitem{Rodriguez19}
+Danissa~V. Rodriguez and Doris~L. Carver.
+\newblock Comparison of information retrieval techniques for traceability link
+  recovery.
+\newblock In {\em {International Conference on Information and Computer
+  Technologies}}, 2019.
+
+\bibitem{apfd}
+G.~Rothermel, R.~Untch, C.~Chu, , and M.~J. Harrold.
+\newblock Test case prioritization: An empirical study.
+\newblock In {\em Proceedings of the IEEE International Conference on Software
+  Maintenance}, pages 179--188. IEEE-ACM, 1999.
+
+\bibitem{saha15}
+R.~K. Saha, L.~Zhang, S.~Khurshid, and D.~E. Perry.
+\newblock An information retrieval approach for regression test prioritization
+  based on program changes.
+\newblock In {\em {International Conference on Software Engineering (ICSE)}},
+  pages 268--279. IEEE-ACM, 2015.
+
+\bibitem{spanoudakis04}
+George Spanoudakis, Andrea Zisman, Elena Perez-Minana, and Paul Krause.
+\newblock {Rule-based generation of requirements traceability relations}.
+\newblock {\em The Journal of Systems and Software}.
+
+\bibitem{spieker17}
+Helge Spieker, Arnaud Gotlieb, Dusica Marijan, and Morten Mossige.
+\newblock Reinforcement learning for automatic test case prioritization and
+  selection in continuous integration.
+\newblock In {\em {In Proceedings of 26th International Symposium on Software
+  Testing and Analysis}}, 2017.
+
+\bibitem{xml}
+http://xml.apache.org/security.
+
+\bibitem{Ying04}
+Annie~T.T. Ying and Gail~C. Murphy.
+\newblock {Predicting Source Code Changes by Mining Change History}.
+\newblock {\em IEEE RANSACTIONS ON SOFTWARE ENGINEERING}, September 2004.
+
+\bibitem{yoo07}
+S.~Yoo and M.~Harman.
+\newblock {Pareto efficient multi-objective test case selection}.
+\newblock In {\em {Proceedings of the International Conference on Software
+  Testing and Analysis}}, pages 140--150, July 2007.
+
+\bibitem{marksurvey}
+S.~Yoo and M.~Harman.
+\newblock Regression testing minimization, selection and prioritization: a
+  survey.
+\newblock {\em {Software Testing, Verification and Reliability}},
+  22(2):67--120, 2012.
+
+\bibitem{zhang13}
+L.~Zhang, D.~Hao, L.~Zhang, G.~Rothermel, and H.~Mei.
+\newblock Bridging the gap between the total and additional test-case
+  prioritization strategies.
+\newblock In {\em {Proceedings of ICSE}}, 2013.
+
+\bibitem{zimmermann07}
+T.~Zimmermann, R.~Premraj, and A.~Zeller.
+\newblock Predicting defects for eclipse.
+\newblock In {\em {International Workshop on Predictor Models in Software
+  Engineering, PROMISE}}. IEEE, 2007.
+
+\bibitem{Zimmermann04}
+Thomas Zimmermann, Peter Weißgerber, Stephan Diehl, and Andreas Zeller.
+\newblock Mining version histories to guide software changes.
+\newblock In {\em {International Conference on Software Engineering}}, pages
+  563--572. ACM, 2005.
+
+\end{thebibliography}

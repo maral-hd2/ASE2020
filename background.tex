@@ -1,0 +1,108 @@
+\section{Related Work}
+\label{sec:related-work}
+
+\subsection{Test case prioritization for regression testing}
+
+For more than two decades, reducing the time and cost of regression 
+testing has been an active research topic. 
+Recent surveys on regression testing techniques~\cite{biswas011,
+marksurvey} provide a comprehensive understanding of
+overall trends of the techniques and areas for improvement.
+To date, numerous regression testing techniques have been implemented using 
+various types of data sources (e.g., code coverage, test case diversity, 
+and fault history), the code coverage-based technique is one of the most 
+widely used and evaluated techniques. 
+Although the code coverage-based approach is na\"{\i}ve and easy to implement, 
+many empirical studies have shown that it can be effective~\cite{cost3, cost1, 
+elbaum02feb, myra}. 
+For instance, 
+Leon and Podgurski~\cite{leon03} 
+compared coverage-based selection with  distribution of test execution profiles.
+The results of their empirical analysis show that the distribution based
+techniques can be as efficient or more efficient for revealing defects 
+than coverage-based techniques, but that the two kinds of techniques 
+are also complementary in the sense that they find different defects. 
+Despite the effectiveness of aforementioned approaches, 
+these techniques suffer from the computational overhead and 
+the demand for collecting and analyzing different test 
+quality metrics (e.g. code coverage, fault history, etc), 
+which makes them less practical for continuous integration 
+software environment. 
+
+
+Recently some researchers have invetigated modern techniques 
+that can be aligned with CI environment. 
+For example, Spieker et al~\cite{spieker17} proposed an 
+automatic learning test prioritization method in CI, 
+which uses failure history information as input of the 
+reinforcement learning system to select
+and prioritize test cases. 
+In another work by Marijan et al~\cite{marijan13}, they 
+presented a case study of a test prioritization approach for
+to improve the efficiency of
+continuous regression testing of industrial video conferencing
+software. their proposed approach prioritizes test cases using a
+weighted function, which calculates test weigh 
+based on historical failure
+data, test execution time and domain-specific heuristics. 
+By contrast, SANI  does not require any type of historical or 
+code coverage information and it is a lightweight, scalable, and language independent 
+method, which only uses the source code and test files and generated the
+links between different portions of the code. 
+
+%\subsection{Continuous Regression Testing in Practice}
+
+\subsection{Tractability Link Recovery}
+
+Tractability link recovery have been investigated heavily 
+by researchers in different areas of software engineering 
+such as requirements, maintenance, etc.  
+Most of these approaches are heuristic based or IR based~\cite{qusef13}. 
+In~\cite{spanoudakis04} authors propose an rule-based 
+engine approach for requirement document traceability rule 
+generation. Similar approaches have been proposed for
+automated update of traceability relations
+between requirements, analysis and design models of software 
+systems~\cite{mader11, bavota13}. 
+In~\cite{Rodriguez19}, Rodriguez and Carver compared 
+the performance of three major traceability techniques: information retrieval,
+Vector Space Model, and Latent Semantic Indexing
+for requirement traceability recovery. Their results show 
+that Latent Semantic Indexing produces lower precision 
+and recall compared to probabilistic IR and Vector Space Model. 
+
+
+In another work by Qusef et al.~\cite{qusef13}, 
+authors proposed a traceability link recovery approach 
+that exploits dynamic slicing to identify a set of 
+candidate tested classes to Junit tests.
+The applied dynamic slicing method to identify 
+the class of the reference variables. 
+They have only focused on the last assert
+statement in Junit test, while GTXCrawler parses the 
+entire test script and source code to 
+identify all possible relationship between tests 
+and code. Therefore, we argue that GTXCrawler would be 
+more accurate to identify the relations. 
+
+Further, some researcher propose applying data mining techniques 
+for traceability link recovery between source code artifacts. 
+For instance, Zimmermann et al. applied association rule mining technique 
+to help programmers identify changes within source code
+automatically~\cite{Zimmermann04}.  
+Ying and Murphy proposed data mining approach, 
+which extract patterns of changes in a software repository
+to help developers identify pertinent source. 
+They have evaluated their techniques using 
+Eclipse and Mozilla as subject programs. The 
+results of this experiment show that the proposed technique
+can reveal valuable dependencies
+that may not be obvious from other existing analyses~\cite{Ying04}.
+
+
+
+
+
+
+
+

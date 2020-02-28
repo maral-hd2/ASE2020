@@ -1,0 +1,47 @@
+
+\section{Conclusions and Future Work}
+\label{sec:conclusions}
+
+To date, researcher and practitioners  
+have proposed various techniques 
+to reduce the cost of regression testing.
+However, existing techniques mainly rely on either dynamic
+coverage information or static program analysis, 
+which they often have significant
+cost of overhead and are imprecise.
+In this research, we have introduced a novel 
+technique, GTXCrawler, to improve the effectiveness as well 
+as reducing the cost of regression testing.
+GTXCrawler uses the textual similarity 
+of a program source code and returns 
+a list of test cases that are
+are highly likely covering the modified portion 
+of the program.
+GTXCrawler does not need any dynamic code coverage 
+or static analysis and also it is flexible, scalable, and 
+language independent. 
+We evaluated our approach using four open-source software projects 
+with three other test prioritization techniques.
+Our empirical results indicate that the use of the GTXCrawler can reduce 
+the the cost of regression testing considerably. 
+
+
+
+Because our initial attempt to apply GTXCrawler in the area of 
+regression testing has shown promising results, 
+we aim to investigate this approach further by 
+considering various algorithms (e.g., a hybrid ranking algorithm), 
+various characteristics of applications
+(e.g., fault history information), 
+different application domains (e.g., mobile applications), 
+and various testing contexts (e.g., different testing processes or environment). 
+For future work, we wish to continue expanding on 
+this research by adding a learner algorithm to the framework
+that can help the system to be smarter and more efficient by learning 
+from it's success and failures.
+Moreover, we wish to expand on 
+this research as more data becomes available across a 
+wider range of applications and different metrics. 
+We also want to investigate how this research applies to 
+different areas of regression testing such as 
+test case selection and reduction.

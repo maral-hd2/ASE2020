@@ -1,0 +1,115 @@
+\section{Discussion}
+\label{sec:discussion}
+
+(* HD: Lets' cut the discussion of code coverage-based
+approach problems because the intro talks about them already.
+Instead, we need to focus on discussing the results in depth and
+their implications.
+As a journal, the current discussion is really short and
+it's somewhat very similar to issre18 paper.
+Please think about how to extend it by looking at the journal
+we wrote with Jeff or my other journals. *)
+ 
+
+The results of our empirical study show that 
+usage of GTXCrawler improves the regression testing. 
+Code coverage-based techniques are one of the most 
+widely used regression testing techniques. In this technique, 
+the selection/prioritization algorithm is often based 
+on the percentage of code covered by a test case. 
+This technique hypothesizes that the test cases that 
+are covering a higher portion of the code have the 
+higher possibility of finding bugs. However, these 
+techniques often have significant overhead and has to 
+be repeated for very new program version. These techniques 
+are more problematic in large scale programs 
+with thousands of lines of code and test cases. 
+Therefore, this technique can not be aligned with modern 
+software development practices where the rate of software 
+release is very fast such as 
+agile system development and continuous integration 
+systems~\cite{}. However, shifting from traditional 
+regression testing techniques to IR-based techniques 
+helps to reduce the cost overhead by eliminating the 
+coverage profiling. In this research, we have shown 
+that the application of IR-based technique to 
+regression testing techniques is advantageous, 
+practical with continuous integration system 
+development practices, and we have demonstrated 
+concrete examples of how it can be applied.
+
+
+
+One major benefit of applying GTXCrawler is that it's 
+performance remains nearly constant even with the 
+growth of the dataset. This can be more advantageous 
+for modern software development, where the program 
+undergoes many changes and the number of test cases 
+grow rapidly. For instance, in case of Joda-Time 
+the number of test cases increase by 409\% comparing 
+version 0.95 to version 1.5. Also, in cases when the 
+size of a program increases, it does not effect the 
+performance of GTXCrawler because each query is 
+localized to a portion of the graph database. 
+For instance, it took 49 seconds to select tests 
+from the graph with 1,512 test cases of 
+JFreeChart V1.0.0 using 98 queries, it only took 
+73 seconds to select a set of test cases from 2,738 
+test cases (1.8 times larger) of JFreeChart V1.0.9 for 186 queries.
+
+
+Moreover, our results indicate that the differences between 
+heuristic and control techniques are statistically 
+significant. 
+To see whether the differences we observed 
+through the statistical analyses are practically 
+meaningful we measured the effect 
+sizes of differences. Table~\ref{tab:effect} 
+presents the effect sizes of differences between 
+control and heuristic techniques. 
+As shown in Table~\ref{tab:effect}, 
+the effect sizes range from 0.44 to 4.18, 
+which are considered to be small 
+(JfreeChart: GTXCrawler in comparison with Jaccard Index ) and large 
+(Umbraco: GTXCrawler in comparison with Total) effect sizes, 
+so we can say that the differences we 
+observed in our studies are indeed practically significant.
+
+
+
+
+
+\begin{table*}[!ht]
+	\caption{Experiment Objects and Associated Data.}
+	\vspace*{-10pt}
+	\begin{center}
+		{\scriptsize
+			\begin{tabular}{|c|c|c|c|}\hline
+				Application &  {GTXCrawler vs Total}  & {GTXCrawler vs Additional }  &  {GTXCrawler vs Jaccard Index} \\\hline 			
+				
+				nopCommerce	 & 3.97 & 1.56 & 1.48 \\
+				Umbraco-CMS  & 4.18 &3.16 &	3.50 \\
+				Joda-Time & 2.52 &	1.06 &	0.59 \\
+				JFreeChart & 2.47 & 0.49 & 0.44 \\\hline 				
+				
+			\end{tabular} 
+			
+		}
+		\end {center}
+		\label{tab:effect}
+		\vspace*{-5pt}
+	\end{table*}
+
+
+%\subsection{Implications of GTXCrawler}
+%\subsection{Cost-Benefits Analysis}
+
+
+
+
+
+
+
+
+
+

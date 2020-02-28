@@ -1,0 +1,54 @@
+
+\subsection{Impact Analysis}
+
+%To analyze the impact of software modifications on a web
+%application, we implemented a static program slicer for web
+%applications written in the PHP programming language. 
+%The benefit of using a program slicer is that it provides 
+%a complete way to reveal which areas of the application will 
+%be affected by software modifications~\cite{agrawal90}.
+%
+%Using the ASTs we constructed during the preprocessing steps, 
+%we perform the impact analysis that identifies the areas of 
+%the application that have been affected by code changes. 
+%For impact analysis, three steps are involved: PDG generation,
+%program differencing, and program slicing. 
+%
+%To build PDGs from ASTs, we follow the same approach
+%used by Harrold et al.~\cite{harrold93}. 
+%First, the PDG generator constructs control flow graphs. 
+%During this phase, the PDG generator builds control flow graphs 
+%for all methods and functions that have been declared. 
+%To construct an inter-procedural control flow graph, all method 
+%or function calls within the control flow graphs are linked to 
+%their corresponding control flow graphs.
+%Next, the PDG generator analyzes the data by performing a def-use 
+%analysis, and it gathers data dependency information for variables. 
+%%The PDG generator uses a bit-vector to track the 
+%%definitions and uses of variables throughout the application. 
+%
+%After constructing PDGs for two consecutive versions,
+%we need to determine which files have been changed from the
+%previous version and which statements within these files have
+% been changed. To perform this task, we use a textual differencing 
+%approach similar to that of the standard Unix diff tool. In our 
+%approach, the differencing tool compares two versions of program 
+%dependence graphs, in XML format, that contain the program structure 
+%and statement content. The differencing tool analyzes each program 
+%and applies a longest common subsequence approach on the PDG 
+%representation of the statements.
+%After the tool determines which statements have been edited, added, 
+%or deleted, it provides this information to the program slicer.
+%
+%Finally, the program slicer creates program slices by using
+%the program modification information. Program slicing is a technique 
+%that can be used to trace control and data dependencies with 
+%an application~\cite{weiser81}, and in this work, it is used for 
+%calculating the code change impact set. Our program slicer performs 
+%forward slicing by finding all statements that are data dependent on 
+%the variables defined in the modified statements and produces a program 
+%slice following these dependencies. It then performs backward slicing 
+%on the modified statements to determine the statements upon which each 
+%modified statement is data dependant. For each modified statement, 
+%the forward and backward slices are combined into a single slice.
+

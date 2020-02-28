@@ -1,0 +1,54 @@
+\begin{algorithm}[!b]
+	\vspace*{3pt}
+	%\begin{algorithm}[ht]
+	\caption{ReTEST Traversal}\label{alg:ReAlg}
+	\begin{algorithmic}[1]
+		{\footnotesize
+			\State \textbf{Inputs:} \\
+			{\textit{Test File[]}} \quad{The set of all test cases from object of analysis.} \\
+			\textit{Query[]} \quad{The set of program changes between two versions.}
+			\State \textbf{Output:} \\
+			\textit{SelectionList[]} \quad {The list of recommended test cases for execution.}
+			\State \textbf{Declare:} \\
+			\textit{S} \quad {The minimum similarity score of test cases to be selected for query matching.}\\
+			\textit{N} \quad {The percentage of the test to be selected for per each query.}\\
+			\textit{recommendationList} \quad {The list of of the tests that are similar to a specific query.}\\
+			\textit{CurrentNode} \quad{The node currently being examined.}\\
+			\textit{UnvisitedNodes} \quad {The set of nodes that have not been visited.}\\
+			\textit{minDistance} \quad{The minimum distance between two pair of nodes.}\\
+			
+			
+			\Procedure{Test Selection}{$test \: file \: []$, $query\:[]$}
+			\State $CurrentNode \gets \emptyset; $
+			\State $minDistance \gets \emptyset; $
+			\State $UnvisitedNodes [] \gets \emptyset;$ 
+			
+			\While{$recommendationList$.Size $ \leq N $}
+			\State $CurrentNode \gets UnvisitedNodes.dequeue(); $			
+			\ForEach {$ query \: q_{i}  \in Query[] $}
+			\State $Calculate Cosine Similarity(CurrentNode, q_{i});$
+			\If {$ CurrentNode.Similarity () > \: S $}
+			\State $CurrentNode$.Lable($q_i$);
+			\State $recommendationList$.Add($currentNode$);
+			\State $currentNode$.remove();
+			\EndIf 
+			\EndFor
+			
+
+			\ForEach {$v \in recommendationList[] $}
+			\If {$currentNode$.hasFailed()}	
+			\State $SelectionList.Add(currentNode);$
+			\Else 
+			\If {$v != visited \& ShortDist[v] < minDistance $ }			
+			\State $minDistance = ShortDistance[v];$
+			\State $currentNode = v;$
+			\State $SelectionList.Add(currentNode);$
+			\EndIf
+			\EndIf
+			\EndFor
+			\EndWhile\label{mainPathWhile}
+			\State \textbf{return} $SelectionList []$
+			\EndProcedure	
+		}
+	\end{algorithmic}
+\end{algorithm}

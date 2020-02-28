@@ -1,0 +1,187 @@
+\section{Introduction}
+\label{sec:introduction}
+
+
+Modern software development tends to grow much faster than 
+before, which has introduced the Continuous Integration (CI)
+concept. In CI practices, software systems involve frequently 
+in a much faster pace comparing to the 
+traditional software development techniques.  
+Methodologies such as agile emphasize the importance of fast software 
+deployment~\cite{agile07} and companies providing web based applications 
+have taken this to extremes. For example, Amazon deploys software every 
+11.6 seconds on average~\cite{jenkins11}. 
+Considering this fast pace of the software deployment makes
+the automatic regression testing an essential step. 
+
+
+
+Common regression testing techniques rely on 
+static or dynamic code analysis. These techniques 
+often apply multiple sources of information 
+(e.g. code coverage, fault history, etc) to 
+select the most important test cases 
+that have high chance to detect faults. 
+Although, many empirical studies have shown the effectiveness of 
+these techniques~\cite{ryan, aggrawal04, mei12, elbaum02feb, zhang13, marksurvey, 
+yoo07, hemmati15, noor15, ambros10, zimmermann07},
+this information is usually unavailable before test cases 
+are executed.
+
+
+In code coverage based techniques, practitioners 
+often select a test case based on the percentage of 
+block or statement coverage. The underlying hypothesis
+of these technique is that the higher the code coverage 
+of a test case is the more chance of catching a faults. 
+However, we argue that this is not an optimum solution because:
+first, a test case with high code coverage might not 
+cover the changed portion of the code, therefore, it 
+might not be effective in catching faults.  
+Second, collecting coverage information is a continuous task, which has to be 
+repeated for each new version of a software and 
+it can be very time consuming,
+particularly for large scale programs~\cite{mondal15, saha15}. 
+Also, previously collected information is not accurate 
+for a new program version due to the changes in source code and test suite. 
+
+
+
+Newly added test cases are another type of limitations of 
+the traditional regression techniques. In traditional 
+regression testing techniques, testers often select test 
+cases based on their history and if they have failed history, 
+they would be favored over other test cases. 
+However, because there is no history information 
+available for the new test cases, these tests would be
+ignored during the selection process regardless of their 
+potential benefit for fault detection. 
+
+
+
+
+
+These limitations can be more problematic in 
+CI environment where the speed of software delivery is 
+one of the important success factors. Therefore, we 
+argue that the traditional regression techniques 
+will not be practical in modern software development practices
+due to following reasons: 1) the limited time for software deployment 
+will not allow the code coverage or history data collection, 
+2) newly added test cases would be ignored despite their 
+potential effectiveness, 3) the focus of testing might change 
+over the time, therefore, some test cases might become 
+more important in a certain period of time, and 4) the 
+fault history information might not be useful for the new 
+version of the system due to several changes, and added/deleted test cases. 
+Moreover, instrumenting the system for code coverage monitoring 
+requires significant amount of time and human knowledge. 
+Therefore, the efficient testing 
+approaches that can be aligned with today's fast
+release software practices should be considered.
+
+
+
+To address these limitations, in this paper, we propose an
+automated lightweight regression test case prioritization 
+approach that utilizes information retrieval techniques
+that we name it GTXCrawler. 
+Information retrieval (IR) techniques such as traceability 
+link recovery techniques have been applied to solve
+various software engineering problems~\cite{spanoudakis04}.
+Common techniques for recovering traceability links
+among software artifacts analyze
+textual similarities among these artifacts. 
+These techniques are often light-weight and efficient~\cite{Retest}. 
+
+
+
+
+GTXCrawler, first parse the source files and test files then 
+it converts them into a eXtensible Markup
+Language (XML) document type. It then  
+generates traceability links between the source code and test cases
+in XML format. GTXCrawler then generates a graph 
+of source code and test cases in which the nodes of the graph 
+are classes and test cases and the edges 
+represent the relations between them. 
+Finally, GTXCrawler search algorithm selects test cases that exercise the most
+recent changes in the source code based on the graph dependency coverage. 
+
+%However, tractability links between code changes and test cases 
+%are not often available or could be outdated due to the 
+%frequent changes in code and tests. Also, 
+%instrumenting the system for code coverage monitoring 
+%requires significant amount of time and human knowledge. 
+%For over a decade traceability link recovery techniques
+%have been utilized to extract the relational links
+%among software artifacts. 
+
+
+%For example, Spanoudakis et. al, in~\cite{spanoudakis04} introduced the concept 
+%of rule-based generation for traceability relations.
+%In that work, the authors provide a databased of the rules, which 
+%could identifies the relationship between requirements and 
+%use case specification documents.
+
+
+%Using traceability link recovery technique can address above mentioned
+%limitations by autocratically generating links between test cases
+%to source code and other potential relevant test cases.
+
+
+
+
+
+
+To evaluate GTXCrawler, we used four open source software projects
+written in two different programming languages
+and compared it against three widely used test prioritization techniques. 
+The experimental results show that our approach outperformed 
+in majority of the application under test.
+The results show that GTXCrawler can be effective in practice
+by reducing a significant amount of time compared to the common techniques
+such as code coverage-based techniques.
+Thus, GTXCrawler provides an effective alternative approach to 
+addressing the prioritization problem
+without requiring any dynamic coverage or static analysis. 
+Furthermore, unlike traditional techniques, GTXCrawler
+is program language independent and can be applied to various
+programs written in different languages. 
+The main contributions of our research are as follows:
+
+\begin{itemize}
+	
+	\item We introduce a new cost effective regression test case
+	prioritization technique.  
+    Our proposed technique is language independent, fast, scalable, and light-weight, 
+    which generates a graph of source code and test cases and
+    eliminates the cost of coverage profiling. 
+
+	\item Our proposed approach provides an efficient search 
+	algorithm to find the relevant test cases that exercise the
+	change portion of the code through the generated graph.
+	
+	\item Our study also empirically evaluates the proposed approach
+	by comparing it with three test prioritization techniques,
+	which are commonly used for regression testing. 
+	
+\end{itemize}
+
+The rest of the paper is structured as follows. 
+Section~\ref{sec:method}
+explains the ReTEST approach. 
+Section~\ref{sec:study} outlines the research questions and 
+the details of the experimental design. 
+Section~\ref{sec:data} presents the results of our study,
+and Section~\ref{sec:validity} discusses the threats to validity. 
+Section~\ref{sec:discussion} discusses the results including practical 
+implications and guidelines for testers. Section~\ref{sec:related-work} 
+presents related work, and Section~\ref{sec:conclusions} discusses 
+conclusions and future work.
+
+
+
+
+
+

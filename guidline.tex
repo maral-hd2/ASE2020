@@ -1,0 +1,54 @@
+\section{Discussion}
+\label{sec:guidline}
+
+To further explore the results of our experiment, in this section we discuss our findings as they might serve as practical guidelines for test prioritization. The first obvious question arising from this research is how these results can be applied in practice. Below, we list some practical questions that might help testers decide whether the use of a graph-based technique can be helpful for their regression testing process or not.
+
+%\textit{When should testers choose a graph-based
+%        approach over other techniques?} 
+%
+%	From our experimental results, we observed the following trends: 
+%	
+%	\begin{smallitem}
+%		\item GraMOP works well for large scale applications with a large number of tests and faults, but it might not be suitable for small applications.
+%		\item GraMOP works better under a tighter time budget and a well-structured dataset.
+%	\end{smallitem}
+%	
+%
+%
+%As we presented in Section~ref{sec:data}, our heuristics performed well for two large applications, \textit{nopCommerce} and \textit{Umbraco}, but for two small applications, (\textit{jmeter} and \textit{jtopas}), they did not perform well. For those small applications, APFD values of GraMOP were very close to the additional-statement technique, and for some cases, additional-statement even performed better than GraMOP (v1 and v2 in \textit{jtopas}). One plausible reason for these results is that the characteristics of software artifacts for these two groups (small and large) are quite different from each other. Small applications have a small number of tests and faults, the execution time of each test is uniform, and the faults are hand seeded. However, large applications have a large number of tests and faults, the execution time of each test is different, and the faults are real faults that were reported by users. Considering these factors, our heuristics might have less impact on these small applications, because one of our prioritization criteria is test execution time, which is uniform among small applications. Also, the types of faults could have affected the outcome of our results, but we need further investigation to see whether this factor indeed affected our outcome.
+%
+%                   
+%From our results, we also observed that GraMOP performed well even when we had 
+%a limited time budget. We speculate that our traversal algorithm affected this outcome.
+%Our algorithm is a greedy search algorithm and it starts by selecting test cases that 
+%have highest code coverage and shortest execution time, and at the same time it measures 
+%diversity to select the most diverse test cases. 
+%Thus, the output of the graph for the first couple of nodes would be those test cases with the 
+%highest code coverage, shortest execution time, and highest diversity, which are possibly more 
+%effective than test cases with less code coverage and less diversity. After finding these sets 
+%of nodes, the remaining nodes would be the test cases with less code coverage, less diversity, 
+%and longer test execution time, which we assume would be less effective.
+%Therefore, when we do not have enough time to run all tests, by selecting and running these 
+%potentially effective tests, we can expect better results than otherwise.  
+%     
+%We also observed that when the search space is well structured, GraMOP typically perform better than NSGA-II, which is computationally less efficient. The test suite dataset of our applications is well structured (i.e., all test cases are unit tests with a similar body structure, and the size of the test cases is almost uniform); thus the effectiveness of graph-based techniques was similar to that of NSGA-II, and they even slightly outperformed in 62\% of the experimental cases. However, when the search space is not as well understood and is unstructured (e.g., having a mixture of different types of test cases, or having huge variances in test size), NSGA-II might provide better results for large and complex spaces due to its powerful ability in heuristic search.
+%
+%\textit{Can the use of multiple metrics help improve prioritization?}
+%
+%Utilizing more sophisticated metrics or combining multiple metrics might help improve test case prioritization, but if the overhead of collecting and manipulating such metrics to implement techniques exceeds the benefits that the metrics can bring, it is not worth employing them. However, it is difficult to decide what choice would be best for certain situations in advance. Based on the results of our study, these are our observations:
+%
+%\begin{smallitem}
+%	\item Utilizing multiple metrics might not be very beneficial when the size of the test suite and application is small.
+%	\item Dissimilarity could be a more effective metric than code coverage in terms of the fault detection rate.
+%\end{smallitem}
+
+
+%The results for \textit{jtopas} and \textit{jmeter} indicate that when the size of the application is very small, utilizing multiple metrics might not be very beneficial due to the time overhead required to analyze multiple metrics. In particular, for these programs, as we discussed earlier, the test execution time for each test is uniform and the execution time is very short; thus, utilizing this metric would increase the analysis overhead without adding any benefit. However, this observation should be interpreted with caution, because small applications with tests that have wide variance in execution time could produce different outcomes, and this issue needs further empirical investigation.
+%
+%The results of this study also indicate that dissimilarity is more effective than code coverage, in particular when the test density (the number of tests per LOC) is high. One possible reason for this is that when the test density is high, the chance of having multiple test cases that cover same portion of code likewise increases. Therefore, in this case, diversity works better because it can reorder the test cases in such a way that they will be scattered through the entire application. The results of \textit{Umbraco} support this claim. The test density score for \textit{Umbraco} is 0.026 (3,381/128,037), whereas for \textit{nopCommerce} it is 0.0023. These values mean that, 
+%for every 37.8 lines of code of \textit{Umbraco}, there is one test case, whereas for every 416.8 lines of code for \textit{nopCommerce}, there is one test. These scores indicate why the diversity metric and its hybrid (ND) performed better in \textit{Umbraco} than in \textit{nopCommerce}.
+%
+%
+%From our empirical results, we also observed that similarity functions perform differently. We found that the Jaccard Index produced the largest average fault detection rate; this index also does not require any parameter settings, and thus it is easier to use. Moreover, comparing the cost of applying the Jaccard Index and the Levenshtein in terms of the actual time spent making the calculation, Jaccard Index required around 5 seconds on average to build the similarity matrix for \textit{Umbraco}, which has the largest test suite among our applications, whereas Levenshtein required 28 seconds to build the same matrix. From these observations, Jaccard Index might be a better choice than Levenshtein.
+
+

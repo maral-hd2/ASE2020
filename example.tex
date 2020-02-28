@@ -1,0 +1,25 @@
+\begin{figure*}[htb]
+%\begin{figure*}[!b]
+  \centering
+  \begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \lstset{language=PHP, title=v0.php (original version),
+basicstyle=\footnotesize,  tabsize=2}
+    \lstinputlisting{figures/v0.php}
+  \end{minipage}
+  \begin{minipage}[t]{0.31\textwidth}
+   \lstset{language=PHP, title=v1.php (modified version),
+basicstyle=\footnotesize, tabsize=2}
+    \lstinputlisting{figures/v1.php}
+  \end{minipage}
+    \begin{minipage}[t]{0.35\textwidth}
+      \caption*{\\PDG for v0 and v1}
+      \vspace*{6pt}
+    \includegraphics[width=\textwidth]{figures/flow2.pdf}
+
+  \end{minipage}
+  \caption{Path Generation Example Program}
+%\vspace*{-5pt}
+  \label{fig:example}
+\end{figure*}
+

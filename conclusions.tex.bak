@@ -1,0 +1,42 @@
+
+\section{Conclusions and Future Work}
+\label{sec:conclusions}
+
+In this paper, we presented a new regression test case
+generation approach that creates test cases using
+program slices for web applications written in PHP.
+To evaluate our approach, we conducted a controlled experiment
+using five non-trivial and open source web applications with 
+multiple versions, and the results showed that our approach can 
+be effective in reducing the number of test paths necessary for 
+the modified application by focusing only on the areas affected 
+by the modified code. 
+
+While our approach can reduce the amount of time needed to apply
+regression testing for patched web application software, it can 
+also reduce time and effort as well as improve testing effectiveness 
+when the major releases are tested because new test cases and other 
+associated artifacts are accumulated over time.
+
+The results of our studies suggested several avenues for future work.
+First, we evaluated our approach utilizing five widely used open source
+web applications. Because our approach provided promising results,
+the next natural step is to perform additional studies that apply 
+our approach to industrial contexts (e.g., using industrial-sized 
+applications or considering constraints imposed by an industry's 
+regression testing practice) to see whether our approach can address 
+an industry's practical problems. 
+
+Second, in this work, we did not consider the use of the existing test cases.
+However, by utilizing existing test cases when we test the modified program,
+we can achieve additional savings. Thus, we plan to investigate test case
+selection approaches that choose test cases that exercise the modified
+areas of code to help reduce the cost of generating new tests.
+
+Third, as we discussed earlier, resolving constraints 
+could require a lot of time and effort. 
+Thus, we plan to develop a technique that identifies reusable
+constraint values for regression test cases from the previous version
+to accommodate further savings for regression testing the web applications 
+that require frequent patches and short regression testing cycles.
+

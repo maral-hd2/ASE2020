@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Approach}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Grammatical Tagging}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{XML Conversion}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Tractability Link Generation}{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Source Graph Generation and Search Algorithm}{subsection.2.3}% 6
+\BOOKMARK [1][-]{section.3}{Empirical Study}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Objects of Analysis}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Variables and Measures}{section.3}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Independent Variables}{subsection.3.2}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Dependent Variable and Measures}{subsection.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Data Collection and Experimental Setup}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{Data and Analysis}{}% 13
+\BOOKMARK [2][-]{subsection.4.1}{RQ1 Analysis}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{RQ2 Analysis}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.3}{RQ3 Analysis}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Discussion}{}% 17
+\BOOKMARK [1][-]{section.6}{Threats to Validity}{}% 18
+\BOOKMARK [1][-]{section.7}{Related Work}{}% 19
+\BOOKMARK [2][-]{subsection.7.1}{Test case prioritization for regression testing}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.2}{Tractability Link Recovery}{section.7}% 21
+\BOOKMARK [1][-]{section.8}{Conclusions and Future Work}{}% 22

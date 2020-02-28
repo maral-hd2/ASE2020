@@ -1,0 +1,36 @@
+%\begin{algorithm}[htb]
+\begin{algorithm}[ht]
+\caption{Graph Traverser}
+\label{fig:walkpath}
+\begin{algorithmic}[1]
+{\footnotesize
+\Procedure{Test Case Recommendation}{$currentNode$, $paths$}
+	\State $gain \gets \emptyset$
+	\State $maxGain \gets \emptyset$	 
+	\State $checked  \gets False$ 
+	\State $Q \gets the set of all nodes in Graph$			
+	\While{$Q is not empty()$}
+		\State $u  \gets  vertex in Q with largest Node_value$ 
+		\If {$ not checked[w] and maxCost[w] > largest then$}
+		\State $largest \gets maxCost[w]$
+		\State $argLargest \gets w$
+		\State {$remove u from Q$}
+		\EndIf 
+		\State  $checked[argLargest] \gets true$
+		\State  $maxGain[argLargest] \gets 0$		
+		\For {$v from 0 to n - 1$}
+		\State $gain \gets dist[u] + dist_between(u, v)+ v.cost $
+		\If {$not checked[v] and Gain > maxGain[v] then$}
+		\State $maxGain[v] \gets gain$
+		\EndIf
+		\EndFor
+		\EndWhile
+\EndProcedure
+}
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+

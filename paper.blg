@@ -1,0 +1,129 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: paper.aux
+A level-1 auxiliary file: RQ4-table.tex.aux
+The style file: plain.bst
+Database file #1: paper.bib
+I was expecting a `,' or a `}'---line 5284 of file paper.bib
+ : 
+ : pages = {150--159},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 5734 of file paper.bib
+ : @inproceedings{yoo07
+ :                     ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5818 of file paper.bib
+ : 
+ : title = {Test data variance as a test
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5845 of file paper.bib
+ : 
+ : title = {Historical value-based approach for
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5882 of file paper.bib
+ : 
+ : title = {Prioritizing manual test
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6017 of file paper.bib
+ : 
+ : publisher = "IEEE",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6027 of file paper.bib
+ : 
+ : publisher = "IEEE",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6042 of file paper.bib
+ : 
+ : publisher = "ACM",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6053 of file paper.bib
+ : 
+ : publisher = "ACM",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 6069 of file paper.bib
+ : @article{xml
+ :             ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6084 of file paper.bib
+ : 
+ : publisher = "ACM",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6094 of file paper.bib
+ : 
+ : publisher = "IEEE",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 6113 of file paper.bib
+ : month = 
+ :         ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6143 of file paper.bib
+ : 
+ : publisher = "IEEE",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Retest"
+Warning--I didn't find a database entry for ""
+Warning--to sort, need author or key in nop
+Warning--to sort, need author or key in umbraco
+Warning--to sort, need author or key in defects4j
+Warning--to sort, need author or key in nopCommerceIssues
+Warning--to sort, need author or key in umbracoIssues
+Warning--to sort, need author or key in jacoco
+Warning--empty publisher in agile07
+Warning--empty journal in cost1
+Warning--empty title in hemmati15
+Warning--empty booktitle in hemmati15
+Warning--empty year in hemmati15
+Warning--empty year in spanoudakis04
+You've used 39 entries,
+            2118 wiz_defined-function locations,
+            708 strings with 10785 characters,
+and the built_in function-call counts, 13137 in all, are:
+= -- 1220
+> -- 696
+< -- 9
++ -- 285
+- -- 238
+* -- 864
+:= -- 2088
+add.period$ -- 120
+call.type$ -- 39
+change.case$ -- 228
+chr.to.int$ -- 0
+cite$ -- 51
+duplicate$ -- 531
+empty$ -- 1082
+format.name$ -- 238
+if$ -- 2853
+int.to.chr$ -- 0
+int.to.str$ -- 39
+missing$ -- 33
+newline$ -- 188
+num.names$ -- 64
+pop$ -- 351
+preamble$ -- 1
+purify$ -- 198
+quote$ -- 0
+skip$ -- 371
+stack$ -- 0
+substring$ -- 526
+swap$ -- 134
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 154
+warning$ -- 12
+while$ -- 86
+width$ -- 41
+write$ -- 388
+(There were 14 error messages)

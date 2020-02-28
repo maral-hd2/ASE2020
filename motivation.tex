@@ -1,0 +1,342 @@
+\section{Problem Statement}
+\label{sec:motivation}
+
+
+
+Software maintenance is an expensive process that can take two-third of 
+the overall cost of software production~\cite{bibid}.  
+Regression testing is one necessary maintenance activity, 
+which increase the quality and reliability of the software 
+behavior during the software evolution. 
+The cost of regression testing can account for one-half of 
+the cost of software maintenance~\cite{bibid}. 
+Several technique have been introduced to decrease the
+cost of regression testing. For example, one regression testing strategy 
+reruns all such tests by reordering them based on importance factors.
+However, this approach may consume excessive time and resources. 
+Test selection, in contrast, attempt to reduce the time of verifying 
+a modified program by executing a set of selected tests that are correlated
+to the modified program. 
+
+
+More recently rate of software delivery has become essential factor of the modern software development. 
+Agile methodology determines the importance of fast releases of software deployment~\cite{bibid}. 
+Similarly open source programs acknowledges the importance of fast deployment with a famous 
+claim from Raymond's: "Release early. Release often"~\cite{bibid}. 
+Companies providing web based applications have taken 
+this to the extreme, e.g., Amazon deploys software on every 11.6 seconds, on average~\cite{bibid}. 
+Although, this phenomena is not limited to the web services. 
+Other type of software products including finance, telecoms and even space and energy 
+software following same path, according to the recent literature review~\cite{22 hematti}. 
+The change to rapid released of a program arises the demand for fast testing and maintenance as well. 
+%Reducing the time and cost of regression testing has been an active research area for near two decades. 
+%Several techniques including est selection [3], [45], prioritization [15], [39], and reduction [44] 
+%have already proposed by researchers. 
+
+
+The most widely examined metric for regression test case selection
+is code coverage-based technique~\cite{}, which has been introduced as greedy techniques.
+Although these techniques have been used heavily but 
+they suffer from three major limitations. The first limitation 
+of these technique is the cost and overhead of the coverage data profiling. 
+The second limitation is that the collected coverage information from the 
+previous releases can be imprecise due to the context of program changes~\cite{sarfaraz}. 
+And last but not least, the collected coverage data does not cover any information
+about newly added test cases. 
+
+
+Some researchers have proposed new techniques to address those limitations. 
+For instance, Saha et.al~\cite{sarfaraz} proposed an information retrieval 
+model, which uses the program change at test cases to map the test cases 
+to the program changes based on their textual similarity.  
+The underlying hypothesis of their framework is that
+developers use similar terms for test cases as they use in program source code, therefor, 
+using the term similarity function we can determine which 
+test case exercises which portion of a program.  
+Results of their study shows that the proposed 
+approach perform as well as additional statement greedy 
+technique with reducing a significant cost of profiling overhead. 
+
+However, the problem with this approach is that it is 
+only limited to the textual information of the program change
+and test suite and ignores the other test quality factors.
+Understanding which metric has higher capability for improving the 
+effectiveness of test selection is even more challenging problem. 
+Over the past few  years, test case diversity is shown to be a promising
+metric for optimizing regression testing techniques~\cite{}.
+Coverage and diversity are two fundamentally different criteria. 
+While, the coverage never decrease with the increase in the number 
+of selected test cases, the diversity value may decrease. 
+Besides, a set of test cases with the maximum coverage 
+does not guarantee that the set
+has fair amount of diversity, fault detection ability and vice versa.
+Moreover, detecting previous faults is another important factor used
+to estimate the tests case quality~\cite{hemmati}. 
+The underlying hypothesis behind it is that if a test detects a fault in the past, it
+is probably exercising a part of the program that used to be faulty 
+and is highly likely to be faulty again, 
+particularly if it is being changed~\cite{hemmati 3, 4}.
+
+Precisely determining that which metric maybe a better choice for 
+selection is fairly complex problem, requiring 
+empirical analysis on multiple applications and results history. 
+One way to address this problem is using multiple metrics 
+simultaneously, which is known as multi-objective technique. 
+Multi-objective techniques attempt to improve 
+the effectiveness of regression testing by considering different 
+goals rather than single goal. 
+Typically, they have multiple number 
+of objectives and use either on static analysis or
+using an evolutionary algorithm in which, both of these 
+techniques require considerable amount of time for analysis. 
+To reduce the cost of multi-objective regression testing
+and improving its effectiveness at the same time, in this paper, we proposed a
+recommender system, which maps the test selection problem to a network framework.
+Our recommender system uses multiple source of information:
+test script, test diversity and fault history of test cases to recommend the 
+best test case for the regression issues based on the code change information. 
+Section~\ref{sec:method} explains the proposed approach in detail.
+
+
+
+ 
+
+
+
+
+\textbf{why graphs are better than traditional information retrival search?}
+1- graph search is faster
+
+2- updating graph is easirer
+when a new node comes, we simply measure the distance between this test
+case and the entire test suite then we will locate it in an appropriate position
+and assigne weight to the edges.
+
+3- graph search are stronger and faster than simple search 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1/5
+
+In this section, we describe the state of the art and practice 
+in regression test case prioritization and discuss and illustrative
+a motivational example.
+
+
+
+
+
+The most widely examined metric for regression test case 
+is code coverage~\cite{}, which has been introduced as greedy techniques.
+Although these techniques have been used heavily but 
+they suffer from two major limitations. The first limitation 
+of these technique is the cost and overhead of the coverage 
+profiling. In modern software development the ratio
+of releasing updated version of application is extremely 
+fast compared to traditional software development. For example,
+Mozilla release each version every five days~\cite{bibid}. Therefore, 
+updating the dynamic coverage information would be impractical. 
+Also, the coverage information from the can be imprecise 
+due to the context of program changes~\cite{sarfaraz}. 
+
+
+
+
+
+
+One way to address this drawback is to use a recommender systems, 
+which can reduce the decision making effort by providing a list of 
+relevant items based on a determined quality attributes. 
+Recommender systems have been applied in various software 
+engineering tasks. In particular, they provide a simple and powerful
+solution to a variety of problems that are typical in software engineering~\cite{bibid}. 
+While many software engineering techniques have started to incorporate
+recommendation systems, the applications of recommender systems have not
+been investigated by researchers in testing areas as thoroughly 
+as other software engineering domains~\cite{bibid}. 
+
+
+
+
+Therefore, in this paper we have investigated whether the use of recommender
+systems can improve regression testing techniques, in particular focusing on test case selection.
+To implement the recommender system, we used program changes, test suite document and 
+fault history is input information of the system. 
+Using this source of information, our recommender system identifies 
+a list of the most important test cases based 
+on: 1) coverage of a portion of the program change, 2) test failure history and 3)
+test diversity. 
+Code coverage is the most widely used metric for implementing
+regression testing techniques. The underlying hypothesis
+of this technique is that tests cases with higher coverage
+tend to have a higher chance of finding faults [13], [14],
+[18], [32]. We also used test failure history, because previous studies 
+shown that if a test detects a fault in the past, it
+is probably exercising a part of the program that used to be faulty 
+and is highly likely to be faulty again~\cite{bibid}. 
+We also used test dissimilarity, because empirical
+evidence indicates that diverse tests can produce a high fault
+detection rate~\cite{bibid}. 
+
+
+We compare ReTeSt against two traditional selection techniques; random and additional coverage and 
+one state of the art~\cite{bibid}. 
+To evaluate ReTeSt we used four open source software projects. 
+The experimental results show that
+for the majority of subjects ReTeSt outperforms all program analysis-based 
+and coverage-based strategies. Thus, ReTeSt provides an
+effective alternative approach to addressing the selection problem
+without requiring any dynamic coverage or static analysis information. 
+Furthermore, unlike traditional techniques, ReTeSt
+can be made oblivious to the program languages
+and may be directly applied to various
+programs written in different languages. 
+This paper makes the following contributions:
+
+
+
+
+To reduce the cost of multi-objective regression testing
+and improving its effectiveness at the same time, in this paper, we proposed a
+recommender system which maps the test selection problem network framework database model.
+Our recommender system uses multiple source of information:
+test script, test diversity and fault history of test cases to recommend the 
+best test case for the regression issues based on the code change information. 
+
+
+
+However, we believe that, rather than simply picking one
+metric over another, adopting a recommender system, that identifies
+more relevant metrics by considering software characteristics and
+the software testing environment might provide a better solution.
+
+
+
+
+
+
+
+%Typically, they have multiple number 
+%of objectives and use an evolutionary algorithms such as genetic 
+%algorithms to achieve their goals~\cite{bibid}.
+%These approaches require relatively long runtime to produce the results. 
+%For example, mySQL, a large scale application,
+%execution time of its entire test suite would take up to 12 days using genetic algorithm;
+%which impose significant cost for the company and also loss 
+%for the users.
+%However, since regression testing is usually time-consuming 
+%and more often in practice, there is a limited budget, therefore,
+%it is imperative to find a solution that has the potential to 
+%be more effective when there is a time constraint for
+%test suite's execution. 
+%While various techniques for single-objective test case
+%prioritization have been proposed and evaluated 
+%in the regression testing area~\cite{bibid}, 
+%multi-objective regression testing still remains a significant challenge.
+
+
+
+
+
+
+
+%Existing technique in regression testing mainly focuses 
+%in two major technique; total and additional greedy technique,
+%which both are based on the code 
+%coverage information. 
+%Total techniques do not change values of test cases during
+%the selection process, whereas additional techniques adjust
+%values of the remaining test cases taking into account the
+%influence of already selected test cases.
+
+%Although both of these technique have been used heavily but 
+%they suffer from two major limitations. The first limitation 
+%of these technique is the cost and overhead of the coverage 
+%profiling. In modern software development the ratio
+%of releasing updated version of application is extremely 
+%fast compared to traditional software development. For example,
+%Mozilla release each version every five days~\cite{bibid}. Therefore, 
+%updating the dynamic coverage information would be impractical. 
+%Also, the coverage information from the can be imprecise 
+%due to the context of program changes~\cite{sarfaraz}. 
+
+\begin{algorithm}[!b]
+	\vspace*{3pt}
+	%\begin{algorithm}[ht]
+	\caption{Graph Generation}\label{alg:ReAlg}
+	\begin{algorithmic}[1]
+		{\footnotesize
+			\State \textbf{Inputs:} \textbf{ \textit{Test Case[]}} \quad{\textit{The 
+					set of all test cases from object of analysis.}}
+			\State \textbf{Inputs:} \textbf{ \textit{Query[]}} \quad{\textit{The 
+					set of program changes between two versions.}}
+			\State \textbf{Declare:} \textbf{ \textit{Top-N}} \quad{\textit{The 
+					percentage of the test to be selected for query matching.}}
+			\State \textbf{Outputs:} \textbf{ \textit{Recommendation List[]}} \quad {\textit{The list of recommended test cases for execution.}}
+			%			\State \textbf{Inputs:} \textbf{ \textit{Test Case[]}} \quad 
+			%			\textit{The entire set of test cases.} 
+			%			\State \textbf{Outputs:} \textbf{\textit{Weighted Graph}} \quad \textit{A weighted graph of entire set of test cases with node and edge value.} 
+			%			\State \textbf{Declare:} \textbf{\textit{nodes}} \quad \textit{A set of nodes that represent test cases}
+			%			\State \textbf{Declare:} \textbf{\textit{edges}} \quad \textit{A set of edges that represent relations between nodes}
+			\Procedure{TestCaseRecommendation}{$test \: document \: []$, $query\:[]$}
+			\State $currentNode \gets \emptyset $
+			\While{$recommendationList[n]$.size()$ != full$}
+			\For{$n \longleftarrow 0 $, $n < testSet$.size(), $n$++}
+			\State $Calculate Cosine Similarity(test(n), query)$
+			\State $AddToList.Top-N(test)$		
+			\If {$currentTest$.hasFailed()}
+			\State $recommendationList.Add(currentTest)$
+			\State $currentTest$.remove()
+			\Else {$DistanceCalculator(currentTest, Top-N)$}
+			\State $recommendationList.Add(minimumDistance)$
+			\State CalculateDistance($currentNode$, $otherNodes$)
+			\EndIf
+			\EndFor			
+			\EndWhile\label{mainPathWhile}
+			\State \textbf{return} $recommendation \: list$
+			\EndProcedure
+		}
+	\end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+Algorithm~\ref{alg:ReAlg} shows the pseudo-code of the test case
+recommendation procedure algorithm. 
+The algorithm begins by receiving the query and analyzing all available
+test cases in the entire set, and then it selects a test cases that have the
+highest cosine similarity value to the query (line 9).
+The percentage of the selected test cases will be decided based on the 
+defined value for $Top-N$ (line 3). 
+After selecting the initial test cases based on their cosine similarity
+then, it checks whether any of the selected test cases has failure history.
+If any of the test cases has failed before it will be added to the recommended list (line 11).
+The added test case to the recommendation list will be removed from the 
+test set to avoid extra analysis.
+For the rest of test cases in $Top-N$ list, recommender system will 
+calculate the distance of the current node with the rest of nodes 
+in $Top-N$ and will selects the one with minimum distance (line 14) (i.e, minimum distance
+indicated the minimum similarity in our network graph). 
+This process will be continued until the recommendation list size is full (line 7)
+Size of the recommendation list could be defined by the users based on their available 
+time and resources. 
+For the rest of queries this process will be repeated until 
+the recommender system find all best candidate test cases for each query. 
+
+
+
+
+\textbf{why graphs are better than traditional information retrival search?}
+1- graph search is faster
+
+2- updating graph is easier
+when a new node comes, we simply measure the distance between this test
+case and the entire test suite then we will locate it in an appropriate position
+and assign weight to the edges.
+
+3- graph search are stronger and faster than simple search 
+

@@ -1,0 +1,107 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Current web applications offer people easy ways to
+deploy web sites containing blogs, shopping carts,
+and many other useful tools. Companies that provide 
+web applications often encounter various security
+attacks and frequent feature update demands from users, 
+and when these needs arise, companies need to fix security 
+problems or upgrade the application with new features. 
+These fixes often involve small patches or revisions, 
+but still, developers and testers need to perform 
+regression testing on their products to detect 
+whether these changes have introduced new faults. 
+Performing regression testing on the entire product, 
+however, can require a lot of time and 
+resources~\cite{srivastava02jul}, and with these applications, 
+a short turnaround time for releasing patches is critical 
+because the applications have already been deployed and 
+used in the field, thus users could suffer a great deal 
+of inconvenience due to the absence of the services on 
+which they rely. For instance, one study~\cite{boggs09} 
+reports that small and medium-sized organizations experienced 
+an average loss of \$70,000 per downtime hour. Further, 
+organizations that provide those applications could also 
+suffer from losing customers or from damaged reputations 
+if they do not supply patch releases in time. One solution 
+to this problem is to focus only on the areas of code that 
+have been changed as well as the portions of impacted code, 
+and to regression test them. In this way, companies can 
+deliver quick patches more dependably whenever
+security breaches are encountered. 
+
+To date, the majority of regression testing approaches 
+have focused on utilizing existing test cases 
+(e.g.,~\cite{elbaum02feb, rothermel97apr, yoo07}), 
+but to test updated features or new functionalities throughly,
+we need new test cases that can cover areas that existing 
+test cases cannot. Creating new, executable test cases for 
+affected areas of the code, which is known as a test suite 
+augmentation problem~\cite{apiwattanapong06}, is one of the 
+important regression testing problems, but only a few researchers 
+have started working on this problem~\cite{apiwattanapong06, 
+santelices11, taneja11, xu11}. While their work has made some 
+progress in this area, they have only provided guidance for 
+creating new tests~\cite{santelices11}, generated new test 
+cases limited to numeric values~\cite{xu11}, and 
+considered only small desktop applications. However, web 
+applications involve different challenges than desktop 
+applications written in C or Java~\cite{wassermann08jul}, 
+and the majority of web applications deal heavily with 
+strings in addition to numeric values. In addition, while 
+Taneja et al.~\cite{taneja11} propose an efficient test 
+generation technique by pruning unnecessary paths, the 
+dynamic, symbolic execution-based test generation approach 
+used by other researchers can still be expensive and infeasible 
+when we apply it to large applications.    
+
+To address these limitations, we propose a new test case generation
+approach that creates test cases using program slices 
+considering both string and numeric input values.
+In particular, we focus on web applications written in PHP which
+is widely used to implement web applications~\cite{wassermann08jul}.
+To do so, the following steps are required: (1) Identifying the areas
+of the application impacted by the patches and (2) Generating new test 
+cases for the impacted areas of code by using program slices and 
+considering both string and numeric input values.
+Program slices have been used for many purposes, such as
+helping with debugging processes~\cite{weiser82jul}, test suite
+reduction~\cite{gupta96jun}, test selection~\cite{bates93jan},
+test case prioritization~\cite{jeffrey08}, or fault
+localization~\cite{kusumoto02}, but to our knowledge, no attempt,
+except for work by Samuel and Mall~\cite{samuel09} (whose work
+uses UML diagrams rather than source code), has been made to generate
+test cases using slices. In this work, we will utilize slices when
+we generate test cases. While we focus on PHP web applications in this 
+research, our approach can be applied to other language domains, and 
+our regression testing frame can be easily extended to support them. 
+ 
+To facilitate our approach, we implemented a PHP Analysis
+and Regression Testing Engine (PARTE~\cite{marback10}).
+To assess our approach, we designed and performed a
+controlled experiment using five open source web applications
+that have multiple versions, various sizes, and different 
+characteristics (e.g., versioning frequencies). 
+
+The results showed that our approach is effective in reducing
+the amount of time needed to apply regression testing for frequently 
+patched web applications. Averaging for each application, the test path 
+reduction rates achieved by our approach ranged from 46\% to 
+87\%, compared to the control technique that generated test cases
+without considering code change information, and the results exposed 
+ways in which that effectiveness can vary with the application 
+characteristics and their versioning frequencies. The results also 
+suggested that our approach can be highly efficient when version 
+revision involves small modifications  due to security fixes or 
+minor bug fixes. 
+
+In the next section of this paper, we describe our overall methodology 
+and the technical details about PARTE. Section~\ref{sec:study} 
+presents our experiment, including the design, 
+threats to validity, and data and analysis. Section~\ref{sec:discussion} 
+discusses the results of the experiment and their practical 
+implications. Section~\ref{sec:related-work} describes related 
+work relevant to web applications and regression testing, and 
+Section~\ref{sec:conclusions} presents conclusions and future work.
+

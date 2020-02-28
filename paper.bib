@@ -1,0 +1,6171 @@
+
+-- $Revision: 1.10 $    $Date: 2007/12/03 20:51:51 $
+
+-- Predefined (standard) journal abbreviations:
+acmcs    ACM Computing Surveys
+acta     Acta Informatica
+cacm     Commun. of the ACM
+ibmjrd   IBM Journal of Research and Development
+ibmsj    IBM Systems Journal
+ieeese   IEEE Transactions on Softw. Eng.
+ieeetc   IEEE Transactions on Computers
+ieeetcad IEEE Transactions on Computer-Aided Design of Integrated Circuits
+ipl      Information Processing Letters
+jacm     Journal of the ACM
+jcss     Journal of Computer and System Sciences
+scp      Science of Computer Programming
+sicomp   SIAM Journal on Computing
+tocs     ACM Transactions on Computer Systems
+tods     ACM Transactions on Database Systems
+tog      ACM Transactions on Graphics
+toms     ACM Transactions on Mathematical Software
+toois    ACM Transactions on Office Information Systems
+toplas   ACM Transactions on Programming Languages and Systems
+tcs      Theoretical Computer Science
+
+-- Non-standard abbreviations:
+@STRING{Proc     = "Proceedings of the "}
+@STRING{ACM      = "The Association for Computing Machinery"}
+@STRING{ICSE     = "International Conference on Software Eng."}
+@STRING{sen      = "ACM SIGSOFT Software Eng. Notes"}
+@STRING{sigplan  = "ACM SIGPLAN Notices"}
+@STRING{sigcse   = "ACM SIGCSE Bulletin"}
+@STRING{jss      = "The Journal of Systems and Software"}
+@STRING{spe      = "Software---Practice and Experience"}
+@STRING{ieeesoft = "IEEE Software"}
+@STRING{HICSS    = "Hawaii Int'l. Conference on System Sciences"}
+@STRING{POPL     = "Annual ACM Symp. on Prin. of Programming Languages"}
+@STRING{COMPSAC  = "Annual Int'l. Computer Software and Applications Conf. (COMPSAC)"}
+@STRING{COMPASS  = "Annual Conf. on Computer Assurance (COMPASS)"}
+@STRING{jsm      = "Journal of Software Maintenance: Research and Practice"}
+@STRING{ieeep    = "IEEE Computer Society Press"}
+
+-- Entry templates:
+>ARTICLE{article,
+>INPROCEEDINGS{inproceedings,
+>PROCEEDINGS{proceedings,
+>TECHREPORT{techreport,
+>PHDTHESIS{phdthesis,
+>MASTERSTHESIS{mastersthesis,
+>BOOK{book,
+>INBOOK{inbook,
+>INCOLLECTION{incollection,
+>MANUAL{manual,
+>BOOKLET{booklet,
+>UNPUBLISHED{unpublished,
+>MISC{misc,
+
+-- Allowable keywords (used in keyword field, pick best one to list first,
+   list others afterwards, separated by comma and space):
+
+      software maintenance
+      mutation testing
+      dataflow testing
+      dataflow testing, interprocedural
+      dataflow testing, incremental
+      dataflow analysis
+      dataflow analysis, interprocedural
+      dataflow analysis, incremental
+      dataflow anomalies
+      integration testing
+      regression testing
+      module testing
+      system test
+      testing object-oriented software
+      software testing (other)
+      program slicing
+      program verification
+      program dependence graph
+      symbolic execution
+      program instrumentation
+
+-- Standard field names:
+    address author booktitle chapter edition editor howpublished
+    institution journal key month note number organization pages
+    publisher school series title type volume year
+
+@book{sieg.1988,
+author="Siegel, Sidney and Castellan, Jr. N. John",
+year="1988",
+title="Nonparametric Statistics For the Behavioral Sciences",
+edition="Second",
+publisher="McGraw-Hill Inc.",
+address="New York, NY"
+}
+
+@book{chambers.1983,
+author="Chambers, John M. and Cleveland, William S. and Kleiner, Beat and Tukey, Paul A.",
+title="Graphical Methods for Data Analysis",
+year="1983",
+publisher="Wadsworth International Group",
+address="Belmont, CA"
+}
+
+@inproceedings{agrawal93sep,
+author = {Agrawal,H. and Horgan, J. and Krauser, E. and London, S.},
+title = {Incremental regression testing},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = sep,
+year = 1993,
+pages = {348-357}
+}
+
+@INPROCEEDINGS{balcer89dec,
+author = {Balcer, M. and Hasling, W. and Ostrand, T.},
+title = {Automatic generation of test scripts from formal test specifications},
+booktitle = {{Proc. 3rd Symp. Softw. Testing, Anal., and Verif.}},
+pages = {210-218},
+month = dec,
+year = 1989
+}
+
+@INPROCEEDINGS{bassen85sep,
+author = {Bassen, H. and Silverberg, J. and Houston, F. and Knight, W. and Christman, C. and Greberman, M.},
+title = {{Computerized medical devices: Usage trends, problems, and safety technology}},
+booktitle = {{Proceedings of the 7th Annual Conference of IEEE Engineering in Medicine and Biology Society}},
+pages = {180-185}, 
+month = sep,     
+year = 1985 
+}
+
+@INPROCEEDINGS{bates93jan,
+author = {Bates, S. and Horwitz, S.},
+title = {{Incremental program testing using program dependence graphs}},
+booktitle = {{Proceedings of the 20th ACM Symp. on Prin. of Programming Languages}},
+month = jan,
+year = 1993,
+pages = {384-396},
+}
+
+@BOOK{beizer95,
+author = {Beizer, B.},
+title = {Black-Box Testing},
+publisher = {John Wiley and Sons},
+address = {New York, NY},
+year = {1995},
+}
+
+@BOOK{beizer90,
+author = {Beizer, B.},
+title = {Software Testing Techniques},
+publisher = {Van Nostrand Reinhold},
+address = {New York, NY},
+year = {1990},
+}
+
+@INPROCEEDINGS{binkley92nov,
+author = {Binkley, D.},
+title = {{Using semantic differencing to reduce the cost of regression testing}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {41-50},
+month = nov,
+year = 1992
+}
+
+@INPROCEEDINGS{binkley95oct,
+author = {Binkley, D.},
+title = {{Reducing the cost of regression testing by semantics guided test case selection}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = oct,
+year = 1995
+}
+
+@INPROCEEDINGS{benedusi88oct,
+author = {Benedusi, P. and Cimitile, A. and De Carlini, U.},
+title = {{Post-maintenance testing based on path change analysis}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {352-361},
+month = oct,
+year = 1988
+}
+
+@ARTICLE{brown90aug,
+author = {Brown, P.A. and Hoffman, D.},
+title = {{The application of module regression testing at TRIUMF.}},
+journal = {{Nuclear Instruments and Methods in Physics Research}},
+volume = {Section A, .A293},
+number = {1-2},
+month = aug,
+year = 1990,
+pages = {377-381}
+}
+
+@ARTICLE{chen96mar,
+author = {Chen, T.Y. and Lau, M.F.},
+title = {{Dividing strategies for the optimization of a test suite.}},
+journal = {{Information Processing Letters}},
+volume = {60},
+number = {3},
+month = mar,
+year = 1996,
+pages = {135-141}
+}
+
+@INPROCEEDINGS{chen94may,
+author = {Chen, Y.F. and Rosenblum, D.S. and Vo, K.P.},
+title = {{TestTube:  A system for selective regression testing}},
+booktitle = {{Proceedings of the International Conference on Software 
+Engineering}},
+pages = {211-220},
+month = may,
+year = 1994
+}
+
+@BOOK{davis94,
+author = {Davis, M. and Sigal, R. and Weyuker, E.},
+title = {Computability, Complexity, and Languages},
+publisher = {Academic Press, Inc.},
+edition = {Second},
+address = {Boston, MA},
+year = {1994}
+}
+
+@INPROCEEDINGS{erdogmus99may,
+author = {Erdogmus, H.},
+title = {{Comparative evaluation of software development strategies 
+based on net present value}},
+booktitle = {{EDSER-1}},
+pages = {},
+month = may,
+year = 1999
+}
+
+@INPROCEEDINGS{muller03may,
+author = {Muller, M. and Padberg, F.},
+title = {{About the return on investment of test-driven development}}, 
+booktitle = {{Proceedings of the Workshop on Economics-Driven Software
+Engineering Research}},
+pages = {},
+month = may,
+year = 2003
+}
+
+@INPROCEEDINGS{muller03sep,
+author = {Muller, M. and Padberg, F.},
+title = {{On the economic evaluation of XP projects}}, 
+booktitle = {{Proceedings of the European Conference on Software Engineering}},
+pages = {},
+month = sep,
+year = 2003
+}
+@INPROCEEDINGS{solingen04may,
+author = {Solingen, R.},
+title = {{Measuring the ROI of software process improvement}}, 
+booktitle = {{IEEE Software}},
+pages = {32-38},
+month = may,
+year = 2004
+}
+
+@INPROCEEDINGS{bockle04may,
+author = {Bockle, G. and Clements, P. and McGregor, J. and 
+          Muthig, D. and Schmid, K.},
+title = {{Calculating ROI of for software product lines}}, 
+booktitle = {{IEEE Software}},
+pages = {23-31},
+month = may,
+year = 2004
+}
+
+@ARTICLE{ferrante87jul,
+author = {Ferrante, J. and Ottenstein, K.J. and Warren, J.D.},
+title = {{The program dependence graph and its use in optimization}},
+journal = toplas,
+volume = 9,
+number = 3,
+month = jul,
+year = 1987,
+pages = {319-349}
+}
+
+@INPROCEEDINGS{fischer77nov,
+author = {Fischer, K.F. },
+title = {{A test case selection method for the validation of
+software maintenance modifications.}},
+booktitle = {{Proceedings of COMPSAC '77}},
+pages = {421-426},
+month = nov,
+year = 1977
+}
+
+@INPROCEEDINGS{fischer81nov,
+author = {Fischer, K.F. and Raji, F. and Chruscicki, A.},
+title = {{A methodology for retesting modified software}},
+booktitle = Proc # {Nat'l. Tele. Conference B-6-3},
+pages = {1-6},
+month = nov,
+year = 1981
+}
+
+@article{frankl93aug,
+author = {Frankl, P.G. and Weiss, S.N.},
+title = {An experimental comparison of the effectiveness of branch testing and data flow testing},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 19,
+number = 8,
+pages = {774-787},
+month = aug,
+year = 1993
+}
+
+@BOOK{garey79,
+author = {Garey, M.R. and Johnson, D.S.},
+title = {Computers and Intractability},
+publisher = {W.H. Freeman},
+address = {New York},
+year = {1979},
+}
+
+@INPROCEEDINGS{graves98apr,
+author = {Graves, T. L. and Harrold, M. J. and Kim, J-M and Porter, A. and Rothermel, G.},
+title = {{An empirical study of regression test selection techniques}},
+booktitle = {{Proceedings of the International Conference on 
+Software Engineering}},
+month = apr,
+year = 1998
+}
+
+@INPROCEEDINGS{gupta92nov,
+author = {Gupta, R. and Harrold, M. J. and Soffa, M. L.},
+title = {{An approach to regression testing using slicing}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = nov,
+pages = {299-308},
+year = 1992
+}
+
+@article{harrold93jul,
+author = {M. J. Harrold and R. Gupta and M. L. Soffa},
+title = {A methodology for controlling the size of a test suite},
+JOURNAL = {ACM Transactions on Software Engineering and Methodology}, 
+volume = 2,
+number = 3,
+pages = {270-285},
+month = jul,
+year = 1993
+}
+
+@INPROCEEDINGS{harrold95mar,
+author = {Harrold, M. J. and Larsen, L. and Lloyd, J. and Nedved, D. and Page, M. and Rothermel, G. and Singh, M. and Smith, M.},
+title = {{Aristotle: a system for the development of program-analysis-based tools}},
+booktitle = {{Proceedings of the 33rd Annual Southeast Conference}},
+month = mar,
+pages = {110-119},
+year = 1995,
+}
+
+@inproceedings{harrold88oct,
+author = {Harrold, M. J. and Soffa, M. L.},
+title = {An incremental approach to unit testing during maintenance},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = oct,
+year = 1988,
+pages = {362-367}
+}
+
+@INPROCEEDINGS{harrold89may,
+author = {Harrold, M. J. and Soffa, M. L.},
+title = {{An incremental data flow testing tool}},
+booktitle = {{Proceedings of the Sixth International Conference on Testing
+Computer Software}},
+month = may,
+year = 1989
+}
+
+@INPROCEEDINGS{harrold89dec,
+author = {Harrold, M. J. and Soffa, M. L.},
+title = {{Interprocedural data flow testing}},
+booktitle = {{Proc. 3rd Symp. Softw. Testing, Anal., and Verif.}},
+pages = {158-167},
+month = dec,
+year = 1989
+}
+
+@ARTICLE{harrold91jun,
+author = {Harrold, M. J. and Soffa, M. L.},
+title = {{Efficient computation of interprocedural definition-use chains}},
+journal = toplas,
+volume = 16,
+number = 2,
+pages = {175-204},
+month = mar,
+year = 1994
+}
+
+@techreport{harrold97mar,
+author = {Harrold, M. J. and Rothermel, G.},
+title = {Aristotle: A System for Research on and Development of Program Analysis Based Tools},
+institution = {Ohio State University},
+number = {OSU-CISRC- 3/97-TR17},
+month = {Mar},
+year = 1997
+}
+
+@techreport{harrold97aug,
+author = {Harrold, M. J. and Jones, J. A. and Lloyd J.},
+title = {Design and Implementation of An Interprocedural Data-Flow Tester},
+institution = {The Ohio State University},
+month = {Aug},
+year = 1997
+}
+
+@INPROCEEDINGS{hartmann90jan92,
+author = {Hartmann, J. and Robson, D.J.},
+title = {{RETEST - development of a selective revalidation
+prototype environment for use in software maintenance}},
+booktitle = {{Proceedings of the 23rd Hawaii International
+Conference on System Sciences}},
+month = jan,
+year = 1990,
+pages = {92-101},
+}
+
+@INPROCEEDINGS{hartmann89oct,
+author = {Hartmann, J. and Robson, D.J.},
+title = {{Revalidation during the software maintenance phase}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = oct,
+year = 1989,
+pages = {70-79},
+}
+
+@ARTICLE{hartmann90jan31,
+author = {Hartmann, J. and Robson, D.J.},
+title = {{Techniques for selective revalidation}},
+journal = ieeesoft,
+volume = {16},
+number = {1},
+month = jan,
+year = 1990,
+pages = {31-38},
+}
+
+@INPROCEEDINGS{hoffman89oct,
+author = {Hoffman, D.},
+title = {{A CASE study in module testing.}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {100-105},
+month = oct,
+year = 1989
+}
+
+@INPROCEEDINGS{hoffman89dec,
+author = {Hoffman, D. and Brealey, C.},
+title = {{Module test case generation}},
+booktitle = {{Proceedings of the 3rd Workshop on Software Testing, Analysis, and Verification}},
+pages = {97-102},
+month = dec,
+year = 1989
+}
+
+@INPROCEEDINGS{horgan92may,
+author = {Horgan, J.R. and London, S.A.},
+title = {{ATAC: A data flow coverage testing tool for C}},
+booktitle = {{Proceedings of the Symp. on Assessment of Quality Software Dev. Tools}},
+pages = {2-10},
+month = may,
+year = 1992
+}
+
+@BOOK{hsu96,
+author = {Hsu, J.C.},
+title = {Multiple Comparisons: Theory and Methods},
+publisher = {Chapman \& Hall},
+address = {London},
+year = {1996},
+}
+
+@INPROCEEDINGS{hutchins94may,
+author = {Hutchins, M. and Foster, H. and Goradia, T. and Ostrand, T.},
+title = {{Experiments on the effectiveness of dataflow- and controlflow-based test adequacy criteria}},
+booktitle = {{Proc. Int'l. Conf. Softw. Eng.}},
+pages = {191-200},
+month = may,
+year = 1994
+}
+
+@INPROCEEDINGS{laski92nov,
+author = {Laski, J. and Szermer, W.},
+title = {{Identification of program modifications and its applications in
+software maintenance}},
+booktitle = {{Proc. Conf. Softw. Maint.}},
+pages = {282-290},
+month = nov,
+year = 1992
+}
+
+@ARTICLE{lee90sep,
+author = {Lee, J.A.N. and He, X.},
+title = {{A Methodology for Test Selection}},
+journal = {{The Journal of Systems and Software}},
+volume = 13,
+number = 1,
+month = sep,
+year = 1990,
+pages = {177-185},
+}
+
+@INPROCEEDINGS{leung89oct,
+author = {Leung, H.K.N. and White, L.},
+title = {{Insights into regression testing}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {60-69},
+month = oct,
+year = 1989
+}
+
+@INPROCEEDINGS{leung90nov,
+author = {Leung, H.K.N. and White, L.J.},
+title = {{A study of integration testing and software regression at the
+integration level}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {290-300},
+month = nov,
+year = 1990
+}
+
+@INPROCEEDINGS{leung91oct,
+author = {Leung, H.K.N. and White, L.J.},
+title = {{A cost model to compare regression test strategies}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = oct,
+year = 1991
+}
+
+@ARTICLE{leung90dec,
+author = {Leung, H.K.N. and White, L.},
+title = {{Insights into testing and regression testing global variables}},
+journal = {Journal of Software Maintenance},
+volume = 2,
+month = dec,
+year = 1990,
+pages = {209-222},
+}
+
+@INPROCEEDINGS{lewis89sep,
+author = {Lewis, R. and Beck, D.W. and Hartmann, J.},
+title = {{Assay - a tool to support regression testing.}},
+booktitle = {{Proceedings of the 2nd European Software Engineering 
+Conference}},
+pages = {487-496},
+month = sep,
+year = 1989
+}
+
+@inproceedings{ostrand88sep,
+author = {Ostrand, T.J. and Weyuker, E.J.},
+title = {Using dataflow analysis for regression testing},
+booktitle = {Sixth Annual Pacific Northwest Software Qual. Conference},
+pages = {233-247},
+month = sep,
+year = 1988
+}
+
+@ARTICLE{ostrand88jun,
+author = {Ostrand, T.J. and Balcer, M. J.},
+title = {{The category-partition method for specifying and generating functional tests}},
+journal = {{Comm. ACM}},
+volume = 31,
+number = 6,
+month = jun,
+year = 1988
+}
+
+@BOOK{pressman87,
+author = {Pressman, R.},
+title = {Software Eng.: A Practitioner's Approach},
+publisher = {McGraw-Hill},
+address = {New York, NY},
+year = {1987},
+}
+
+@Book{pressman,
+  author =       "R. S. Pressman",
+  title =        "Software Engineering A Practitioner's Approach",
+  edition =      "5th",
+  publisher =    "McGraw-Hill",
+  year =         "2001",
+}
+
+@INPROCEEDINGS{rosenblum96oct,
+author = {Rosenblum, D. and Weyuker, E. J.},
+title = {Predicting the cost-effectiveness of regression testing strategies},
+booktitle = {{ACM SIGSOFT '96 Fourth Symp. on the Foundations of Software Eng.}},
+month = oct,
+year = 1996
+}
+
+@article{bible01apr,
+author = {Bible, J. and Rothermel, G. and Rosenblum, D.},
+title = {Coarse- and fine-grained safe regression test selection},
+JOURNAL = {ACM Transactions on Software Engineering Methodology}, 
+volume = 10,
+number = 2,
+pages = {149-183},
+year = 2001,
+month = apr
+}
+
+@ARTICLE{rosenblum97apr,
+author = {Rosenblum, D. and Weyuker, E. J.},
+title = {Lessons learned from a regression testing case study},
+journal = {{Empir. Software Eng. Journal}},
+year = 1997,
+volume = 2,
+number = 2
+}
+
+@ARTICLE{rosenblum97mar,
+author = {Rosenblum, D. and Weyuker, E. J.},
+title = {{Using coverage information to predict the cost-effectiveness of
+regression testing strategies}},
+journal = {{IEEE Transactions on Software Engineering}},
+month = mar,
+year = 1997,
+volume = 23,
+number = 3,
+pages = {146--156}
+}
+
+@PHDTHESIS{vokolosdis,
+author = {Vokolos, F.I.},
+title = {A regression test selection technique based on textual differencing},
+school = {Polytechnic University},
+type = {{Ph.D.} Dissertation},
+month = jan,
+year = 1998
+}
+
+@PHDTHESIS{rothermel96,
+author = {Rothermel, G.},
+title = {Efficient, effective regression testing using safe test selection techniques},
+school = {Clemson University},
+type = {{Ph.D.} Dissertation},
+month = may,
+year = 1996
+}
+
+@INPROCEEDINGS{rothermel94sep,
+author = {Rothermel, G. and Harrold, M. J.},
+title = {{Selecting regression tests for object-oriented software}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = sep,
+year = 1994,
+pages = {14-25}
+}
+
+@ARTICLE{rothermel97apr,
+author = {Rothermel, G. and Harrold, M. J.},
+title = {{A safe, efficient regression test selection technique}},
+journal = {{ACM Transactions on Software Engineering and Methodology}},
+volume = 6,
+number = 2,
+month = apr,
+year = 1997,
+pages = {173-210}
+}
+
+@INPROCEEDINGS{rothermel94aug,
+author = {Rothermel, G. and Harrold, M. J.},
+title = {{Selecting tests and identifying test coverage requirements for
+modified software}},
+booktitle = {{Proceedings of the International Symposium on Software
+Testing and Analysis}},
+month = aug,
+year = 1994
+}
+
+@ARTICLE{rothermel96aug,
+author = {Rothermel, G. and Harrold, M. J.},
+title = {{Analyzing regression test selection techniques}},
+journal = {{IEEE Transactions on Software Engineering}},
+month = aug,
+year = 1996,
+volume = 22,
+number = 8,
+pages = {529--551},
+}
+
+@inproceedings{harrold96jan,
+author = {Harrold, M. J. and Rothermel, G.},
+title = {{Separate computation of alias information for reuse}},
+booktitle = {{Proceedings of the International Symposium 
+on Software Testing and Analysis}},
+month = jan,
+year = 1996
+}
+
+@inproceedings{saff03nov,
+author = {D. Saff and M. D. Ernst},
+title = {Reducing wasted development time via continuous testing},
+booktitle = {{Proceedings of the International Symposium
+on Software Reliability Engineering}},
+pages = {281-292},
+month = nov,
+year = 2003
+}
+
+@BOOK{schach90,
+author = {Schach, S.},
+title = {Software Eng.},
+publisher = {Aksen Associates},
+address = {Boston, MA},
+year = {1992}
+}
+
+@INPROCEEDINGS{sherlund91,
+author = {Sherlund, B. and Korel, B.},
+title = {{Modification oriented software testing}},
+booktitle = {Conference Proceedings: Qual. Week 1991},
+pages = {1-17},
+year = 1991
+}
+
+@INPROCEEDINGS{sherlund95,
+author = {Sherlund, B. and Korel, B.},
+title = {{Logical modification oriented software testing}},
+booktitle = {Proceedings: Twelfth International Conference on Testing
+Computer Software},
+month = jun,
+year = 1995
+}
+
+@BOOK{stallman90feb,
+author = {Stallman, R.},
+title = {Using and porting GNU CC},
+publisher = {Free Software Foundation, Inc.},
+address = {Cambridge, MA},
+year = 1990
+}
+
+@article{weyuker82,
+author = {Weyuker, E.J.},
+title = {On testing non-testable programs},
+journal = {The Computer Journal},
+volume = {15},
+number = {4},
+pages = {465-470},
+year = 1982
+}
+
+@article{weyuker79,
+author = {Weyuker, E.J.},
+title = {The applicability of program schema results to programs},
+journal = {{International Journal of Computer and Information Science}},
+volume = 8,
+year = 1979,
+pages = {387-403}
+}
+
+@MISC{weyukerissta,
+author = {Weyuker, E.J.},
+title = {Empir. techniques for assessing testing strategies,},
+howpublished = {{(Panel discussion at the International Symp. on Software Testing and Analysis)}},
+month = aug,
+year = 1994
+}
+
+@INPROCEEDINGS{white93sep,
+author = {White, L. and Narayanswamy, V. and Friedman, T. and Kirschenbaum, M. and Piwowarski, P.  and Oha, M.},
+title = {{Test Manager: a regression testing tool}},
+booktitle = {{Proc. Conf. Softw. Maint.}},
+pages = {338-347},
+month = sep,
+year = 1993
+}
+
+@INPROCEEDINGS{white92nov,
+author = {White, L.J. and Leung, H.K.N.},
+title = {{A firewall concept for both control-flow and data-flow in regression
+integration testing}},
+booktitle = {{Proc. Conf. Softw. Maint.}},
+pages = {262-270},
+month = nov,
+year = 1992
+}
+
+@inproceedings{wong94nov,
+author = {W. E. Wong and J. R. Horgan and S. London and A. P. Mathur},
+title = {Effect of test set size and block coverage on the fault detection effectiveness},
+booktitle = {{Proc. Int'l. Symp. Softw. Rel. Engr.}},
+pages = {230-238},
+month = nov,
+year = 1994,
+}
+
+@inproceedings{wong97nov,
+author = {Wong, W.E. and Horgan, J.R. and London, S. and Agrawal, H.},
+title = {A study of effective regression testing in practice},
+booktitle = {{Proceedings of the International Symposium on 
+Software Reliability Engineering}},
+pages = {230-238},
+month = nov,
+year = 1997,
+}
+
+@inproceedings{wong95,
+author = {W. E. Wong and J. R. Horgan and S. London and A. P. Mathur},
+title = {Effect of test set minimization on fault detection effectiveness},
+booktitle = {{17th International Conference on Software Eng.}},
+pages = {41-50},
+month = apr,
+year = 1995,
+}
+
+@inproceedings{andrews05,
+author = {Andrews, J. H. and Briand, L. C. and Labiche, Y.},
+title = {{Is mutation an appropriate tool for testing experiments?}},
+booktitle = {Int'l. Conf. Softw. Eng.},
+month = may,
+pages = {402-411},
+year = {{2005}}
+}
+
+@TECHREPORT{wong97apr,
+author = {Wong, W.E. and Horgan, J.R. and Mathur, A.P. and Pasquini, A.},
+title = {{Test Set Size Minimization and Fault Detection Effectiveness: A Case Study in a Space Application}},
+institution = {Softwarere Engineering Research Council},
+number = {{SERC-TR-173-P}},
+month = apr,
+year = 1997
+}
+
+@INPROCEEDINGS{yau87oct,
+author = {Yau, S.S. and Kishimoto, Z.},
+title = {{A method for revalidating modified programs in the maintenance phase}},
+booktitle = {COMPSAC '87: The Eleventh Annual International Computer Software and Applications Conference},
+pages = {272-277},
+month = oct,
+year = 1987
+}
+
+@INPROCEEDINGS{ziegler89oct,
+author = {Ziegler, J. and Grasso, J.M. and Burgermeister, L.G.},
+title = {{An Ada based real-time closed-loop integration and regression test tool}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {81-90},
+month = oct,
+year = 1989
+}
+
+@BOOK{johnson,
+author = {Johnson,R.},
+title = {Elementary Statistics},
+publisher = {Duxbury Press},
+address = {Belmont, CA},
+edition = {Sixth},
+year = {1992},
+}
+
+@article{onoma98may,
+author = {Onoma, K. and Tsai, W-T. and Poonawala, M. and Suganuma, H.},
+title = {Regression testing in an industrial environment},
+journal = {Communications of the ACM},
+volume = {41},
+number = {5},
+pages = {81-86},
+month = may,
+year = 1988
+}
+
+@ARTICLE{binkley97aug,
+author = {Binkley, D.},
+title = {{Semantics guided regression test cost reduction}},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 23,
+number = 8,
+month = aug,
+pages = {498-516},
+year = 1997,
+}
+
+@INPROCEEDINGS{Delamaro96jul,
+author = {Delamaro, M\'{a}rcio E. and Maldonado, Jos\'{e} C.},
+title = {{Proteum--A Tool for the Assessment of Test Adequacy for C Programs}},
+booktitle = Proc #
+  {Conference on Performability in Computing Sys. (PCS 96)},
+pages = {79-95},
+month = jul,
+year = 1996
+}
+
+@BOOK{Freund81,
+author = {Freund, Rudolf J. and Littell, Ramon C.},
+title = {SAS for Linear Models: a guide to the ANOVA and GLM procedures},
+publisher = {SAS Institute Inc.},
+address = {Cary, NC},
+year = {1981},
+comment = { Cooper: QA276.4 .F7 },
+keyword = { statistics; linear regression },
+}
+
+
+@BOOK{Ott88,
+author = {Ott, Lyman},
+title = {An Introduction to Statistical Methods and Data Analysis},
+edition = {Third},
+publisher = {PWS-Kent Publishing Company},
+address = {Boston, MA},
+year = {1988},
+comment = { ISBN 0-534-91926-X },
+keyword = { statistics },
+}
+
+@ARTICLE{Hamlet77jul,
+author = {Hamlet, Richard G.},
+title = {{Testing programs with the aid of a compiler}},
+journal = ieeese,
+volume = {SE-3},
+number = 4,
+month = jul,
+year = 1977,
+pages = {279-290},
+keyword = { software testing; mutation analysis; debugging; maintenance }
+}
+
+@ARTICLE{DeMillo78apr,
+author = {DeMillo, Richard A. and Lipton, Richard J. and Sayward, Frederick G.},
+title = {{Hints on Test Data Selection: Help for the Practicing Programmer}},
+journal = {Computer},
+volume = 11,
+number = 4,
+month = apr,
+year = 1978,
+pages = {34-41},
+comment = { Usually cited as first mutation analysis article. },
+keyword = { mutation analysis; software testing },
+}
+
+@INPROCEEDINGS{vokolos98nov,
+author = {Vokolos, F. I. and Frankl, P. G.},
+title = {Empirical evaluation of the textual differencing regression testing technique},
+booktitle={{Proceedings of the International Conference on Software Maintenance}},
+month = nov,
+year = 1998,
+pages = {44--53}
+}
+
+@inproceedings{vokolos,
+author = {Vokolos, F. I. and Frankl, P. G.},
+title = {Pythia: a regression test selection tool based on textual differencing},
+booktitle={{Proc. 3rd Int'l. Conf. on Rel., Quality \& Safety of Softw.-Intensive Sys.}},
+month = may,
+year = 1997
+}
+
+@inproceedings{ball98mar,
+author = {Ball, T.},
+title = {On the limit of control flow analysis for regression test selection},
+booktitle= {{Proc. Int'l. Symp. on Softw. Testing and Analysis}},
+month = mar,
+year = 1998,
+pages = {134-142}
+}
+
+
+@inproceedings{thompson93jun,
+author = {Thompson, M.C. and Richardson, D.J. and Clarke, L.A.},
+title = {An information flow model of fault detection},
+booktitle= {{ACM International Symp. on Software Testing and Analysis}},
+month = jun,
+year = 1993,
+pages = {182-192}
+}
+
+@inproceedings{goradia93jun,
+author = {Goradia, T.},
+title = {Dynamic impact analysis: A cost-effective technique to enforce error-propagation},
+booktitle= {{ACM International Symp. on Software Testing and Analysis}},
+month = jun,
+year = 1993,
+pages = {171-181}
+}
+
+
+@article{voas92aug,
+author = {Voas, J.},
+title = {{PIE: A dynamic failure-based technique}},
+journal = {{IEEE Transactions on Software Engineering}},
+month = aug,
+year = 1992,
+pages = {717-727}
+}
+
+@article{munson92may,
+author = {Munson, J.C. and Khoshgoftaar, T.M.},
+title = {The detection of fault-prone programs},
+journal = {{IEEE Transactions on Software Engineering}},
+month = may,
+year = 1992,
+pages = {423-433}
+}
+
+@INPROCEEDINGS{rothermel99aug,
+author = {Rothermel, G. and Untch, R.H. and Chu, C. and Harrold, M. J.},
+title = {{Test case prioritization: An empirical study}},
+booktitle = {{Int'l. Conf. Softw. Maint.}},
+month = aug,
+year = 1999,
+pages = {179-188}
+}
+
+@TECHREPORT{rothermelpriotechrep,
+author = {Rothermel, G. and Untch, R.H. and Chu, C. and Harrold, M. J.},
+title = {{Test case prioritization}},
+institution = {Oregon State University},
+number = {{99-60-12}},
+month = dec,
+year = 1999
+}
+
+@TECHREPORT{rothermelpriotechrep2,
+author = {Elbaum, S. and Malishevsky, A. G. and Rothermel, G.},
+title = {{Prioritizing test cases for regression testing}},
+institution = {Oregon State University},
+number = {{00-60-03}},
+month = feb,
+year = 2000
+}
+
+@ARTICLE{avritzer95sep,
+author = {Avritzer, A. and Weyuker, E. J.},
+title = {{The automatic generation of load test suites
+and the assessment of the resulting software}},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 21,
+number = 9,
+month = sep,
+year = 1995,
+pages = {705-716}
+}
+
+@ARTICLE{hamlet87apr,
+author = {Hamlet, R. G.},
+title = {{Probable correctness theory}},
+journal = {{Information Processing Letters}},
+volume = {25},
+month = apr,
+year = 1987,
+pages = {17-25}
+}
+
+@INPROCEEDINGS{elbaum00aug,
+author = {Elbaum, S. and Malishevsky, A. and Rothermel, G.},
+title = {{Prioritizing test cases for regression testing}},
+booktitle = {{Proceedings of the International Symposium on
+Software Testing and Analysis}},
+month = aug,
+year = 2000,
+pages = {102-112}
+}
+
+@BOOK{musa99,
+author = {Musa, J.},
+title = {Software Reliability Engineering},
+publisher = {McGraw-Hill},
+address = {New York, NY},
+year = {1999},
+}
+
+@INPROCEEDINGS{lanubile95,
+author = {Lanubile, F. and Lonigro, A. and Visaggio, G.},
+title = {{Comparing models for identifying fault-prone software components}},
+booktitle = {{Proceedings 7th International Conference on Software Engr. and Knowledge Engr.}},
+month = jun,
+year = 1995,
+pages = {12-19}
+}
+
+@BOOK{schulmeyer99,
+author = {Schulmeyer, G. and McManus, J.},
+title = {Handbook of Software Quality Assurance},
+edition = {3rd},
+publisher = {Prentice Hall},
+address = {New York, NY},
+year = {1999},
+}
+
+@article{rothermel98jun,
+author = {Rothermel, G. and Harrold, M. J.},
+title = {Empirical studies of a safe regression test selection technique},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 24,
+number = 6,
+month = jun,
+year = 1998,
+pages = {401-419}
+}
+
+@inproceedings{kim00jun,
+author = {Kim, J. and Porter, A. and Rothermel, G.},
+title = {An empirical study of regression test application frequency},
+booktitle = {Proceedings of the International Conference on 
+Software Engineering},
+pages = {126-135},
+month = jun,
+year = 2000
+}
+
+@article{oppen80oct,
+author = {Oppen, D. C.},
+title = {Prettyprinting},
+journal = {ACM Trans. Prog. Lang. Sys.},
+volume = 2,
+number = 4,
+month = oct,
+year = 1980,
+pages = {465-483}
+}
+
+@article{rubin83mar,
+author = {Rubin, L. F.},
+title = {Syntax-directed pretty printing -- A first step towards a syntax-directed editor},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = {{SE-9}},
+number = 2,
+month = mar,
+year = 1983,
+pages = {119-127}
+}
+
+@ARTICLE{rothermel04jul, 
+author = {G. Rothermel and
+S. Elbaum and A. G. Malishevsky and P. Kallakuri and X. Qiu }, 
+title = {{On test suite composition and cost-effective regression testing}}, 
+JOURNAL = {ACM Transactions on Software Engineering Methodologies}, 
+volume = 13,
+number = 3,
+month = jul, 
+pages = {227-331},
+year = 2004 }
+
+@inproceedings{harrold01oct,
+author = {Harrold, M. J. and Jones, J. and Li, T. and Liang, D. and Orso, A.
+and Pennings, M. and Sinha, S. and Spoon, S. and Gujarathi, A.},
+title = {{Regression test selection for Java software}},
+booktitle = {{Proc. Conf. O.-O.  Programming, Systems,
+Langs., and Apps.}},
+month = oct,
+year = 2001
+}
+
+
+
+@misc{ ciolkowski-family,
+  author = "Marcus Ciolkowski",
+  title = "A Family of Experiments to Investigate the Influence of Context
+on the
+    Effect of Inspection Techniques",
+  url = "citeseer.nj.nec.com/544882.html" }
+
+
+@article{ basili99building,
+    author = "Victor R. Basili and Forrest Shull and Filippo Lanubile",
+    title = "Building Knowledge through Families of Experiments",
+    journal = "Software Engineering",
+    volume = "25",
+    number = "4",
+    pages = "456-473",
+    year = "1999",
+    url = "citeseer.nj.nec.com/article/basili99building.html" }
+
+
+@inproceedings{ basili99using,
+    author = "Victor R. Basili and Forrest Shull and Filippo Lanubile",
+    title = "Using Experiments to Build a Body of Knowledge",
+    booktitle = "Ershov Memorial Conference",
+    pages = "265-282",
+    year = "1999",
+    url = "citeseer.nj.nec.com/basili98using.html" }
+
+@inproceedings{clarke85aug,
+author = {Clarke, L.A. and Podgurski, A. and Richardson, D.J. and Zeil, S.J.},
+title = {A comparison of data flow path selection criteria},
+booktitle = {Proceedings of the 8th International Conference on Software
+Engineering},
+pages = {244-51},
+month = aug,
+year = 1985
+}
+
+@article{rapps85apr,
+author = {Sandra Rapps and Elaine J. Weyuker},
+title = {Selecting software test data using data flow information},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = {SE-11},
+number = 4,
+month = apr,
+year = 1985,
+pages = {367-375}
+}
+
+@ARTICLE{Weyuker88jun,
+author = {Weyuker, Elaine J.},
+title = {The evaluation of program-based software test data adequacy criteria},
+journal = {{Communications of the ACM}},
+volume = 31,
+number = 6,
+month = jun,
+year = 1988
+}
+
+
+@misc{splus,
+  title = "http://www.insightful.com/products/splus" }
+
+@misc{xp,
+  author = "xprogramming.com",
+  howpublished = "http://www.xprogramming.com" }
+
+@misc{extreme,
+  author = "Don Wells",
+  month = jan,
+  year = 2003,
+  title = {{Extreme Programming: A Gentle Introduction}},
+  howpublished = "http://www.extremeprogramming.org" }
+
+@misc{junit,
+  key = "junit",
+  howpublished = "http://www.junit.org" }
+
+@misc{ant,
+  key = "ant",
+  howpublished = "http://ant.apache.org" }
+
+@misc{jmeter,
+  key = "jmeter",
+  howpublished = "http://jakarta.apache.org/jmeter" }
+
+@misc{bcel,
+  key = "bcel",
+  howpublished = "http://jakarta.apache.org/bcel" }
+
+@misc{xml,
+  key = "xml",
+  howpublished = "http://xml.apache.org/security" }
+
+@misc{jtopas,
+  key = "jtopas",
+  howpublished = "http://jtopas.sourceforge.net/jtopas" }
+
+@misc{nanoxml,
+  key = "nanoxml",
+  howpublished = "http://nanoxml.sourceforge.net/orig" }
+
+@misc{jakarta,
+  key = "jakarta",
+  howpublished = "http://jakarta.apache.org" }
+
+@misc{sourceforge,
+  key = "sourceforge",
+  howpublished = "http://sourceforge.net" }
+
+@misc{galileo-web,
+  key = "galileo",
+  howpublished = "http://csce.unl.edu/$\tilde{~}$galileo/pub/galileo" }
+
+@misc{culpepper,
+  key = "culpepper",
+  howpublished = "http://www.culpepper" }
+
+@INPROCEEDINGS{srivastava02jul,
+author = {Srivastava, A. and Thiagarajan, J.},
+title = {{ Effectively prioritizing tests in development environment}},
+booktitle = {{Proceedings of the International Symposium on
+Software Testing and Analysis}},
+month = jul,
+pages = {97-106},
+year = 2002,
+}
+
+@INPROCEEDINGS{elbaum01apr,
+author = {Elbaum, S. and Gable, D. and Rothermel, G.},
+title = {{Understanding and measuring the sources of variation
+in the prioritization of regression test suites}},
+booktitle = {{Proceedings of the International Software Metrics Symposium}},
+month = apr,
+pages = {169-179},
+year = 2001
+}
+
+@INPROCEEDINGS{kim02may,
+author = {Kim, J. and Porter, A.},
+title = {A history-based test prioritization technique for regression testing
+in resource constrained environments},
+booktitle = {{Proceedings of the International Conference on 
+Software Engineering}},
+month = may,
+year = 2002
+}
+
+@MASTERSTHESIS{galileo, 
+author = {Aarti Thorat}, 
+title = {{Galileo: A system for analyzing Java bytecode}}, 
+school = {Oregon State University}, 
+type = {{MS}
+Dissertation}, 
+month = jan, 
+year = 2003, }
+
+@MASTERSTHESIS{sofya, 
+author = {Alex Kinneer}, 
+title = {{Assessing the cost-benefits of using type inference algorithms 
+to improve the representation of exceptional control flow in Java}}, 
+school = {University of Nebraska - Lincoln}, 
+type = {{MS}
+Dissertation}, 
+month = aug, 
+year = 2005, }
+
+@BOOK{fowler99,
+author = {Fowler, M.},
+title = {Refactoring: Improving the Design of Existing Code},
+publisher = {Addison-Wesley},
+year = {1999},
+}
+
+@INPROCEEDINGS{ishizaki99jun,
+author = {Ishizaki, K. and Kawahito, M. and Yasue, T. and Takeuchi, M. and
+Ogasawara, T. and Suganuma, T. and Onodera, T. and Komatsu, H. and Nakatani, T.},
+title = {Design, implementation and evaluation of optimisations in a
+Just-In-Time compiler},
+booktitle = {{ACM 1999 Java Grande Conf.}},
+pages = {119-128},
+month = jun,
+year = 1999
+}
+
+@TECHREPORT{power02jul, 
+author = {Power, J. and Waldron, J.}, 
+title = {{A method-level analysis of object-oriented techniques in Java
+applications}}, 
+institution = {National University of Ireland}, 
+type = { Technical Report},
+number = {NUM-CS-TR-2002-07}, 
+month = jul, 
+year = 2002 }
+
+@article{hamlet77,
+author = {R. G. Hamlet},
+title = {Testing programs with the aid of a compiler},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = {3},
+number = 4,
+year = 1977,
+pages = {279-290}
+}
+
+@inproceedings{ma02nov,
+author = {Y. Ma and Y. Kwon and J. Offutt},
+title = {Inter-class mutation operators for Java},
+booktitle = {{Proc. Int'l. Symp. Softw. Rel. Engr.}},
+pages = {352-363},
+month = nov,
+year = 2002,
+}
+
+@inproceedings{demillo78,
+author = {R. A. Demillo and R. J. Lipton and F. G. Sayward},
+title = {Hints on test data selection: Help for the practicing 
+programmer},
+booktitle = {{IEEE Computer}},
+pages = {34-41},
+year = 1978,
+}
+
+@PHDTHESIS{budd80,
+author = {Budd, T. A.},
+title = {Mutation analysis of program test data},
+school = {Yale University},
+type = {{Ph.D.} Dissertation},
+year = 1980
+}
+
+@inproceedings{bieman01nov,
+author = {J. M. Bieman and S. Ghosh and R. T. Alexander},
+title = {{A technique for mutation of Java objects}},
+booktitle = {{Proc. Automated Softw. Eng.}},
+month = nov,
+pages = {337-340},
+year = 2001,
+}
+
+@article{offutt96feb,
+author = {A. J. Offutt and J. Pan and K. Tewary and T. Zhang},
+title = {An experimental evaluation of data flow and mutation testing},
+journal = {{Softw. Pract. and Exp.}},
+volume = {26},
+number = 2,
+pages = {165-176},
+month = feb,
+year = 1996,
+}
+
+@ARTICLE{kim01,
+author = {S. Kim and J. A. Clark and J. A. McDermid},
+title = {{Investigating the effectiveness of object-oriented testing 
+strategies with the mutation method}},
+JOURNAL = {{J. of Softw. Testing, Verif., and Rel.}},
+volume = 11,
+number = 4,
+pages = {207-225},
+year = 2001
+}
+
+@inproceedings{kim00oct,
+author = {S. Kim and J. A. Clark and J. A. McDermid},
+title = {{Class mutation: Mutation testing for object-oriented programs}}, 
+booktitle = {{Proc. Net.ObjectDays Conf. Object-Oriented Softw. Sys.}},
+month = oct,
+year = 2000
+}
+
+@inproceedings{do05sep,
+author = {H. Do and G. Rothermel},
+title = {{A controlled experiment assessing test case prioritization
+techniques via mutation faults}},
+booktitle = {{Proceedings of the International Conference on
+Software Maintenance}},
+pages = {113-124},
+month = sep,
+year = 2005
+}
+
+@ARTICLE{do05dec,
+author = {H. Do and S. Elbaum and G. Rothermel},
+title = {{Supporting controlled experimentation with testing techniques: 
+An infrastructure and its potential impact}}, 
+JOURNAL = {{International Journal on Empirical Software Engineering}},
+volume = 10,
+number = 4,
+pages = {405-435},
+year = 2005
+}
+
+@ARTICLE{do06jan,
+author = {H. Do and G. Rothermel and A. Kinneer},
+title = {{Prioritizing JUnit test cases: An empirical assessment and 
+cost-benefits analysis}}, 
+JOURNAL = {{Empirical Software Engineering: An International Journal}},
+volume = 11,
+number = 1,
+pages = {33-70},
+month = jan,
+year = 2006
+}
+
+@inproceedings{do04nov,
+author = {H. Do and G. Rothermel and A. Kinneer},
+title = {{Empirical studies of test case prioritization in a JUnit testing
+environment}},
+booktitle = {{Proceedings of the International Symposium on Software
+Reliability Engineering}},
+pages = {113-124},
+month = nov,
+year = 2004,
+}
+
+@inproceedings{do04aug,
+author = {H. Do and S. Elbaum and G. Rothermel},
+title = {{Infrastructure support for controlled experimentation
+with software testing and regression testing techniques}},
+booktitle = {{Proceedings of the International Symposium on Empirical 
+Software Engineering}},
+pages = {60-70},
+month = aug,
+year = 2004,
+}
+
+@ARTICLE{frankl97,
+author = {P. G. Frankl and S. N. Weiss and C. Hu},
+title = {{All-uses versus mutation testing: An experimental comparison
+of effectiveness}}, 
+JOURNAL = {{J. Sys. Softw.}},
+volume = 38,
+number = 3,
+pages = {235-253},
+year = 1997
+}
+
+@InProceedings{orso01nov,
+author = {Orso, A. and Harrold, M. J. and Rosenblum, D. and Rothermel, G. and Soffa, M. L. and Do, H.},
+title = {Using component metacontents to support the
+regression testing of component-based software.},
+booktitle = {{Proceedings of the International Conference on Software Maintenance}},
+month = nov,
+pages = {716-725},
+year = 2001
+}
+
+@inproceedings{orso04nov,
+author = {Orso, A. and Shi, N. and Harrold, M. J.},
+title = {{Scaling regression testing to large software systems}},
+booktitle = {{Proceedings of the International Symposium on
+Foundations of Software Engineering}},
+year = 2004,
+month = nov
+}
+
+@InProceedings{ren04oct,
+author =  {Ren, X. and Shah, F. and Tip, F. and Ryder, B. G. and Chesley, O.},
+title =        {{Chianti: A tool for change impact analysis of Java programs}},
+booktitle =    {Proceedings of the International Conference
+on Object-Oriented Programming Systems, Languages, and Applications},
+pages =        {432--448},
+year =         {2004},
+month =        oct
+}
+
+@TechReport{kinneer06apr,
+author =       {Kinneer, A. and Dwyer, M. and Rothermel, G.},
+  title =        {Sofya: A Flexible Framework for Development of Dynamic Program Analysis for {Java} Software},
+  institution =  {University of Nebraska--Lincoln},
+  year =         {2006},
+  number =       {TR-UNL-CSE-2006-0006},
+  OPTaddress =   {Lincoln, Nebraska, {U.S.A.}},
+  month =        apr
+}
+
+@book{craig02,
+author="Craig, Rick D. and Jaskiel, Stefan P.",
+year="2002",
+title="Systematic Software Testing",
+edition="First",
+publisher="Artech House Publishers",
+address="Boston, MA"
+}
+
+@ARTICLE{hendricks97apr,
+author = {K. B. Hendricks and R. V. Singhal},
+title = {{Delays in new product introductions and the market value
+of the firm: The consequences of being late to the market }}, 
+JOURNAL = {{Management Science}},
+volume = 43,
+number = 4,
+pages = {422-436},
+month = apr,
+year = 1997
+}
+
+@book{jones97,
+author="Jones, Capers",
+year="1997",
+title="Applied Software Measurement: Assuring productivity
+and quality",
+publisher="McGraw-Hill",
+}
+
+@INPROCEEDINGS{shull02,
+author = {{Shull, F. et al.}},
+title = {{What we have learned about fighting defects}},
+booktitle = {{Int'l. Softw. Metrics Symp.}},
+year = 2002
+}
+
+@ARTICLE{tichy95jan,
+author = {Tichy, W. and Lukowicz, P. and Heinz, E. and Prechelt, L.},
+title = {{Experimental evaluation in computer science: a quantitative study}},
+journal = {{Journal of Systems and Software}},
+volume = {28},
+number = {1},
+month = jan,
+year = 1995,
+pages = {9-18}
+}
+
+@ARTICLE{zelkowitz98may,
+author = {Zelkowitz, M. and Wallace, D.},
+title = {{Experimental models for validating technology}},
+journal = {{IEEE Computer}},
+month = may,
+year = 1998,
+pages = {23-31}
+}
+
+@ARTICLE{kitchenham95jul,
+author = {Kitchenham, B. and Pickard, L. and Pfleeger, S.},
+title = {{Case studies for method and tool evaluation}},
+journal = {{IEEE Software}},
+month = jul,
+year = 1995,
+pages = {52-62}
+}
+
+@INPROCEEDINGS{boehm00jun,
+author = {Boehm, B. and Sullivan, K.},
+title = {Software economics: A roadmap},
+booktitle = {{The Futher of Software Economics}},
+pages = {319-343},
+month = jun,
+year = 2000
+}
+
+@ARTICLE{basili86jul,
+author = {Basili, V. and Selby, R. and Heinz, E. and Hutchens, D.},
+title = {{Experimentation in software engineering}},
+journal = {{IEEE TSE}},
+volume = {12},
+number = {7},
+month = jul,
+year = 1986,
+pages = {733-743}
+}
+
+@ARTICLE{chen02dec,
+author = {Chen, W. and Untch, R. H. and Rothermel, G. and Elbaum, S. and von Ronne, J.},
+title = {{Can fault-exposure-potential estimates improve the fault detection abilities of test suites?}},
+journal = {{Journal of Software Testing, Verification, and Reliability}},
+volume = 4,
+number = 2,
+month = dec,
+year = 2002
+}
+
+@INPROCEEDINGS{harder03may,
+author = {Harger, M and },
+title = {Improving test suites via operational abstraction},
+booktitle = {{Proc. 25rd International Conference on Software Eng.}},
+pages = {},
+month = may,
+year = 2003
+}
+
+@INPROCEEDINGS{ernst00jun,
+author = {Ernst, M. and Czeisler, A. and Griswold, W. and Notkin, D.},
+title = {Quickly detecting relevant program invariants}, 
+booktitle = {{Proc. 22th International Conference on Software Eng.}},
+pages = {},
+month = jun,
+year = 2000
+}
+
+@ARTICLE{okun03jan,
+author = {Okun, V. and Black, P. and Yesha, Y},
+title = {Testing with model checker: insuring fault visibility}, 
+journal = {{WSEAS Transactions on Systems}},
+volume = {2},
+number = {1},
+month = jan,
+year = 2003,
+pages = {77-82},
+}
+
+@INPROCEEDINGS{xie02may,
+author = {Xie, T. and Notkin, D.},
+title = {Macro and micro perspectives on strategic software quality 
+assurance in resource constrained environments}, 
+booktitle = {{Proc. EDSER-4}},
+pages = {},
+month = may,
+year = 2002
+}
+
+@INPROCEEDINGS{xie02nov,
+author = {Xie, T. and Notkin, D.},
+title = {Checking inside the black box: regression fault exposure and 
+localization based on value spectra differences}, 
+booktitle = {{FSE poster session}},
+pages = {},
+month = nov,
+year = 2002
+}
+
+@INPROCEEDINGS{coenporisini01,
+author = {Alberto Coen-Porisini, Giovanni Denaro, Carlo Ghezzi, Mauro Pezze},
+title = {Using symbolic execution for verifying safety-critical systems}, 
+booktitle = {{Proc. ESEC/FSE}},
+pages = {},
+year = 2001
+}
+
+@ARTICLE{fenton94jul,
+author = {Fenton, N. and Pfleeger, S.},
+title = {{Science and substance: A challenge to software engineers}},
+journal = {{IEEE Software}},
+month = jul,
+year = 1994,
+pages = {86-95}
+}
+
+@book{sieg.1988,
+author="Siegel, Sidney and Castellan, Jr. N. John",
+year="1988",
+title="Nonparametric Statistics For the Behavioral Sciences",
+edition="Second",
+publisher="McGraw-Hill Inc.",
+address="New York, NY"
+}
+
+@book{chambers.1983,
+author="Chambers, John M. and Cleveland, William S. and Kleiner, Beat and Tukey, Paul A.",
+title="Graphical Methods for Data Analysis",
+year="1983",
+publisher="Wadsworth Int'l. Group",
+address="Belmont, CA"
+}
+
+@inproceedings{agrawal93sep,
+author = {Agrawal,H. and Horgan, J. and Krauser, E. and London, S.},
+title = {Incremental regression testing},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = sep,
+year = 1993,
+pages = {348-357}
+}
+
+@INPROCEEDINGS{balcer89dec,
+author = {Balcer, M. and Hasling, W. and Ostrand, T.},
+title = {Automatic generation of test scripts from formal test specifications},
+booktitle = {{Proceedings of the 3rd Symposium on Software Testing, Analysis, and Verification}},
+pages = {210-218},
+month = dec,
+year = 1989
+}
+
+@INPROCEEDINGS{binkley92nov,
+author = {Binkley, D.},
+title = {{Using semantic differencing to reduce the cost of regression testing}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {41-50},
+month = nov,
+year = 1992
+}
+
+@INPROCEEDINGS{binkley95oct,
+author = {Binkley, D.},
+title = {{Reducing the cost of regression testing by semantics guided test case selection}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = oct,
+year = 1995
+}
+
+@INPROCEEDINGS{benedusi88oct,
+author = {Benedusi, P. and Cimitile, A. and De Carlini, U.},
+title = {{Post-maintenance testing based on path change analysis}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {352-361},
+month = oct,
+year = 1988
+}
+
+
+@BOOK{davis94,
+author = {Davis, M. and Sigal, R. and Weyuker, E.},
+title = {Computability, Complexity, and Languages},
+publisher = {Academic Press, Inc.},
+edition = {Second},
+address = {Boston, MA},
+year = {1994}
+}
+
+@INPROCEEDINGS{dogsa88oct,
+author = {Dogsa, T. and Rozman, I.},
+title = {{CAMOTE - computer aided module testing and design environment.}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {404-408},
+month = oct,
+year = 1988
+}
+
+@ARTICLE{ferrante87jul,
+author = {Ferrante, J. and Ottenstein, K.J. and Warren, J.D.},
+title = {{The program dependence graph and its use in optimization}},
+journal = toplas,
+volume = 9,
+number = 3,
+month = jul,
+year = 1987,
+pages = {319-349}
+}
+
+@INPROCEEDINGS{fischer77nov,
+author = {Fischer, K.F. },
+title = {{A test case selection method for the validation of
+software maintenance modifications.}},
+booktitle = {{Proceedings of COMPSAC '77}},
+pages = {421-426},
+month = nov,
+year = 1977
+}
+
+@BOOK{garey79,
+author = {Garey, M.R. and Johnson, D.S.},
+title = {Computers and Intractability},
+publisher = {W.H. Freeman},
+address = {New York},
+year = {1979},
+}
+
+@INPROCEEDINGS{harrold95mar,
+author = {Harrold, M. J. and Larsen, L. and Lloyd, J. and Nedved, D. and Page, M. and Rothermel, G. and Singh, M. and Smith, M.},
+title = {{Aristotle: a system for the development of program-analysis-based tools}},
+booktitle = {{Proceedings of the 33rd Annual Southeast Conference}},
+month = mar,
+pages = {110-119},
+year = 1995,
+}
+
+@inproceedings{harrold88oct,
+author = {Harrold, M. J. and Soffa, M.L.},
+title = {An incremental approach to unit testing during maintenance},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = oct,
+year = 1988,
+pages = {362-367}
+}
+
+@INPROCEEDINGS{harrold89may,
+author = {Harrold, M. J. and Soffa, M.L.},
+title = {{An incremental data flow testing tool}},
+booktitle = {{Proceedings of the Sixth International Conference on Testing
+Computer Software}},
+month = may,
+year = 1989
+}
+
+@INPROCEEDINGS{harrold89dec,
+author = {Harrold, M. J. and Soffa, M.L.},
+title = {{Interprocedural data flow testing}},
+booktitle = {Proceedings of the 3rd Testing, Analysis, and Verification
+Symposium},
+pages = {158-167},
+month = dec,
+year = 1989
+}
+
+@techreport{harrold97aug,
+author = {Harrold, M. J. and Jones, J. A. and Lloyd J.},
+title = {Design and Implementation of An Interprocedural Data-Flow Tester},
+institution = {The Ohio State University},
+month = {Aug},
+year = 1997
+}
+
+@INPROCEEDINGS{harrold01nov,
+author = {Harrold, M. J. and Orso, A. and Rosenblum, D. and Rothermel, G. and Soffa, M. L. and Do, H.},
+title = {{Using component metadata to support the regression testing of component-based software}},
+booktitle = {Proceedings of the International Conference on Software Maintenance},
+year = 2001,
+month = nov
+}
+
+@INPROCEEDINGS{hartmann90jan92,
+author = {Hartmann, J. and Robson, D.J.},
+title = {{RETEST - development of a selective revalidation
+prototype environment for use in software maintenance}},
+booktitle = {{Proceedings of the 23rd Hawaii International
+Conference on System Sciences}},
+month = jan,
+year = 1990,
+pages = {92-101},
+}
+
+@INPROCEEDINGS{hartmann89oct,
+author = {Hartmann, J. and Robson, D.J.},
+title = {{Revalidation during the software maintenance phase}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = oct,
+year = 1989,
+pages = {70-79},
+}
+
+@INPROCEEDINGS{horgan92may,
+author = {Horgan, J.R. and London, S.A.},
+title = {{ATAC: A data flow coverage testing tool for C}},
+booktitle = {{Proceedings of the Symposium on Assessment of Quality Software Dev. Tools}},
+pages = {2-10},
+month = may,
+year = 1992
+}
+
+@INPROCEEDINGS{laski92nov,
+author = {Laski, J. and Szermer, W.},
+title = {{Identification of program modifications and its applications in
+software maintenance}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {282-290},
+month = nov,
+year = 1992
+}
+
+@ARTICLE{lee90sep,
+author = {Lee, J.A.N. and He, X.},
+title = {{A Methodology for Test Selection}},
+journal = {{The Journal of Systems and Software}},
+volume = 13,
+number = 1,
+month = sep,
+year = 1990,
+pages = {177-185},
+}
+
+@ARTICLE{leung90dec,
+author = {Leung, H.K.N. and White, L.},
+title = {{Insights into testing and regression testing global variables}},
+journal = {Journal of Software Maintenance},
+volume = 2,
+month = dec,
+year = 1990,
+pages = {209-222},
+}
+
+@inproceedings{ostrand88sep,
+author = {Ostrand, T.J. and Weyuker, E.J.},
+title = {Using dataflow analysis for regression testing},
+booktitle = {Sixth Annual Pacific Northwest Software Qual. Conference},
+pages = {233-247},
+month = sep,
+year = 1988
+}
+
+@inproceedings{taha89sep,
+author = {Taha, A. B. and Thebaut, S. M. and Liu, S. S.},
+title = {An approach to software fault localization and revalidation based on
+incremental data flow analysis},
+booktitle = {{Proceedings of the 13th Annual International Computer Software and Applications Conference}},
+pages = {527--534},
+month = sep,
+year = 1989
+}
+
+@INPROCEEDINGS{rosenblum97oct,
+author = {Rosenblum, D. and Rothermel, G.},
+title = {A comparative study of regression test selection techniques},
+booktitle = {{Proceedings of the 2nd International Workshop on Empir. Studies of Software Maintenance}},
+month = oct,
+year = 1997
+}
+
+@ARTICLE{rosenblum97apr,
+author = {Rosenblum, D. and Weyuker, E. J.},
+title = {Lessons learned from a regression testing case study},
+journal = {{Empir. Software Engineering Journal}},
+year = 1997,
+volume = 2,
+number = 2
+}
+
+@ARTICLE{rosenblum97mar,
+author = {Rosenblum, D. and Weyuker, E. J.},
+title = {{Using coverage information to predict the cost-effectiveness of
+regression testing strategies}},
+journal = {{IEEE Transactions on Software Engineering}},
+month = mar,
+year = 1997,
+volume = 23,
+number = 3,
+pages = {146--156}
+}
+
+@INPROCEEDINGS{rothermel94may,
+author = {Rothermel, G. and Harrold, M. J.},
+title = {{A framework for evaluating regression test selection techniques}},
+booktitle = {{Proceedings of the International Conference on Software Engineering}},
+pages = {201-210},
+month = may,
+year = 1994
+}
+
+@techreport{rothermel96,
+author = {Rothermel, G.},
+title = {Efficient, Effective Regression Testing Using Safe Test Selection Techniques},
+institution = {Clemson University},
+number = {96-101},
+month = {January},
+year = 1996
+}
+
+@INPROCEEDINGS{rothermel93sep,
+author = {Rothermel, G. and Harrold, M. J.},
+title = {{A safe, efficient algorithm for regression test selection}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+month = sep,
+year = 1993,
+pages = {358-367}
+}
+
+@BOOK{schach90,
+author = {Schach, S.},
+title = {Software Engineering},
+publisher = {Aksen Associates},
+address = {Boston, MA},
+year = {1992},
+}
+
+@INPROCEEDINGS{sherlund91,
+author = {Sherlund, B. and Korel, B.},
+title = {{Modification oriented software testing}},
+booktitle = {Conference Proc.: Qual. Week 1991},
+pages = {1-17},
+year = 1991
+}
+
+@INPROCEEDINGS{sherlund95,
+author = {Sherlund, B. and Korel, B.},
+title = {{Logical modification oriented software testing}},
+booktitle = {Proc.: Twelfth International Conference on Testing
+Computer Software},
+month = jun,
+year = 1995,
+}
+
+@BOOK{stallman90feb,
+author = {Stallman, R.},
+title = {Using and porting GNU CC},
+publisher = {Free Software Foundation, Inc.},
+address = {Cambridge, MA},
+year = 1990,
+}
+
+@article{weyuker82,
+author = {Weyuker, E.J.},
+title = {On testing non-testable programs},
+journal = {The Computer Journal},
+volume = {15},
+number = {4},
+pages = {465-470},
+year = 1982,
+}
+
+@article{weyuker79,
+author = {Weyuker, E.J.},
+title = {The applicability of program schema results to programs},
+journal = {{International Journal of Computer and Information Science}},
+volume = 8,
+year = 1979,
+pages = {387-403},
+}
+
+@MISC{weyukerissta,
+author = {Weyuker, E.J.},
+title = {Empirical techniques for assessing testing strategies,},
+howpublished = {{(Panel discussion at the International Symposium on Software Testing and Analysis)}},
+month = aug,
+year = 1994,
+}
+
+@INPROCEEDINGS{white93sep,
+author = {White, L.J. and Narayanswamy, V. and Friedman, T. and Kirschenbaum, M. and Piwowarski, P.  and Oha, M.},
+title = {{Test Manager: a regression testing tool}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {338-347},
+month = sep,
+year = 1993
+}
+
+@INPROCEEDINGS{white92nov,
+author = {White, L.J. and Leung, H.K.N.},
+title = {{A firewall concept for both control-flow and data-flow in regression
+integration testing}},
+booktitle = {{Proceedings of the Conference on Software Maintenance}},
+pages = {262-270},
+month = nov,
+year = 1992
+}
+
+@inproceedings{wong94nov,
+author = {W. E. Wong and J. R. Horgan and S. London and A. P. Mathur},
+title = {Effect of test set size and block coverage on the fault detection effectiveness},
+booktitle = {{Proceedings of the Fifth International Symposium on Software Reliability Engineering}},
+pages = {230-238},
+month = nov,
+year = 1994,
+}
+
+@inproceedings{wong95,
+author = {W. E. Wong and J. R. Horgan and S. London and A. P. Mathur},
+title = {Effect of test set minimization on fault detection effectiveness},
+booktitle = {{Proceedings of the International Conference on Software Engineering}},
+pages = {41-50},
+month = apr,
+year = 1995,
+}
+
+@TECHREPORT{wong97apr,
+author = {Wong, W.E. and Horgan, J.R. and Mathur, A.P. and Pasquini, A.},
+title = {{Test Set Size Minimization and Fault Detection Effectiveness: A Case Study in a Space Application}},
+institution = {Software Engineering Research Council},
+number = {{SERC-TR-173-P}},
+month = apr,
+year = 1997
+}
+
+@INPROCEEDINGS{yau87oct,
+author = {Yau, S.S. and Kishimoto, Z.},
+title = {{A method for revalidating modified programs in the maintenance phase}},
+booktitle = {COMPSAC '87: The Eleventh Annual International Computer Software and Applications Conference},
+pages = {272-277},
+month = oct,
+year = 1987
+}
+
+@BOOK{johnson,
+author = {Johnson,R.},
+title = {Elementary Statistics},
+publisher = {Duxbury Press},
+address = {Belmont, CA},
+edition = {Sixth},
+year = {1992},
+}
+
+@INPROCEEDINGS{Delamaro96jul,
+author = {Delamaro, M\'{a}rcio E. and Maldonado, Jos\'{e} C.},
+title = {{Proteum--A Tool for the Assessment of Test Adequacy for C Programs}},
+booktitle = Proc #
+  {Conference on Performability in Computing Sys. (PCS 96)},
+pages = {79-95},
+month = jul,
+year = 1996
+}
+
+@BOOK{Freund81,
+author = {Freund, Rudolf J. and Littell, Ramon C.},
+title = {SAS for Linear Models: a guide to the ANOVA and GLM procedures},
+publisher = {SAS Institute Inc.},
+address = {Cary, NC},
+year = {1981},
+comment = { Cooper: QA276.4 .F7 },
+keyword = { statistics; linear regression },
+}
+
+
+@BOOK{Ott88,
+author = {Ott, Lyman},
+title = {An Introduction to Statistical Methods and Data Analysis},
+edition = {Third},
+publisher = {PWS-Kent Publishing Company},
+address = {Boston, MA},
+year = {1988},
+comment = { ISBN 0-534-91926-X },
+keyword = { statistics },
+}
+
+@ARTICLE{Hamlet77jul,
+author = {Hamlet, Richard G.},
+title = {{Testing programs with the aid of a compiler}},
+journal = {{IEEE Trans. Softw. Eng.}},
+volume = {SE-3},
+number = 4,
+month = jul,
+year = 1977,
+pages = {279-290},
+keyword = { software testing; mutation analysis; debugging; maintenance }
+}
+
+@ARTICLE{DeMillo78apr,
+author = {DeMillo, Richard A. and Lipton, Richard J. and Sayward, Frederick G.},
+title = {{Hints on Test Data Selection: Help for the Practicing Programmer}},
+journal = {Computer},
+volume = 11,
+number = 4,
+month = apr,
+year = 1978,
+pages = {34-41},
+comment = { Usually cited as first mutation analysis article. },
+keyword = { mutation analysis; software testing },
+}
+
+@inproceedings{vokolos,
+author = {Vokolos, F. I. and Frankl, P. G.},
+title = {Pythia: a regression test selection tool based on textual differencing},
+booktitle={{Proceedings of the 3rd International Conference on Rel., Quality \& Safety of Software-Intensive Sys. (ENCRESS '97)}},
+month = may,
+year = 1997
+}
+
+@inproceedings{thompson93jun,
+author = {Thompson, M.C. and Richardson, D.J. and Clarke, L.A.},
+title = {An information flow model of fault detection},
+booktitle= {{ACM International Symposium on Software Testing and Analysis}},
+month = jun,
+year = 1993,
+pages = {182-192}
+}
+
+@inproceedings{goradia93jun,
+author = {Goradia, T.},
+title = {Dynamic impact analysis: A cost-effective technique to enforce error-propagation},
+booktitle= {{ACM International Symposium on Software Testing and Analysis}},
+month = jun,
+year = 1993,
+pages = {171-181}
+}
+
+
+@article{voas92aug,
+author = {Voas, J.},
+title = {{PIE: A dynamic failure-based technique}},
+journal = {{IEEE Transactions on Software Engineering}},
+month = aug,
+year = 1992,
+pages = {717-727}
+}
+
+@article{munson92may,
+author = {Munson, J.C. and Khoshgoftaar, T.M.},
+title = {The detection of fault-prone programs},
+journal = {{IEEE Transactions on Software Engineering}},
+month = may,
+year = 1992,
+pages = {423-433}
+}
+
+@TECHREPORT{rothermelpriotechrep,
+author = {Rothermel, G. and Untch, R.H. and Chu, C. and Harrold, M. J.},
+title = {{Test case prioritization}},
+institution = {Oregon State University},
+number = {{99-60-12}},
+month = dec,
+year = 1999
+}
+
+@TECHREPORT{rothermelpriotechrep2,
+author = {Elbaum, S. and Malishevsky, A. G. and Rothermel, G.},
+title = {{Prioritizing test cases for regression testing}},
+institution = {Oregon State University},
+number = {{00-60-03}},
+month = feb,
+year = 2000
+}
+
+@ARTICLE{avritzer95sep,
+author = {Avritzer, A. and Weyuker, E. J.},
+title = {{The automatic generation of load test suites
+and the assessment of the resulting software}},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 21,
+number = 9,
+month = sep,
+year = 1995,
+pages = {705-716}
+}
+
+@ARTICLE{hamlet87apr,
+author = {Hamlet, R. G.},
+title = {{Probable correctness theory}},
+journal = {{Information Processing Letters}},
+volume = {25},
+month = apr,
+year = 1987,
+pages = {17-25}
+}
+
+@BOOK{musa99,
+author = {Musa, J.},
+title = {Software Reliability Engineering},
+publisher = {McGraw-Hill},
+address = {New York, NY},
+year = {1999},
+}
+
+@INPROCEEDINGS{lanubile95,
+author = {Lanubile, F. and Lonigro, A. and Visaggio, G.},
+title = {{Comparing models for identifying fault-prone software components}},
+booktitle = {{Proceedings of the 7th International Conference on Software Engr. and Knowledge Engr.}},
+month = jun,
+year = 1995,
+pages = {12-19}
+}
+
+@BOOK{schulmeyer99,
+author = {Schulmeyer, G. and McManus, J.},
+title = {Handbook of Software Quality Assurance},
+edition = {3rd},
+publisher = {Prentice Hall},
+address = {New York, NY},
+year = {1999},
+}
+
+@ARTICLE{rothermel00jun,
+author = {Rothermel, G. and Harrold, M. J. and Dedhia, J.},
+title = {{Regression test selection for C++ programs}},
+journal = {{Journal of Software Testing, Verification, and Reliability}},
+volume = 10,
+number = 2,
+month = jun,
+pages = {77-109},
+year = 2000
+}
+
+@INPROCEEDINGS{rothermel98nov,
+author = {Rothermel, G. and Harrold, M. J. and Ostrin, J. and Hong, C.},
+title = {{An empirical study of the effects of minimization on the
+fault detection capabilities of test suites}},
+booktitle = {{Proceedings of the International Conference on Software Maintenance}},
+month = nov,
+year = 1998,
+pages = {34--43}
+}
+
+@article{wong98apr,
+author = {Wong, W. E. and Horgan, J. R. and London, S. and Mathur, A. P.},
+title = {Effect of test set minimization on fault detection effectiveness},
+journal = {{Software -- Practice and Experience}},
+volume = {28},
+number = {4},
+pages = {347-369},
+year = 1998,
+month = apr
+}
+
+@inproceedings{wong95apr,
+author = {W. E. Wong and J. R. Horgan and S. London and A. P. Mathur},
+title = {Effect of test set minimization on fault detection effectiveness},
+booktitle = {{Proceedings of the International Conference on Software Engineering}},
+pages = {41-50},
+month = apr,
+year = 1995,
+}
+
+@inproceedings{wong97aug,
+author = {Wong, W. E. and Horgan, J. R. and Mathur, A. P. and Pasquini, A.},
+title = {Test set size minimization and fault detection effectiveness: A case study in a space application},
+booktitle = {{Proceedings of the 21st Annual International Computer Software \& Applications Conference}},
+pages = {522-528},
+month = aug,
+year = 1997,
+}
+
+@INPROCEEDINGS{offutt95jun,
+author = {Offutt, J. and Pan, J. and Voas, J. M.},
+title = {{Procedures for reducing the size of coverage-based test sets}},
+booktitle = {{Proc. Int'l. Conf. Testing Comp. Softw.}},
+pages = {111--123},
+month = jun,
+year = 1995
+}
+
+@BOOK{kit95,
+author = {Kit, E.},
+title = {{Software Testing in the Real World}},
+publisher = {Addison-Wesley},
+address = {Reading, MA},
+year = 1995,
+}
+
+@ARTICLE{elbaum02feb,
+author = {Elbaum, S. and Malishevsky, A. G. and Rothermel, G.},
+title = {{Test case prioritization: A family of empirical studies}},
+journal = {{IEEE Transactions on Software Engineering}},
+month = feb,
+year = 2002,
+volume = 28,
+number = 2,
+pages = {159-182}
+}
+
+@INPROCEEDINGS{hildebrandt00aug,
+author = {Hildebrandt, R. and Zeller, A.},
+title = {{Minimizing failure-inducing input}},
+booktitle = {{Proceedings of the International Symposium on Software Testing and Analysis}},
+month = aug,
+year = 2000,
+pages = {135-145}
+}
+
+@article{harrold01mar,
+author = {Harrold, M. J. and Rosenblum, D. and Rothermel, G. and Weyuker, E.},
+title = {Empirical studies of a prediction model for regression test selection},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 27,
+number = 3,
+month = mar,
+year = 2001,
+pages = {248-263}
+}
+
+@BOOK{montgomery97,
+author = {Montgomery, D. C.},
+title = {{Design and Analysis of Experiments}},
+publisher = {John Wiley and Sons},
+address = {New York},
+edition = {Fourth},
+year = {1997}
+}
+
+@BOOK{ramey98,
+author = {Ramey, C. and Fox, B.},
+title = {{Bash Reference Manual}},
+edition = {2.2},
+publisher = {O'Reilly \& Associates, Inc.},
+address = {Sebastopol, CA},
+year = {1998}
+}
+
+@BOOK{kaner99,
+author = {Kaner, C. and Falk, J. and Nguyeen, H. Q.},
+title = {{Testing Computer Software}},
+publisher = {Wiley and Sons},
+address = {New York},
+year = {1999}
+}
+
+@BOOK{binder00,
+author = {Binder, R.},
+title = {{Testing Object-Oriented Systems: Models, Patterns, and Tools. Addison-Wesley}},
+publisher = {Addison Wesley},
+address = {Reading, MA},
+year = {2000}
+}
+
+@BOOK{libes96nov,
+author = {Libes, D.},
+title = {{Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs}},
+publisher = {O'Reilly \& Associates, Inc.},
+address = {Sebastopol, CA},
+month = nov,
+year = {1996}
+}
+
+@article{bach96oct,
+author = {Bach, J.},
+title = {Useful features of a test automation system (part III)},
+journal = {{Testing Techniques Newsletter}},
+publisher = {Software Research, Inc.},
+month = oct,
+year = 1996
+}
+
+@INPROCEEDINGS{elbaumclic,
+author = {Elbaum, S. and Munson, J. and Harrison, M.},
+title = {{CLIC: A tool for the measurement of software system dynamics}},
+booktitle = {{SETL Technical Report - TR-98-04.}},
+month = {04},
+year = {1998}
+}
+
+@MISC{gzip,
+  author =       "Jean-loup Gailly ",
+  title =        "Gzip Web Site",
+  howpublished =       "http://www.gzip.org"
+}
+
+@MISC{msofttmt,
+  author =       "Mircrosoft",
+  title =        "Threat Modeling Tool Web Page",
+  howpublished =  "http://www.microsoft.com/downloads/details.aspx?FamilyID=62830f95-0e61-4f87-88a6-e7c663444ac1\&displaylang=en"
+}
+
+@MISC{javaxml,
+  author =       "Sun Mircosystems",
+  title =        "Java XML Parsers",
+  howpublished =  "http://java.sun.com/javase/6/docs/api/javax/xml/parsers/package-summary.html"
+}
+
+@MISC{oscommerce,
+  title =       {{osCommerce web page}},
+  howpublished =  "http://www.oscommerce.com/"
+}
+
+@MISC{phpscheduleit,
+  title =       {{phpScheduleIt web page}},
+  howpublished =  "http://phpscheduleit.org/"
+}
+
+@MISC{mambo,
+  title =       {{Mambo web page}},
+  howpublished =  "http://mambo-foundation.org/"
+}
+
+@MISC{mantis,
+  title =       {{Mantis web page}},
+  howpublished =  "http://www.mantisbt.org/"
+}
+
+@MISC{drupal,
+  title =       "Drupal web page",
+  howpublished =  "http://www.drupal.org/"
+}
+
+@MISC{selenium,
+  title =        "Selenium Web Page",
+  howpublished =  "http://seleniumhq.org/projects/"
+}
+
+@MISC{perlcpan,
+  title =        "Perl CPAN Modules",
+  howpublished =  "http://www.cpan.org/modules/index.html"
+}
+
+@MISC{umlspec,
+  title =        "UML Specification",
+  howpublished =  " http://www.omg.org/technology/documents/formal/uml.htm"
+}
+
+@INPROCEEDINGS{harrold01oopsla,
+author = {Harrold, M. J. and Jones, J. and Li, T. and
+Spoon, S. and Gujarathi, A.},
+title = {{Regression test selection for Java software}},
+booktitle = {{Proceedings of the ACM Conference on Object Oriented Programming Systems, Languages, and Applications}},
+pages = {312-326},
+month = oct,
+year = 2001
+}
+
+@article{graves01apr,
+author = {Graves, T. L. and Harrold, M. J. and Kim, J.-M. and
+Porter, A. and Rothermel, G.},
+title = {An empirical study of regression test selection techniques},
+journal = {{ACM Transactions on Software Engineering Methodology}},
+volume = 10,
+number = 2,
+month = apr,
+year = 2001,
+pages = {184-208}
+}
+
+@INPROCEEDINGS{agrawal90, 
+author= {Agrawal, H. and Horgan, R.},
+title= {Dynamic Program Slicing}, 
+booktitle= {SIGPLAN Conference on Programming Languages, Design and
+Implementation}, 
+month= jun, 
+year=1990,
+pages = {246-256}
+} 
+
+@article{ammons97,
+    author = "Glenn, A. and Ball, T. and Larus, J.",
+    title = "Exploiting Hardware Performance Counters with Flow and Context Sensitive Profiling",
+    journal = "ACM SIG{\-}PLAN Notices",
+    volume = "32",
+    number = "5",
+    isbn = "0-89791-907-6",
+    pages = "85--96",
+    year = "1997"
+}
+
+@ARTICLE{anderson97, author={Anderson, J. and Berc, L.},
+title={Continuous Profiling: Where have all the cycles gone},
+journal={ACM Transactions on Computer Systems}, volume=15,
+number=4, month=nov, year=1997, pages={357-390}}
+
+
+
+@MISC{aspectj, author = { Kiczales, D.}, title = {AspectJ:
+Crosscutting Objects for Better Modularity}, howpublished =
+{{http://aspectj.org}}, month = jun, year = 2002 }
+
+
+@INPROCEEDINGS{ATOM, author={Srivastava, A. and Eustace, A.},
+title={ATOM - A System for Building Customized Program Analysis
+Tools}, booktitle={Proceedings on the Symposium on Programming
+Language Design and Implementation}, year=1994, pages={196-205}}
+
+@article{baker90jul, author = {Baker, A. and Bieman, J.  and
+Fenton, N. and Gustafson, D. and Melton, A. and Whitty, R.}, title
+= {Philosophy for software measurement}, journal = {J. Sys.
+Softw.}, volume = {12}, number = {3}, pages = {277-281}, year =
+1990 }
+
+@INPROCEEDINGS{ball92, author={Ball, T. and Laurus, J.},
+title={Optimally profiling and tracing programs},
+booktitle={Proceedings on the 19th Annual Symposium on Principles
+of Programming}, month=aug, year=1992, pages={59-70}}
+
+@ARTICLE{ball99, author={Ball, T. }, title={The Concept of Dynamic
+Analysis}, journal={ACM SIGSOFT Software Engineering Notes - FSE},
+year=1997, volume=24, number=6, pages={216-234}}
+
+@ARTICLE{basili87, author = {Zweben, S.  and Heym, W.  and
+Kimmich, J.}, title = {{Systematic testing of data abstractions
+based on software specifications}}, journal = {{Journal of
+Software Testing, Verification and Reliability}}, volume = 1,
+number = 4, pages = {39-55}, year = 1992 }
+
+@INPROCEEDINGS{basili96may, author={Basili, V.}, title={The Role
+of Experimentation in Software Engineering: Past, Current, and
+Future}, booktitle={Proceedings on the International Conference on
+Software Engineering}, month=may, year=1996, pages={15-29}}
+
+
+@MISC{bcel02, author = { Dahm, M. and Van Zyl, J. }, title = {Byte
+Code Engineering Library }, howpublished =
+{{http://jakarta.apache.org/bcel/}}, month = jun, year = 2002 }
+
+@INPROCEEDINGS{binkley98apr, author = {Binkley, D.}, title =
+{{Validation of the coupling dependency metric as a predictor of
+run-time failures and maintenance measures}}, booktitle =
+{Proceedings of the International Conference of Software
+Engineering}, pages = {352-355}, month = apr, year = 1998 }
+
+@MISC{bodyknowledge, author = { ACM and IEEE Software Engineering
+Committee}, title = {Guide to the Software Engineering Body of
+Knowledge}, howpublished = {{www.swebok.org}}, month = apr, year =
+2001 }
+
+@BOOK{boehm81, author = {Boehm, B.}, title = {Software Engineering
+Economics}, publisher = {Prentice Hall}, address = {New York, NY},
+year = 1981 }
+
+@INPROCEEDINGS{briand99may, author = {Briand, L. and Wust, J. and
+Ikonomovski, S. and Lounis, H.}, title = {{Investigating quality
+factors in object oriented designs: an industrial case study}},
+booktitle = {Proceedings of the International Conferenece on
+Software Engineering}, pages = {345-354}, month = may, year = 1999
+}
+
+@article{ buck00,
+    author = "Buck, B. and Hollingsworth, J.",
+    title = "An {API} for Runtime Code Patching",
+    journal = "The International Journal of High Performance Computing Applications",
+    volume = "14",
+    number = "4",
+    month = "Winter",
+    pages = "317--329",
+    year = "2000"
+}
+
+@INPROCEEDINGS{bush90, author = {Bush, M}, title = {{Improving
+Software Quality: The Use of Formal Inspections at the Jet
+Propulsion Laboratory}}, booktitle = {Proceedings of the
+International Conference of Software Engineering}, pages =
+{196-199}, month = jun, year = 1990 }
+
+@MISC{businessweek99, author = {Gross, N. and Stepanek, M. and
+Port, O. and Carey, J.}, title = {Software Hell}, howpublished =
+{{Business Week International Edition}}, month = dec, year = 1999}
+
+@article{card98,
+    author = "Card, D.",
+    title = "Learning from our mistakes with defect causal analysis",
+    journal = "IEEE Software",
+    volume = "15",
+    number = "1",
+    pages = "56-63",
+    month = jan,
+    year = "1998"
+}
+
+@article{carver91,
+    author = "R. Carver",
+    title = "Replay and testing for concurrent programs",
+    journal = {{IEEE Transactions on Software Engineering}},
+    month = mar,
+    year =1991,
+    pages = {66-74}
+}
+
+@article{chillarege92nov, author = {Chillarege, R. and Bhandari,
+I. and Chaar, J. and Halliday, M. and Moebus, D. and Ray, B. and
+Wong M.Y. }, title = {Orthogonal defect classification - A concept
+for in-process measurement}, journal = ieeese, volume = 18, number
+= 11, pages = {943-956}, month = nov, year = 1992 }
+
+@MISC{ciac99, author = {Computer Incident Advisory Center}, title
+= {E-Mail Buffer Overflow}, howpublished =
+{{www.ciac.org/cgi-bin/index/bulletins}}, year = 1999}
+
+@MISC{cnn99, author = {CNN}, title ="Silence on Mars as NASA's
+last silver bullet misses mark", howpublished =
+{cnn.com/1999/TECH/space/12/07/mars.lander. 02/\#2}, month = dec,
+year = 1999}
+
+@MISC{compuworld00, author = {Computer World}, title = {Windows
+2000 successor enters beta\-testing}, howpublished =
+{www.itworld.com/Comp/2221/CWSTO53170}, month = nov, year = 2000}
+
+@INPROCEEDINGS{dickinson01, author = {Dickinson, W. and Leon, D.
+and Podgursky, A.}, title = {{Finding Failures by Cluster Analysis
+of Execution Profiles}}, booktitle = {{Proceedings of the
+International Conference of Software Engineering}}, month = may,
+year = 2001, pages = {339-348} }
+
+@INPROCEEDINGS{dunbar01mar, author = {Dunbar, S. and Goddard, S.
+and Henninger, S. and Elbaum, S.},title= {{Bootstrapping the
+Software Design Studio}}, booktitle={Proceedings of the NCIIA
+Annual Conference for Technology, Products and Ventures:
+Creativity and Innovation in Higher Education}, month=mar,
+year=2001, pages={179-188}}
+
+@article{elbaum00feb, author = {Elbaum, S. and Munson, J.}, title
+= {Evaluating regression test suites based on their fault exposure
+capability}, journal = "J. of Softw. Maint.: Research
+and Practice", volume=3, number=12, year=2000, pages={171-184} }
+
+@INPROCEEDINGS{elbaum00mar, author = {Elbaum, S. and Munson, J.},
+title = {{Investigating software failures with a software black box}}, 
+booktitle = {Proceedings of the IEEE Aerospace Conference-
+CD}, month = mar, year = {{2000}} }
+
+@INPROCEEDINGS{elbaum00oct, author = {Elbaum, S. and Munson, J.},
+title= {{Software black box: An alternative mechanism for failure analysis}}, 
+booktitle={Proceedings of the International  Symposium on
+Software Reliability Engineering}, month=oct,
+year=2000, pages={142-147}}
+
+@INPROCEEDINGS{elbaum01feb, author = {Elbaum, S. and Narla, S.},
+title= {{A methodology for Operational Profile Refinement}},
+booktitle={Proceeedings of the Annual Reliability and
+Maintainability Symposium}, month=feb, year=2001, pages={365-376}}
+
+@INPROCEEDINGS{elbaum01nova, 
+author = {Elbaum, S. and Gable, D.  and Rothermel, G.}, 
+title = {{The impact of software evolution on code coverage}}, 
+booktitle = {{Proceedings of the International
+Conference of Software Maintenance}}, 
+pages={169-179}, 
+month = nov, 
+year = 2001 }
+
+@INPROCEEDINGS{elbaum01novb, author = {Elbaum, S.}, title = {{An
+Experimental Infrastructure for Evaluating Failure Analysis
+Techniques for Released Software}}, note = {Proceedings of the
+Workshop of Empirical Studies in Software Maintenance}},
+pages={3-7},month = nov, year= 2001 }
+
+@TECHREPORT{elbaum98aprclic, author = {Elbaum, S. and Munson, J.
+and Harrison, M.}, title = {{CLIC: a tool for the measurement of
+software system dynamics}}, institution = {University of Idaho},
+type = {Technical Report}, number = {TR-CS-98-04}, month = apr,
+year = 1998}
+
+@TECHREPORT{elbaum98feb, author = {Elbaum, S. and Munson, J.},
+title = {{A standard for the measurement of C complexity
+attributes}}, institution = {University of Idaho}, type =
+{Technical Report}, number = {TR-CS-98-02}, month = feb, year =
+1998 }
+
+@INPROCEEDINGS{elbaum98novchurn, author = {Elbaum, S. and Munson,
+J.}, title = {{Code churn: A measure for estimating the impact of
+code change}}, booktitle = {Proceedings of the International
+Conference on Software Maintenance}, pages = {24-31}, month = nov,
+year = 1998 }
+
+@INPROCEEDINGS{elbaum98novmetrics, author = {Elbaum, S. and
+Munson, J.}, title = {{Getting a handle on the fault injection
+process: Validation of measurement tools}}, booktitle =
+{Proceedings of the International Symposium of Software Metrics},
+pages = {133-141}, month = nov, year = 1998 }
+
+@INPROCEEDINGS{elbaum99april, author = {Elbaum, S. and Munson,
+J.}, title = {{Intrusion detection through dynamic software
+measurement}}, booktitle = {Workshop on Intrusion Detection and
+Network Monitoring}, pages = {41-50}, month = apr, year = 1999 }
+
+@INPROCEEDINGS{elbaum99jan, author = {Munson, J. and Elbaum, S.},
+title = {{Software reliability as a function of user execution
+patterns}}, booktitle = {Proceedings of the Hawaii International
+Conference on System Science}, pages = {181}, month = jan, year =
+1999 }
+
+@PHDTHESIS{elbaum99jul,
+  author =       "Elbaum, S.",
+  title =        "Conceptual framework for a software black box",
+  school =       "University of Idaho",
+  year =         "1999",
+  type =  {{Ph.D.} Dissertation},
+  month =        "July"
+}
+
+@article{elbaum99sept, author = {Elbaum, S. and Munson, J.}, title
+= {Software evolution and the code fault introduction process},
+journal = {{Empirical Software Engineering Journal}}, volume = 4,
+number = 3, pages = {241-262}, month = sep, year = 1999 }
+
+@INPROCEEDINGS{elbaum01may, 
+author={Elbaum, S. and Malishevsky, A. and Rothermel, G.}, 
+title={{Incorporating varying test costs and
+fault severities into test case prioritization}},
+booktitle={{Proceedings of the International Conference on 
+Software Engineering}}, 
+month=may, 
+year=2001, 
+pages={329-338}}
+
+@TECHREPORT{elbaum02jun,
+  AUTHOR =       "Elbaum, S. and Kallakuri, P. and Malishevsky, A. and Rothermel, G. and Kanduri, S.",
+  TITLE =        "Understanding the effects of Changes on Regression Testing",
+  INSTITUTION =  "University of Nebraska - Lincoln",
+  YEAR =         "2002",
+  type =         "Technical Report",
+  number =       "020701",
+  address =      "Computer Science and Engineering Department",
+  month =        "July",
+}
+
+@INPROCEEDINGS{elbaum02nov, author = {Liu, X. and Elbaum, S. },
+title = {{On the Use of Empirical Studies to Compare Failure
+Analysis Techniques}}, booktitle = {{Proceedings of the Workshop
+of Empirical Studies in Software Maintenance}}, month = nov, year
+= 2002 }
+
+@INPROCEEDINGS{kanduri02nov, author = {Kanduri, S. and Elbaum,
+S.}, title = {{An empirical study of tracing techniques from a
+failure analysis perspective}}, booktitle = {{Proceedings of the
+International Symposium of Software Reliability Engineering}},
+month = nov, year = 2002,  pages = {280-291}}
+
+@MISC{empiricalresearch98, author = {Brilliant, S. and Knight,
+J.}, title = {Empirical Research in Software Engineering},
+howpublished = {NSF Workshop Final report}, month = dec, year =
+1998 }
+
+@INPROCEEDINGS{ernst00may, author={Ghosh, S. and Mathur, A.},
+title={{Quickly detecting relevant program invariants}},
+booktitle={{Proceedings of the Internation Conference of Software
+Engineering}}, month=may, year=2000, pages={449-458}}
+
+@BOOK{fenton98book, author = {Fenton, N. and Pfleeger, S.}, title
+= {Software Metrics - A Rigorous and Practical Approach},
+publisher = {PWS Publishing Company}, address = {Boston, MA}, year
+= 1998 }
+
+@article{fenton94mar, author = {Fenton, N.}, title = {Software
+measurement: A necessary scientific basis}, journal = ieeese,
+volume = 20, number = 3, pages = {199-206}, month = mar, year =
+1994 }
+
+@article{fenton00, author = {Fenton, N. and Ohlsson, N.}, title =
+{Quantitative Analysis of Faults and Failures in a Complex
+Software System}, journal = {{IEEE Transactions on Software Engineering}},
+volume = 26, number = 8, pages = {797-814}, month =
+jul, year = 2000 }
+
+@article{fenton99, author = {Fenton, N. and Neil, M.}, title = {A
+Critique of Software Defect Prediction Models}, 
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 25, number = 5,
+pages = {675-689}, month = jul, year = 1999}
+
+
+@MISC{gamma,
+  author =       "Harrold, M. and Lipton, R. and Orso, A.",
+  title =        "GAMMA: Continuous Evolution of Software
+after Deployment",
+  howpublished = "http://www.cc.gatech.edu/aristotle/Research/Projects/gamma.html",
+  year =         "2002"
+}
+
+@INPROCEEDINGS{ghosh99, author={Ghosh, S. and Mathur, A.},
+title={{Issues in Testing Distributed Component-Based Systems}},
+booktitle={{ First ICSE Workshop on Testing Distributed
+Component\-Based Systems;}{www.serc.net}}, month=may, year=1999}
+
+@article{gorlick91,
+    author = "Michael M. Gorlick",
+    title = "The Flight Recorder: An Architectural Aid for System Monitoring",
+    journal = "Proceedings of the ACM/ONR Workshop on Parallel and Distributed Debugging, in ACM SIGPLAN Notices",
+    volume = "26",
+    number = "12",
+    pages = "175--183",
+    year = "1991"
+}
+
+@ARTICLE{graham82, author={Graham, S. and McKusick, M.},
+title={Gprof: a call graph execution profiler}, journal={ACM
+SIGPLAN}, volume=17, number=6, month=jun, year=1982,
+pages={120-126}}
+
+@PHDTHESIS{hall97april,
+  author =       "Hall, G.",
+  title =        "Usage patterns: Extracting system functionality from observed profiles",
+  school =       "University of Idaho",
+  year =         "1997",
+  type =         "Computer Science",
+  month =        "April",
+  keywords =     "software reengineering, reliability, software measurement",
+}
+
+@INPROCEEDINGS{hamlet93june, author = {Hamlet, D. and Voas, J.},
+title = {{Faults on its sleeve: Amplifying software reliability
+testing}}, booktitle = {Proceedings of the International Symposium
+on Software Testing and Analysis}, pages = {89-98}, month = june,
+year = 1993 }
+
+
+
+@INPROCEEDINGS{harrold95mar, author = {Harrold, M. and Larsen, L.
+and Lloyd, J. and Nedved, D. and Page, M. and Rothermel, G. and
+Singh, M. and Smith, M.}, title = {{Aristotle: A system for the
+development of program-analysis-based tools}}, booktitle =
+{{Proceedings of the Annual Southeast Conference}}, month = mar,
+pages = {110-119}, year = 1995 }
+
+@article{hatton99, author = {Hatton, L.}, title = {Repetitive
+failure, feedback and the lost art of diagnosis}, month = jan,
+year = {1999}, pages = {183-188}, journal = {Journal of Systems
+and Software}, volume=47, number={2-3}}
+
+@article{hatton01, author = {Hatton, L.}, title = {Exploring the
+Role of Diagnosis in Software Failure}, journal = {IEEE Software},
+volume = 18, number = 4, pages = {34-39}, month = jul, year =
+2001}
+
+@INPROCEEDINGS{hildebrandt00, author = {Hildebrandt, R. and
+Zeller, A.}, title = {{Simplifying Failure-Inducing Input}},
+booktitle = {{Proceedings of the International Symposium if
+Software Testing and Analysis}}, month = aug, year = 2000, pages =
+{135-145} }
+
+
+@MISC{hollingsworth00,
+  author =       "Hollingsworth, J.",
+  title =        "DYNINST: An Application Program Interface (API) for Runtime Code Generation",
+  howpublished = "http://www.dyninst.org",
+  year =         "2000"
+}
+
+
+@TECHREPORT{horgan95feb, author = {Horgan, R. and Mathur, A. and
+Pasquini, A. and Rego, V.}, title = {{Perils of software
+reliability modeling}}, institution = {{Software Engineering
+Research Council}}, type = {Technical Report}, address = {Purdue
+University}, number = {{SERC-TR-160-P}}, month = feb, year = 1995
+}
+
+
+@BOOK{ieee93faults,
+  author =       "IEEE Standards Association",
+  title =        "Software Engineering Standards",
+  publisher =    "Institute of Electrical and Electronics Engineers",
+  year =         "1993",
+  volume =       "4",
+  series =       "Std. 1044: Classifications for Software Anomalies",
+  edition =      "1999",
+  isbn =         "0738115630",
+}
+
+@BOOK{ieee94quality,
+  author =       "IEEE Standards Association",
+  title =        "Software Engineering Standards",
+  publisher =    "Institute of Electrical and Electronics Engineers",
+  year =         "1992",
+  volume =       "3",
+  series =       "Std. 1061: Standard for Software Quality Methodology",
+  edition =      "1999",
+  isbn =         "0738115630",
+}
+
+@article{khoshgoftaar96jan, author = {Khoshgoftaar, T. and Allen,
+E.  and Kalaichelvan, K.  and Goel, N.}, title = {Early quality
+prediction: A case study in telecommunications}, journal = {{IEEE
+Software}}, volume = 13, number = 1, pages = {65-71}, month = jan,
+year = 1996 }
+
+@article{khoshgoftaar90feb, author = {Khoshgoftaar, T. and Munson,
+J.}, title = {Predicting software development errors using
+complexity metrics}, journal = {{Journal on Selected Areas in
+Communications}}, volume = 8, number = 2, pages = {253-261}, month
+= feb, year = 1990 }
+
+@INPROCEEDINGS{khoshgoftaar92, author = {Khoshgoftaar, T. and
+Munson, J.}, title = {{A measure of software system complexity and
+its relationship to faults}}, booktitle = {Proceedings of the
+International Simulation Technology Conference}, pages =
+{267-272}, year = 1990 }
+
+@INPROCEEDINGS{korel98, author = {Korel, B. and Al-Yami, A.},
+title = {{Automated regression test generation}}, booktitle =
+{{Proceedings of the International Symposium on Software Testing
+and Analysis}}, pages = {143-151}, year = 1998 }
+
+@INPROCEEDINGS{lanubile95, author = {Lanubile, F. and Lonigro, A.
+and Visaggio, G.}, title = {Comparing models for identifying
+fault-prone software components}, booktitle = {{Proceedings of the
+International Conference on Software Engineering and Knowledge
+Engineering}}, month = jun, year = 1995, pages = {312-319} }
+
+@INPROCEEDINGS{larus95, author = {Larus, J. and Schnarr, E.},
+title = {{EEL: Machine-independent executable editing}}, booktitle
+= {{SIGPLAN Conference on Programming Languages, Design and
+Implementation}}, month = jun, year = 1995, pages = {291-300} }
+
+@article{laski83may, author = {Laski, J.  and Korel, B.}, title =
+{A data flow oriented program testing strategy}, journal = ieeese,
+volume = {SE-9}, number = {3}, pages = {347-54}, month = may, year
+= 1983 }
+
+@INPROCEEDINGS{leszak00, author={Leszak, M. and Perry, D. and
+Stoll, D.}, title={{A case study in root cause defect analysis }},
+booktitle={{Proc. of the 22nd International Conference on Software
+Engineering and Knowledge Engineering}}, month=jun, year=2000,
+pages={428-427}}
+
+@article{leveson93, author = {Levenson, N. and Turner, C.}, title
+= {An Investigation of the Therac-25 Accidents}, month = jul, year
+= {1993}, pages = {18-41}, journal = {IEEE Computer}, number=7,
+volume=26 }
+
+@BOOK{lyu95sre,
+  author =       "Lyu, M.",
+  title =        "Handbook of Software Reliability Engineering",
+  publisher =    "IEEE Computer Society Press",
+  year =         "1995",
+  edition =      "1995",
+  isbn =         "007039400",
+}
+
+@INBOOK{lyu96,
+    author = "Lyu, M.",
+    title = "Hanbook of Software Reliability Engineering",
+    chapter = "1: Introduction",
+    publisher = "McGraw-Hill",
+    year = 1996,
+    pages = "1-25"
+}
+
+@INPROCEEDINGS{malishevsky02oct,
+author = {Malishevsky, A. G. and Rothermel, G. and Elbaum, S.},
+title = {{Modeling the cost-benefits tradeoffs for regression testing techniques}},
+booktitle= {{Proceedings of the International Conference on Software Maintenance}},
+month=oct,
+year=2002,
+pages={204-213}
+}
+
+@MISC{mapstext, author = {Rothermel, G. and Elbaum, S.}, title =
+{Handbook of subject preparation}, howpublished =
+{{mapstext.unl.edu-Infrastructure}}, month = jan, year = 2001 }
+
+@BOOK{marick99,
+  AUTHOR =       "Fewster, M. and Graham, D.",
+  TITLE =        "Software Test Automation: Effective Use of Test Execution Tools ",
+  PUBLISHER =    "Addison-Wesley",
+  month=          sep,
+  YEAR =         "1999",
+  isbn =         "0201331403"
+}
+
+@INPROCEEDINGS{menzies00, author = {Menzies, T. and Cukic, B. and
+Harhsinder, S. and Powell, J.}, title = {{Testing Nondeterminate
+Systems}}, booktitle = {{Proceedings International Symposium on
+Software Reliability Engineering}}, month = oct, year = 2000,
+pages = {222-231}}
+
+@INPROCEEDINGS{modi01, author = {Modi, T.}, title = {{Dynamic
+Logging \& the CORBA Notification Service}}, booktitle = {{Dr.
+Dobb's Journal}}, month = mar, year = 2001, pages = {42-50}}
+
+@BOOK{montgomery97, author = {Montgomery, D.}, title = {Design and
+Analysis of Experiments}, publisher = {John Wiley \& Sons},
+address = {New York, NY}, edition=4, year = 1997 }
+
+@article{musa96nov, author = {Musa, J.}, title = {Software
+reliability engineering testing}, journal = {Computer}, volume =
+{29}, number = {11}, pages = {61-68}, year = 1996 }
+
+@INPROCEEDINGS{musa92apr, author = {Musa, J. }, title = {The
+operational profile in software reliability engineering: an
+overview}, booktitle = {Proceedings of International Symposium on
+Software Reliability Engineering}, pages = {140-154}, month = apr,
+year = 1992 }
+
+@INBOOK{ musa96operational,
+    author = "Musa, J. and Fuoco, G. and Irving, N. and Kropfl, D.",
+    title = "Hanbook of Software Reliability Engineering",
+    chapter = "5: The Operational Profile",
+    publisher = "McGraw-Hill",
+    year = 1996,
+    pages = "167-215"
+}
+
+@article{musa89feb, author = {Musa, J.}, title = {Software faults,
+software failures, and software reliability modeling}, journal =
+ieeesoft, volume = {6}, number = {2}, pages = {85-91}, month =
+feb, year = 1996 }
+
+
+@INPROCEEDINGS{munson96nov, author = {Munson, J.}, title = {A
+functional approach to software reliability modeling}, booktitle =
+{Proceedings of the Conference on Mathematical and Scientific
+Computing: Quality of Numerical Software}, pages = {61-76}, month
+= nov, year = 1996 }
+
+@INPROCEEDINGS{munson98march, author = {Munson, J. and Elbaum, S.
+and Karcich, R. and Wilcox, J.}, title = {{Software risk
+assessment through software measurement and modeling}}, booktitle
+= {Proceedings of the IEEE Aerospace Conference}, pages =
+{137-147}, month = mar, year = 1998 }
+
+@article{munson96dyn, author = {Munson, J. and Hall, G.}, title =
+{Estimating test effectiveness with dynamic complexity
+measurement}, journal = {Empirical Software Engineering Journal},
+volume = {1}, number = {3}, pages = {279-305}, year = 1996 }
+
+@article{munson90mar, author = {Munson, J. and Khoshgoftaar, T.},
+title = {Regression modeling of software quality: An empirical
+investigation}, journal = {Journal of Information and Software
+Technology}, volume = {32}, number = {2}, pages = {105-114}, month
+= mar, year = 1990 }
+
+@article{munson95, author = {Munson, J.}, title = {Software
+measurement: Problems and practice}, journal = {Annals of Software
+Engineering}, volume = {1}, number = {1}, pages = {255-285}, year
+= 1995 } @INPROCEEDINGS{munson96feb, author = {Munson, J.}, title
+= {{A software black box recorder}}, booktitle = {Proceedings of
+the IEEE Aerospace Conference}, pages = {309-320}, month = feb,
+year = 1996 }
+
+@INPROCEEDINGS{munson96mar, author = {Werries, D. and Munson, J.},
+title = {{Measuring software evolution}}, booktitle = {Proceedings
+of the International Symposium on Software Metrics}, pages =
+{41-51}, month = mar, year = 1996 }
+
+@TECHREPORT{munson97mar, author = {Munson, J. and Elbaum, S.},
+title = {{Software reliability as a measurement problem}},
+institution = {University of Idaho}, type = {Technical Report},
+number = {TR-CS-97-03}, month = mar, year = 1997, }
+
+@INPROCEEDINGS{munson90, author = {Munson, J. and Khoshgoftaar,
+T.}, title = {{The relative software complexity metric: A
+validation study}}, booktitle = {Proceedings of the Software
+Engineering Conference}, pages = {89-102}, year = 1990 }
+
+@BOOK{neumann95, author = {Neumann, P.}, title = {Computer Related
+Risks}, publisher = {Addison-Wesley Publishing Company}, address =
+{New York, NY}, year = 1995 }
+
+@MISC{netscapefeedback, author = {Netscape}, title = {Netscape
+Quality Feedback System}, howpublished =
+{{home.netscape.com/communicator/navigator/v4.5/qfs1.html}}, month
+= aug, year = 2000 }
+
+@TECHREPORT{netzer94, author = {Netzer, R. and Weaver, M.}, title
+= {{Optimal tracing and incremental execution for debugging long
+running programs}}, institution = {Brown University}, type =
+{Technical Report}, number = {TR-CS9411}, month = mar, year = 1994
+}
+
+@INPROCEEDINGS{nikora98nov, author = {Nikora, A. and Munson, J.},
+title = {{Determining fault insertion rates for evolving software
+systems}}, booktitle = {{Proceedings of the International
+Symposium of Software Reliability Engineering}}, month = nov, year
+= 1998 }
+
+@INPROCEEDINGS{nikora98, author = {Nikora, A. and Munson, J.},
+title = {{Software evolution and the fault process}}, booktitle =
+{{Proceedings of the Annual Software Engineering Workshop,
+NASA/Goddard Space Flight Center}}, year = 1998 }
+
+@PHDTHESIS{nikora98dis,
+  author =       "Nikora, A.",
+  title =        "Software system defect content prediction from
+development process and product characteristics",
+  school =       "University of Southern California",
+  year =         "1998",
+  type =         "Department of Computer Science",
+  address =      "Los Angeles, CA",
+  month =        "",
+  keywords =     "reliability, software measurement",
+}
+
+@INPROCEEDINGS{olsson01, author = {Olsson, T. and Bauer, N. and
+Runeson, P. and Bratthall, L.}, title = {{An Experiment on
+Lead-Time Impact in Testing of Distributed Real-Time Systems}},
+booktitle = {Proceedings of the International Symposium of
+Software Metrics}, month = mar, year = 2001, pages = {159-169} }
+
+@MISC{palm01, author = {Palm}, title = {Developing for the Palm
+{OS}}, howpublished = {www.palmos.com/dev}, month = jul, year =
+2001 }
+
+@article{parnas72dec, author = {Parnas, D.L.}, title = {On the
+criteria to be used in decomposing systems into modules}, journal
+= {Communications of the ACM}, volume = 15, number = 12, pages =
+{1053-1058}, month = dec, year = 1972 }
+
+@INPROCEEDINGS{pavlopoulou99, author = {Pavlopoulou, C. and Young,
+M.}, title = {{Residual Test Coverage Monitoring}}, booktitle =
+{{Proceedings International Conference of Software Engineering}},
+month = may, year = 1999, pages = {277-284} }
+
+@MISC{peng93, author = {Peng, W. and Wallace, D.}, title =
+{Software Error Analysis}, howpublished = {{NIST Special
+Publication 500-209}}, month = mar, year = 1993 }
+
+@MISC{perpetualtesting, author = {University of Massachusetts
+Amherst and University of Oregon and University of California
+Irvine}, title = {Perpetual Testing Project},
+howpublished={{http://laser.cs.umass.edu/perptest/}}}
+
+@INPROCEEDINGS{perry93,
+author = {D. E. Perry and C. S. Stieg},
+title = {{Software faults in evolving a large, real-time system:
+          A case study}},
+booktitle = {{Eur. S.E. Conf.}},
+year = 1993
+}
+
+@INPROCEEDINGS{perry00, author = {Perry, D. and Porter, A. and
+Votta, L.}, title = {{Empirical Software Engineering: A Roadmap}},
+booktitle = {{Proceedings International Conference of Software
+Engineering}}, month = may, year = 2000, pages = {345-355} }
+
+@BOOK{peterson96, author = {Peterson, I.}, title = {Fatal Defect},
+publisher = {Vintage Books}, address = {New York, NY}, year =
+1996}
+
+@BOOK{petroski92, author = {Petroski, H..}, title = {To Engineer
+is Human}, publisher = {Vintage Books}, address = {New York, NY},
+year = 1992}
+
+@MISC{pine, author = {University of Washington}, title = {Pine
+Information Center},
+howpublished={{http://www.washington.edu/pine/}}}
+
+@INPROCEEDINGS{piwowarski93may, author = {Piwowarski, P. and Ohba,
+M. and Caruso, J.}, title = {{Coverage measurement experience
+during function test}}, booktitle = {{Proceedings of the 15th
+International Conference on Software Engineering}}, month = may,
+year = 1993, }
+
+@TECHREPORT{price98, author = {Price, N.}, title = {{New
+techniques for replay debugging}}, institution = {Brown
+University}, type = {Technical Report}, number = {TR-CS9800},
+month = may, year = 1998 }
+
+@inproceedings{raz02may,
+    author = "Raz, O. and Koopman, P. and Shaw, M.",
+    title = "Semantic Anomaly Detection in Online Data Sources",
+    booktitle = "Proceedings of the International Conference on Software Engineering",
+    publisher = "IEEE-ACM",
+    pages = "",
+    month=may,
+    year = "2002"
+}
+
+@INPROCEEDINGS{reiss01, author = {Reiss, S. and Renieris, M.},
+title = {{Encoding Program Executions}}, booktitle = {{Proceedings
+of the International Conference of Software Engineering}}, month =
+may, year = 2001, pages = {221-230} }
+
+@inproceedings{reps97,
+    author = "Reps, T. and Ball, T. and Das, M. and Larus, J.",
+    title = "The Use of Program Profiling for Software Maintenance with Applications to the Year 2000 Problem",
+    booktitle = "Proceedings of the~Sixth~European Software Engineering Conference~({ESEC}/{FSE} 97)",
+    publisher = "Springer--Verlag",
+    editor = "M. Jazayeri and H. Schauer",
+    pages = "432--449",
+    year = "1997"
+}
+
+@INPROCEEDINGS{ romer97,
+    author = "T. Romer and G. Voelker and D. Lee and A. Wolman and W. Wong and H. Levy
+      and B. Bershad and B. Chen",
+    title = "Instrumentation and Optimization of Win32/Intel Executables Using Etch",
+    booktitle="Proceedings of the USENIX Windows NT Workshop",
+    pages = {1-8},
+    month = aug,
+    year = "1997"
+}
+
+@INPROCEEDINGS{rosenblum97octemp, author = {Rosenblum, D. and
+Rothermel, G.}, title = {An empirical comparison of regression
+test selection techniques}, booktitle = {{Proceedings of the
+International Workshop for Empirical Studies of Software
+Maintenance}}, month = oct, year = 1997, pages = {89-94} }
+
+@ARTICLE{rosenblum97, author = {Rosenblum, D.S and Weyuker, E.J.},
+title = {{Lessons Learned from Regression Testing Case Study}},
+journal = {{Empirical Software Engineering Journal}}, volume = 2,
+number = 2, pages={188-191}, year = {1997} }
+
+@PHDTHESIS{rothermel96, author = {Rothermel, G.}, title =
+{Efficient, Effective Regression Testing Using Safe Test Selection
+Techniques}, school = {Clemson University}, type = {{Ph.D.}
+Dissertation}, month = may, year = 1996, }
+
+@INPROCEEDINGS{rothermel99sep,
+author = {Rothermel, G. and Untch, R. H. and Chu, C. and Harrold, M. J.},
+title = {{Test case prioritization: An empirical study}},
+booktitle = {{Proceedings of the International Conference on Software Maintenance}},
+month = sep,
+year = 1999
+}
+
+@ARTICLE{rothermel02dec,
+author = {Rothermel, G. and Harrold, M. J. and von Ronne, J. and Hong, C.},
+title = {{Empirical studies of test-suite reduction}},
+journal = {{Journal of Software Testing, Verification and Reliability}},
+volume = 4,
+number = 2,
+month = dec,
+year = 2002
+}
+
+@ARTICLE{rothermel01oct,
+author = {Rothermel, G. and Untch, R. and Chu, C. and Harrold, M. J.},
+title = {{Prioritizing test cases for regression testing}},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 27,
+number = 10,
+pages = {929-948},
+month = oct,
+year = 2001,
+}
+
+@INPROCEEDINGS{rothermel96nov, author = {Rothermel, G. and
+Harrold, M.}, title = {Experience with regression test selection},
+booktitle = {{Workshop on Empirical Studies of Software
+Maintenance}}, month = nov, year = 1996 }
+
+@INPROCEEDINGS{rothermel02may, author = {Rothermel, G. and Elbaum,
+S. and Malishevsky, A. and P. Kallakuri and B. Davia}, title="The
+Impact of Test Suite Granularity on the Cost-Effectiveness of
+Regression Testing", 
+booktitle = {Proceedings of the International Conference
+on Software Engineering }, 
+pages={}, month = may, year
+= 2002 }
+
+@BOOK{rumbaugh98, author = {Rumbaugh, J. and Jacobson, I. and
+Booch, G.}, title = {The Unified Modeling Language reference
+manual}, publisher = {Addison Wesley}, address = {Reading, MA},
+year = 1998}
+
+@article{savage97,
+    author = "Savage, S. and Burrows, M. and Nelson, G. and Sobalvarro, P. and Anderson, T.",
+    title = "{Eraser}: {A} Dynamic Data Race Detector for Multithreaded Programs",
+    journal = "ACM Transactions on Computer Systems",
+    volume = "15",
+    number = "4",
+    pages = "391--411",
+    year = "1997"
+}
+
+@BOOK{sahner96, author = {Sahner, R. and Trivedi, K. and
+Puliafito, A.}, title = {Performance and Reliability Analysis of
+Computer Systems}, publisher = {Kluwer Academic Publishers},
+address = {Norwell, MA}, year = 1996}
+
+@article{sharon96, author = {Sharon, D.}, title ={Meeting the
+Challenge of Software Maintenance}, month = jan, year = {1996},
+pages = {122-125}, journal = {IEEE Software}}
+
+@inproceedings{shaw00,
+    author = "Shaw, M.",
+    title = "Software engineering education: a roadmap",
+    booktitle = "International Software Engineering Conference - Future of Software Engineering",
+    pages = "371-380",
+    year = "2000",
+}
+
+@BOOK{stallman90feb, author = {Stallman, R.}, title = {Using and
+porting GNU CC}, publisher = {Free Software Foundation, Inc.},
+address = {Cambridge, MA}, year = 1990, }
+
+@INPROCEEDINGS{stevens00, author = {Stevens, J. and Chandra, P.
+and Podgurski, A.}, title = {{jRapture: A Capture/Replay Tool for
+Observation-Based Testing}}, booktitle = {{Proceedings of the
+International Symposium of Software Testing and Analysis}}, month
+= aug, year = 2000, pages = {158-167} }
+
+@inproceedings{tewary94nov, author = {Tewary, K. and Harrold, M.},
+title = {Fault modeling using the program dependence graph},
+booktitle = {IEEE International Symposium on Software
+Reliability}, pages = {126-135}, month = nov, year = 1994, }
+
+@ARTICLE{tichy98, author={Tichy, W.}, title={Should computer
+scientists experiment more?}, journal="IEEE Computer", volume=31,
+number=5, month= may, year=1998, pages={32-40}}
+
+@ARTICLE{tip95, author={Tip, F.}, title={A Survey of Slicing
+Techniques}, journal={Journal of Programming Languages}, volume=3,
+number=3, month= sep, year=1995, pages={121-189}}
+
+@MISC{traceback, author = {InCert}, title = {Rapid Failure
+Recovery to eliminate application downtime}, howpublished =
+{www.incert.com}, month = jun, year = 2001 }
+
+@BOOK{tsai95, author = {Tsai, J. and Yang, S.}, title =
+{Monitoring and Debugging of Distributed Real-Time Systems},
+publisher = {IEEE Computer Society Press}, address = {Los
+Alamitos, CA}, year = 1995, }
+
+@article{tsai90, author = "Tsai, J. and Fang, K. and Chen, H.",
+title = "A non-interference monitoring and replay mechanism for
+real-time software testing and debugging",
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 16, number = 8,
+pages={897-916}, month =aug, year = 1990}
+
+@INCOLLECTION{verner93, author = {Verner, J. and Todd, E.}, title
+= {{Experiences with the organization and assessment of group
+software development projects}}, editor = {Barta, B. Z. and Hung,
+S. L. and Cox, K. R.}, booktitle = {Software Engineering Education
+(A-40), IFIP Transactions}, pages = {309-315}, publisher =
+{Elsevier Science B.V.}, address = {North Holland}, year = 1993, }
+
+@INPROCEEDINGS{voas00jun, author = "Voas, J.", title = "Deriving
+Accurate Operational Profiles for Mass Marketed Software",
+booktitle=
+"http://wwwsel.iit.nrc.ca/projects/cots/icse2000wkshp/Papers/7.pdf",
+month=jun, year=2000}
+
+@INPROCEEDINGS{vonmayrhauser94sep, author = {von Mayrhauser, A.
+and Mraz, R. T. and Walls, J.}, title = {{Domain based regression
+testing}}, booktitle = {{Proceedings of the Conference on Software
+Maintenance - 1994}}, pages = {26-35}, month = sep, year = 1994 }
+
+@INPROCEEDINGS{wallace97, author = {Wallace, D. and Ippolito, L.
+and Hecht, H.}, title = {Error, Fault and Failure Data Collection
+and Analysis}, booktitle = {hissa.nist.gov/eff/qweff.html}, month
+= may, year = 1997,
+ }
+
+@article{weiser82jul, author = {Weiser, M.}, title = {Programmers
+use slices when debugging}, journal = {Communications of the ACM},
+volume = 25, number = 7, pages = {446-452}, month = jul, year =
+1982 }
+
+@article{weyuker96, author = {Weyuker, E.}, title = {Using Failure
+Cost Information for Testing and Reliability Assessment}, journal
+={ACM Transactions on Software Engineering and Methodology},
+volume = 5, number = 2, pages = {87-98}, month = apr, year = 1996
+}
+
+@article{weiser84jul, author =  {Weiser, M.}, title = {Program
+slicing},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 10, number = 4, pages = {352--357}, month = jul, year =
+1984, }
+
+@BOOK{west97, author = {West, M. and Harrison, J.}, title =
+{Bayesian Forecasting and Dynamic Models}, publisher = {Springer
+Verlag }, address = {New York, NY}, year = 1997 }
+
+@article{weyuker82, author = {Weyuker, E.}, title = {On testing
+non-testable programs}, journal = {The Computer Journal}, volume =
+{15}, number = {4}, pages = {465-470}, year = 1982, }
+
+@article{weyuker86dec, author = {Weyuker, E. }, title =
+{Axiomatizing software test data adequacy}, journal = ieeese,
+volume = {SE-12}, pages = {1128-1138}, month = dec, year = 1986 }
+
+@article{weyuker79, author = {Weyuker, E. }, title = {The
+applicability of program schema results to programs}, journal =
+{{International Journal of Computer and Information Science}},
+volume = 8, year = 1979, pages = {387-403}, }
+
+@MISC{weyukerissta, author = {Weyuker, E. }, title = {Empirical
+techniques for assessing testing strategies}, howpublished =
+{{(Panel discussion at the International Symposium on Software
+Testing and Analysis)}}, month = aug, year = 1994, }
+
+@incollection{white87, author = {L. White}, title = {Software
+Testing and Verification}, booktitle = {Advances in Computers},
+pages = {335-390}, publisher = {Academic Press, Inc}, address =
+{Boston, MA}, year = 1987, editor = {Marshall C. Yovits} }
+
+@ARTICLE{wilde95, author={Wilde, N. and Scully, M.},
+title={Software Reconnaissance: Mapping Program Features to Code},
+journal={Journal of Software Maintenance: Research and Practice},
+volume=7, number=1, month= jan, year=1995, pages={49-62}}
+
+@MISC{windowscrash00, author={Open Systems Resources, Inc.},
+title={Crash Dump Facility - CDF - },
+howpublished={www.osr.com/toolkits\_cdf.shtml}, month=jan,
+year=2000}
+
+@article{wirth71apr, author = {Wirth, N.}, title = {Program
+development by stepwise refinement}, journal = {Communications of
+the ACM}, volume = 14, number = 4, pages = {221-227}, month = apr,
+year = 1971 }
+
+@INPROCEEDINGS{wood97, author = {Wood, M. and Roper, M. and
+Brooks, A. and Miller, J.}, title = {{Comparing and combining
+software defect detection techniques: a replicated empirical
+study}}, booktitle = {Proceedings of the European Software
+Engineering Conference}, pages = {262-277}, month = sept, year =
+1997 }
+
+@BOOK{wolfram91, author = {Wolfram, S.}, title = {Mathematica: A
+System for Doing Mathematics on a Computer}, edition = {Second},
+publisher = {Addison-Wesley}, address = {Reading, MA}, year =
+{1991}, }
+
+@UNPUBLISHED{wu95, author = {Wu, W.}, title = {{Safe and precise
+test case selection in regression testing}}, note = {(Unpublished
+paper)}, month = jan, year = 1995 }
+
+@ARTICLE{yang91jul, author = {Yang, W.}, title = {{Identifying
+syntactic differences between two programs}}, journal = spe,
+volume = 21, number = 7, month = jul, year = 1991, pages =
+{739-755}, }
+
+@ARTICLE{yang92jul, author = {Yang, W. and Horwitz, S. and Reps,
+T.}, title = {{A program integration algorithm that accomodates
+semantics-preserving transformations}}, journal = {ACM
+Transactions on Software Engineering and Methodology}, volume = 1,
+number = 3, month = jul, year = 1992, pages = {311-54} }
+
+@INPROCEEDINGS{zelkowitz01, author = {Zelkowitz, M. and Rus, I.},
+title = {{Understanding IV \& V in a Safety Critical and Complex
+Evolutionary Environment:}{ The NASA Space Shuttle Program}},
+booktitle = {{Proceedings International Conference of Software
+Engineering}}, month = may, year = 2001, pages = {349-357} }
+
+@ARTICLE{zelkowitz98, author={Zelkowitz, M. and Wallace, D.},
+title={Experimental models for validating computer technology},
+journal="IEEE Computer", volume=31, number=5, month= may,
+year=1998, pages={23-31}}
+
+@BOOK{zuse98, author = {Zuse, H.}, title = {A Framework of
+Software Measurement}, publisher = {Walter de Gruyter}, address =
+{New York, NY}, year = 1998 }
+
+@ARTICLE{zweben92, author = {Zweben, S. and Heym, W. and Kimmich,
+J.}, title = {{Systematic testing of data abstractions based on
+software specifications}}, journal = {{Journal of Software
+Testing, Verification and Reliability}}, volume = 1, number = 4,
+pages = {39-55}, year = 1992 }
+
+
+@ARTICLE{elbaum04sep, 
+author = {S. Elbaum and G. Rothermel and S. Kanduri and A. G. Malishevsky}, 
+title = {{Selecting a cost-effective test case prioritization technique}}, 
+journal ={{Software Quality Journal}},
+pages ={},
+volume=12,
+number=3,
+year = "2004"}
+
+
+@article{boehm76dec,
+author = {Boehm, B. W.},
+title = {{Software engineering}},
+journal = {{IEEE Transactions on Computers}},
+volume = {C-25}, 
+number = 12,
+month = dec,     
+year = 1976,
+pages = {1226-1241}
+}
+
+@BOOK{lientz80,
+author = {Lientz, B. P. and Swanson, E. B.},
+title = {{Software Maintenance Management: A Study of the Maintenance of Computer Applications Software in 487 Data Processing Organizations}},
+publisher = {Addison-Wesley},
+address = {Reading, MA},
+year = {1980},
+}
+
+@article{nosek90,
+author = {Nosek, J. T. and Palvia, P.}, 
+title = {{Software maintenance management: Changes in the last decade}}, 
+journal = {{Journal of Software Maintenance Research and Practice}},
+volume = 2, 
+year = 1990,
+pages = {157-174}
+}
+
+@ARTICLE{martinig96oct,
+author = {Martinig, F.},
+title = {{Software testing: Poor consideration.}},
+journal = {{Testing Techniques Newsletter}},
+publisher = {{Software Research, Inc.}},
+month = oct,
+year = 1996,
+}
+
+
+@ARTICLE{elbaum03jun,
+author = {S. Elbaum and P. Kallakuri and A. G. Malishevsky and G. Rothermel and S. Kanduri}, 
+title = {{Understanding the effects of changes on the cost-effectiveness
+of regression testing techniques}}, 
+journal = {{Journal of Software Testing, Verification, and Reliability}},
+volume = {13}, 
+number = {2},
+month = jun, 
+year = 2003,     
+pages = {65-83}  
+}
+
+@INPROCEEDINGS{law03may, 
+author = {J. Law and G. Rothermel}, 
+title = {Whole program path-based dynamic impact analysis},
+booktitle = {{Proceedings of the International Conference on Software Engineering}}, 
+pages = {208-318}, 
+month = may,     
+year = 2003 
+}
+
+@INPROCEEDINGS{orso04may,
+author = {Orso, A. and Apiwattanapong, T. and Law, J. and Rothermel, G. and Harrold, M.J.},
+title = {{An empirical comparison of dynamic impact analysis algorithms}},
+booktitle = {Proceedings of the International Conference on Software Engineering},
+year = 2004,
+month = may
+}
+
+@INPROCEEDINGS{law03nov,
+author = {Law, J. and Rothermel, G.},
+title = {{Incremental dynamic impact analysis for evolving software systems}},
+booktitle = {Proceedings of the International Symposium on Software Reliability Engineering}, 
+year = 2003,
+month = nov
+}
+
+@misc{aristotle,
+key = {aristotle},
+author = {{Aristotle Research Group -- College of Computing, 
+Georgia Institute of Technology}},
+title = {\textsc{Aristotle}: {S}oftware {E}ngineering {T}ools},
+howpublished = {\url{http://www.cc.gatech.edu/aristotle/Tools/}},
+year = {2001},
+}
+
+@INPROCEEDINGS{sinha99may,
+author = {Sinha, S. and Harrold, M. J. and Rothermel, G.},
+title = {{System-dependence-graph-based slicing of programs with arbitrary 
+interprocedural control flow}},
+booktitle = {{Proceedings of the International Conference on Software Engineering}},
+month = may,
+year = 1999,
+}
+
+@article{harrold93julcdg,
+author = {Harrold, M. J. and Jones, J. A. and Rothermel, G.},
+title = {{Empirical studies of control dependence graph size for C programs}},
+journal = {{Empirical Software Engineering Journal}},
+volume = 3,
+number = 2,
+pages = {203-211},
+month = jul,
+year = 1993
+}
+
+@INPROCEEDINGS{harrold98mar,
+author = {Harrold, M. J. and Rothermel, G. and Sinha, S.},
+title = {{Computation of interprocedural control dependence}},
+booktitle = {{Proceedings of the International Symposium on Software Testing
+ and Analysis}},
+month = mar,
+pages = {11-21},
+year = 1998,
+}
+
+@article{sinha01apr,
+author = {Sinha, S. and Harrold, M. J. and Rothermel, G.},
+title = {{Computation of interprocedural control dependencies}},
+journal = {{ACM Transactions on Software Engineering and Methodology}},
+volume = 10,
+number = 2,
+month = apr,
+year = 2001,
+pages = {209-254}
+}
+
+@article{harrold00sep,
+author = {Harrold, M. J. and Rothermel, G. and Sayre, K. and Wu, R. and Yi, L.},
+title = {{An empirical investigation of the relationship between fault-revealing
+ test behavior and differences in program spectra}},
+journal = {{Journal of Software Testing, Verification, and Reliability}},
+volume = 10,
+number = 3,
+month = sep,
+year = 2000
+}
+
+@INPROCEEDINGS{harrold98jun,
+author = {Harrold, M. J. and Rothermel, G. and Wu, R. and Yi, L.},
+title = {{An empirical investigation of program spectra}},
+booktitle = {{Proceedings of the Workshop on Program Analysis 
+for Software Tools and Engineering}},
+month = jun,
+pages = {83-90},
+year = 1998
+}
+
+@INPROCEEDINGS{do98apr,
+author = {Do, H. and Bae, S. and Kim, S.},
+title = {{INAP protocol test suite verification method using 
+the IUT simulator for AIN system conformance testing}},
+booktitle = {{Lecture Notes in Computer Science, Springer}},
+month = apr,
+pages = {106-116},
+year = 1998
+}
+
+@INPROCEEDINGS{do97jul,
+author = {Do, H. and Bae, S. and Kim, S.},
+title = {{AIN protocol conformance test suite Generation 
+using formal methods}},
+booktitle = {{Lecture Notes in Computer Science, Springer}},
+month = jul,
+year = 1997
+}
+
+@INPROCEEDINGS{do96nov,
+author = {Do, H.},
+title = {A design and analysis of telecommunication protocol using
+object-oriented methodology},
+booktitle = {{The sixth workshop on Synthesis and System Integration of
+Mixed Technologies}},
+month = nov,
+year = 1996
+}
+
+@INPROCEEDINGS{do08nov,
+author = {Do, H. and Mirarab, S. and Tahvildari, L. and Rothermel, G.},
+title = {{An empirical study of the effect of time constraints 
+on the cost-benefits of regression testing}},
+booktitle = {{Proceedings of the ACM SIGSOFT Symposium on 
+Foundations of Software Engineering}}, 
+month = nov,
+year = 2008
+}
+
+@INPROCEEDINGS{do08jul,
+author = {Do, H. and Rothermel, G.},
+title = {{Using sensitivity analysis to create simplified 
+economic models for regression testing}},
+booktitle = {{Proceedings of the International Conference on 
+Software Testing and Analysis}},
+month = jul,
+year = 2008,
+pages = {51-61}
+}
+
+@INPROCEEDINGS{do06nov,
+author = {Do, H. and Rothermel, G.},
+title = {{An empirical study of regression testing techniques 
+incorporating context and lifecycle factors and improved 
+cost-benefit models}},
+booktitle = {{Proceedings of the ACM SIGSOFT Symposium on 
+Foundations of Software Engineering}}, 
+month = nov,
+year = 2006
+}
+
+@article{do06sep,
+author = {Do, H. and Rothermel, G.},
+title = {{On the use of mutation faults in empirical assessments of 
+test case prioritization techniques}},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = 32,
+number = 9,
+month = sep,
+year = 2006,
+pages = {733-752}
+}
+
+@article{orso06dec,
+author = {Orso, A. and Do, H. and Rothermel, G. and Harrold, M.J. and Rosenblum, D.},
+title = {{Using component metadata to regression test component-based software}},
+journal = {{Journal of Software Testing, Verification, and Reliability}},
+volume = 17,
+number = 2,
+month = jun,
+year = 2007,
+pages = {61-94}
+}
+
+@article{kim05dec,
+author = {Kim, J.M. and Porter, A. and Rothermel, G.},
+title = {{An empirical study of regression test application frequency}},
+journal = {{Journal of Software Testing, Verification, and Reliability}},
+volume = 15,
+number = 4,
+month = dec,
+pages = {257-279},
+year = 2005
+}
+
+@BOOK{johnson92,
+author = {Johnson, R. and Wichem, D.},
+title = {Applied Multi-Variate Statistical Analysis},
+publisher = {Prentice-Hall},
+year = {1992}
+}
+
+@MISC{ciscotalk,
+author = {Langlois, M.},
+title = {{CISCO Software Quality}},
+howpublished = {{(Keynote Address at the International 
+Symposium on Software Reliability Engineering)}},
+month = nov,
+year = 2004,
+}
+
+@INPROCEEDINGS{kapfhammer06jul,
+author = {Walcott, K. and Kapfhammer, G. and Roos, R. and Soffa, M. L.},
+title = {{Time-aware test suite prioritization}},
+booktitle = {{Proceedings of the International Symposium on Software Testing
+ and Analysis}},
+month = jul,
+year = 2006
+}
+
+@ARTICLE{telang07,
+author = {Telang, R. and Wattal, S},
+title = {{An empirical analysis of the impact of software vulnerability
+announcements on firm stock proce}},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = {33},
+number = {8},
+month = aug,
+year = 2007,
+pages = {544-557}
+}
+
+@misc{jboss,
+  key = "jboss",
+  howpublished = "http://jboss.org" }
+
+@INPROCEEDINGS{korel07,
+author = {Korel, B. and Koutsogiannakis, G. and Tahat, L.},
+title = {{Model-based test prioritization heuristic methods 
+and their evaluation}},
+booktitle = {Proceedings of Advances in Model Based Testing}, 
+month = jul,
+year = 2007
+}
+
+@INPROCEEDINGS{korel05,
+author = {Korel, B. and Tahat, L. and Harman, M.},
+title = {Test prioritization using system models},
+booktitle = {Proceedings of the 21st IEEE International 
+Conference on Software Maintenance},
+month = sep,
+year = 2005,
+pages = {559-568}
+}
+
+@INPROCEEDINGS{chen07,
+author = {Chen, Y. and Probert, R. and Ural, H.},
+title = {Model-based regression test suite generation using 
+dependence analysis},
+booktitle = {Proceedings of the 3rd International Workshop 
+on Advances in Model-Based Testing},
+month = jul,
+year = 2007,
+pages = {54--62}
+}
+
+@INPROCEEDINGS{malaiya98,
+author = {Malaiya, Y. and Denton, J.},
+title = {{Estimating the number of residual defects}},
+booktitle = {Proceedings of High Assurance Systems Engineering 
+Symposium}, 
+month = nov,
+year = 1998
+}
+
+@BOOK{saaty80,
+author = {Saaty, T. L.},
+title = {The Analytic Hierarchy Process},
+publisher = {McGraw-Hill},
+year = {1980}
+}
+
+@ARTICLE{richardson07,
+author = {Richardson, R.},
+title = {CSI Survey: Computer crime and security survey},
+booktitle = {Computer Security Institute},
+year = 2007,
+}
+
+@ARTICLE{davis04,
+author = {Davis, N. and Humphrey, W. and Redwine Jr., S. T. and 
+Zibulski, G. and McGraw, G.},
+title = {Processes for producing secure software},
+journal = {{IEEE Security and Privacy Magazine}},
+volume = {2},
+number = {3},
+year = 2004,
+pages = {18-25}
+}
+
+@ARTICLE{webcohort04,
+author = {WebCohort, Inc.},
+title = {Only 10\% of Web applications are secured against common 
+hacking techniques},
+year = 2004
+}
+
+@BOOK{trochim00, author = {Trochim, W.}, title = {The Research
+Methods Knowledge Base}, edition = {2nd}, publisher = {Atomic Dod
+Publishing}, address = {Cincinnati, OH}, year = {2000}, }
+
+
+@BOOK{Yin94, author = {Yin, R. K.}, title = {{Case Study Research
+: Design and Methods (Applied Social Research Methods, Vol. 5)}},
+publisher = {Sage Publications}, address = {London, UK}, year =
+1994 }
+
+@article{ kitchenham02,
+author = {Kitchenham, B. and Pfleeger, S. and Pickard, L. 
+and Jones, P. and Hoaglin, D. and Emam, K. and Rosenberg, J.},
+title = {{Preliminary guidelines for empirical research 
+in software engineering}},
+journal = "IEEE Trans. Softw. Eng.",
+volume= 28,
+number = 8,
+pages = {721--734},
+month = aug,
+year = 2002
+}
+
+@ARTICLE{basili99,
+    author = {Basili, V. and  Shull, F. and  Lanubile, F.},
+    title = "Building Knowledge through Families of Experiments",
+    journal = "IEEE Transactions on Software Engineering",
+    pages ={456-473},
+    volume=25,
+    number=4,
+    year = 1999
+}
+
+@article{pickard98,
+author = "L. Pickard and B. Kitchenham",
+title = "Combining empirical results in software engineering",
+journal = "Inf. Softw. Tech.",
+volume= 40,
+number = 14,
+pages = {811-821},
+month = aug,
+year = 1998}
+
+@INPROCEEDINGS{malaiya98,
+author = {Malaiya, Y. and Denton, J.},
+title = {{Estimating the number of residual defects}},
+booktitle = {Proceedings of High Assurance Systems Engineering 
+Symposium}, 
+month = nov,
+year = 1998
+}
+
+@article{andrews03,
+author = {Andrews, A. and France, R. and Ghosh, S. and Craig G.},
+title = {{Test adequacy criteria for UML design models}}, 
+journal = {{Journal of Software Testing, Verification and Reliability}},
+volume = {13},
+number = 2,
+year = 2003,
+pages = {95-127}
+}
+
+@BOOK{bishop03,
+author = {Bishop, M.},
+title = {Computer Security: Art and Science},
+publisher = {Addison-Wesley},
+year = {2003}
+}
+
+@INPROCEEDINGS{blackburn02,
+author = {Blackburn, M. and Busser, R. and Nauman, A. and 
+          Knickerbocker, R. and and Kasuda, R.},
+title = {{Mars Polar Lander fault identification using 
+          model-based testing}},
+booktitle = {Proceedings of the 8th International Conference 
+             on Engineering of Complex Computer Systems},
+month = dec,
+year = 2002,
+pages = {163-169}
+}
+
+@article{blackburn01,
+author = {Blackburn, M. and Busser, R. and Nauman, A. and 
+	  Chandramouli, R.},
+title = {{Model-based Approach to Security Test Automation}},
+journal = {Quality Week},
+month = jun,
+year = 2001,
+}
+
+@article{briand02,
+author = {Briand, L. and Labiche, Y.},
+title = {{A UML-based approach to system testing}},
+journal = {{Journal of Software and Systems Modeling}},
+year = 2002,
+pages = {10-42}
+}
+
+@ARTICLE{briand04,
+author = {Briand, L.C and Di Penta, M. and and Labiche, Y.},
+title = {{Assessing and improving state-based class testing: 
+          A series of experiments}}, 
+journal = {{IEEE Transactions on Software Engineering}},
+pages ={770-793},
+volume=30,
+number=11,
+year = 2004
+}
+
+@ARTICLE{chow78,
+author = {Chow, T.S.},
+title = {Testing software design modeled by finite-state machines},
+journal = {{IEEE Transactions on Software Engineering}},
+pages ={178-187},
+volume = {SE-4},
+number= 3,
+year = 1978
+}
+
+@INPROCEEDINGS{dalal99,
+author = {Dalal, S. and Jain, A. and Karunanithi, N. and 
+Leaton, J. and Lott, C. and Patton, G. and and Horowitz, B.},
+title = {Model-based testing in practice},
+booktitle = {Proceedings of the 21st International Conference
+             on Software Engineering},
+month = may,
+year = 1999,
+pages = {285-294}
+}
+
+@ARTICLE{elfakih04,
+author = {El-Fakih, K. and Yevtushenko, N. and and Bochmann, G.},
+title = {{FSM-based incremental conformance testing methods}},
+journal = {{IEEE Transactions on Software Engineering}},
+pages ={425-436},
+volume=30,
+number=7,
+year = 2004
+}
+
+@BOOK{elfar01,
+author = {El-Far, I. and Whittaker, J.},
+title = {Model-based software testing},
+publisher = {In Marciniak (ed.) Encyclopedia on Software Engineering, Wiley},
+year = 2001
+}
+
+@ARTICLE{fujiwara91,
+author = {Fujiwara, S. and Bochmann, G. and Khendek, F. and 
+          Amalou,  M. and Ghedamsi, A.},
+title = {Test selection based on finite state models},
+journal = {{IEEE Transactions on Software Engineering}},
+pages = {591-603},
+volume = 17,
+number = 6,
+year = 1991
+}
+
+@BOOK{genrich87,
+author = {Genrich, H.},
+title = {{Predicate/transition nets. Petri Nets: 
+Central Models and Their Properties}},
+publisher = {Springer-Verlag},
+year = 1987,
+pages = {207-247}
+}
+
+@BOOK{hoglund04,
+author = {Hoglund, G. and McGraw, G.},
+title = {{Exploiting Software: How to Break Code}},
+publisher = {Addison-Wesley},
+year = {2004}
+}
+
+@INPROCEEDINGS{hong03,
+author = {Hong, H. and Cha, S. and Lee, I. and Sokolsky, O. and Ural, H.},
+title = {Data flow testing as model-checking},
+booktitle = {Proceedings of the 21st International Conference
+             on Software Engineering},
+month = may,
+year = 2003,
+pages ={232-243}
+}
+
+@article{hong00,
+author = {Hong, H. and Kim, Y. and Cha, S. and Bae, D. and Ural, H.},
+title = {A test sequence selection method for statecharts},
+journal = {{Journal of Software Testing, Verification and Reliability}},
+volume = {10},
+number = 4,
+year = 2000,
+pages = {203-227}
+}
+
+@INPROCEEDINGS{hong02,
+author = {Hong, H. and Lee, I. and Sokolsky, O. and Ural, H.},
+title = {A temporal logic based theory of test coverage and generation},
+booktitle = {Proceedings of the International Conference on Tools 
+and Algorithms for Construction and Analysis of Systems},
+month = apr,
+year = 2002,
+pages ={327-341}
+}
+
+@BOOK{howard03,
+author = {Howard, M. and LeBlanc, D.},
+title = {Writing Secure Code},
+publisher = {Microsoft Press},
+edition = {2nd},
+year = {2003}
+}
+
+@BOOK{howard05,
+author = {Howard, M. and LeBlanc, D. and Viega, J.},
+title = {19 Deadly Sins of Software Security: 
+Programming Flaws and How to Fix Them},
+publisher = {McGraw-Hill},
+year = {2005}
+}
+
+@article{lee96,
+author = {Lee, D. and Yannakakis, M.},
+title = {{Principles and methods of testing finite state 
+machines - A survey}},
+journal = {Proceedings of the IEEE},
+volume = {84},
+number = 8,
+year = 1996,
+pages = {1090-1123}
+}
+
+@INPROCEEDINGS{martin06,
+author = {Martin, E. and Xie, T.},
+title = {Defining and measuring policy coverage in testing 
+access control policies},
+booktitle = {Proceedings of the 8th International Conference 
+on Information and Communications Security},
+month = dec,
+year = 2006,
+pages ={139-158}
+}
+
+@INPROCEEDINGS{martin07a,
+author = {Martin, E. and Xie, T.},
+title = {A fault model and mutation testing of access 
+control policies},
+booktitle = {Proceedings of the 16th international conference 
+on World Wide Web},
+month = may,
+year = 2007,
+pages ={667-676}
+}
+
+@INPROCEEDINGS{martin07b,
+author = {Martin, E. and Xie, T.},
+title = {Automated test generation for access control 
+policies via change-impact analysis},
+booktitle = {The 3rd International Workshop on Software 
+Engineering for Secure Systems},
+month = may,
+year = 2007
+}
+
+@INPROCEEDINGS{taneja11,
+author = {Taneja, K. and Xie, T. and Tillmann, N. and Halleux, J.},
+title = {{eXpress: Guided path exploration for efficient regression
+test generation}},
+booktitle = {{Proceedings of the International Conference
+on Software Testing and Analysis}},
+month = jul,
+year = 2011,
+pages = {1-11}
+}
+
+@TECHREPORT{masood05, 
+author = {Masood, A. and Bhatti1, R. and Ghafoor, A. and Mathur, A.},
+title = {{Model-based testing of access control systems that 
+employ RBAC policies}},
+institution = {Purdue University}, 
+type = {Technical Report}, 
+number = {SERC-TR-277},
+month = sep, 
+year = 2005 
+}
+
+@TECHREPORT{masood06, 
+author = {Masood, A. and Ghafoor, A. and Mathur, A.},
+title = {{Scalable and effective test generation for access 
+control systems that employ RBAC policies}},
+institution = {Purdue University}, 
+type = {Technical Report}, 
+number = {SERC-TR-285},
+month = sep, 
+year = 2006 
+}
+
+@article{murata89,
+author = {Murata, T.},
+title = {{Petri nets: Properties, analysis and applications}},
+journal = {Proceedings of the IEEE},
+volume = {77},
+number = 4,
+year = 1989,
+pages = {541-580}
+}
+
+@BOOK{mathur07,
+author = {Mathur, A.},
+title = {Foundations of Software Testing},
+publisher = {Pearson Education},
+year = {2007}
+}
+
+@INPROCEEDINGS{offutt99,
+author = {Offutt, J. and Abdurazik, A.},
+title = {{Generating tests from UML specifications}},
+booktitle = { The Second International Conference on the 
+Unified Modeling Language},
+month = oct,
+year = 1999,
+pages = {416-429}
+}
+
+@INPROCEEDINGS{offutt00,
+author = {Offutt, J. and Abdurazik, A.},
+title = {{Using UML collaboration diagrams for static 
+checking and test generation}},
+booktitle = {The Third International Conference on the 
+Unified Modeling Language},
+month = oct,
+year = 2000,
+pages = {383-395}
+}
+
+@article{offutt03,
+author = {Offutt, J. and Liu, S. and Abdurazik, A. and Ammann, P.},
+title = {Generating test data from state-based specifications},
+journal = {{Journal of Software Testing, Verification and Reliability}},
+volume = {13},
+number = 1,
+year = 2003,
+pages = {25-53}
+}
+
+@BOOK{pezze08,
+author = {Pezze, M. and Young, M.},
+title = {Software Testing and Analysis: Process, Principles, 
+and Technologies},
+publisher = {John Wiley \& Sons, Inc.},
+year = {2008}
+}
+
+@INPROCEEDINGS{pauli05a,
+author = {Pauli, J. and Xu, D.},
+title = {Misuse case-based analysis of secure software architecture},
+booktitle = {Proceedings of ITCC},
+month = apr,
+year = 2005,
+pages ={398-403}
+}
+
+@INPROCEEDINGS{pauli05b,
+author = {Pauli, J. and Xu, D.},
+title = {Threat-driven architectural design of secure information systems},
+booktitle = {Proceedings of ICEIS},
+month = may,
+year = 2005,
+pages = {136-143}
+}
+
+@INPROCEEDINGS{pauli05c,
+author = {Pauli, J. and Xu, D.},
+title = {{Trade-off analysis of misuse case-based secure 
+software architectures: A case study}},
+booktitle = {Proceedings of the 3rd International Workshop on 
+Modeling, Simulation, Verification and Validation of Enterprise 
+Information Systems},
+month = may,
+year = 2005,
+pages ={89-95}
+}
+
+@INPROCEEDINGS{pauli06a,
+author = {Pauli, J. and Xu, D.},
+title = {Ensuring consistent use/misuse case decomposition 
+for secure systems},
+booktitle = {Proceedings of the 18th International Conference 
+on Software Engineering and Knowledge Engineering},
+month = jul,
+year = 2006
+}
+
+@INPROCEEDINGS{pauli06b,
+author = {Pauli, J. and Xu, D.},
+title = {Integrating functional and security requirements 
+with use case decomposition},
+booktitle = {Proceedings of the 11th IEEE International 
+Conference on Engineering of Complex Computer Systems},
+month = mar,
+year = 2006,
+pages = {57-66}
+}
+
+@INPROCEEDINGS{potter04,
+author = {Potter, B. and Allen, B. and Mcgraw, G.},
+title = {Software security testing},
+booktitle = {IEEE Security \& Privacy},
+month = sep,
+year = 2004,
+pages = {32-36}
+}
+
+@INPROCEEDINGS{pretschner05,
+author = {Pretschner, A. and Prenninger, W. and Wagner, S. and 
+Kuhnel C. and Baumgartner, M. and Sostawa, B. and Zolch, R. and Stauner, T.},
+title = {One evaluation of model-based testing and its automation},
+booktitle = {Proceedings of the 27th International Conference 
+on Software Engineering},
+month = may,
+year = 2005,
+pages = {392-401}
+}
+
+@article{pretschner04,
+author = {Pretschner, A. and Slotosch, O. and Aiglstorfer, E. 
+and Kriebel, S.},
+title = {{Model-based testing for real - The inhouse card case study}},
+journal = {Journal of Software Tools for Technology Transfer},
+volume = {5},
+number = 2,
+year = 2004,
+pages = {140-157}
+}
+
+@article{sheyner04,
+author = {Sheyner, O. and Wing, J.},
+title = {Tools for generating and analyzing attack graphs},
+journal = {LNCS},
+volume = {3188},
+year = 2004,
+pages = {344-371}
+}
+
+
+@INPROCEEDINGS{sheyner02,
+author = {Sheyner, O. and Jha, S. and Haines, J. and 
+Lippmann, R. and Wing, J.},
+title = {Automated generation and analysis of attack graphs},
+booktitle = {Proceedings of the EEE Symposium on Security and Privacy},
+month = may, 
+year = 2002,
+pages = {273-284}
+}
+
+@BOOK{swiderski04,
+author = {Swiderski, F. and Snyder, W.},
+title = {Threat Modeling},
+publisher = {Microsoft Press},
+year = {2004}
+}
+
+@article{thompson02,
+author = {Thompson, H. and Whittaker, J.},
+title = {Testing for software security},
+journal = {Dr. Dobb's Journal},
+month = nov,
+year = 2002,
+pages = {24-34}
+}
+
+@BOOK{viega02,
+author = {Viega, J. and McGraw, G.},
+title = {{Building Secure Software: How to Avoid Security Problems 
+in the Right Way}},
+publisher = {Addison-Wesley},
+year = {2002}
+}
+
+@INPROCEEDINGS{wang07,
+author = {Wang, L. and Wong, W. and Xu, D.},
+title = {A threat model driven approach for security testing},
+booktitle = {The 3rd International Workshop on Software 
+Engineering for Secure Systems},
+month = may,
+year = 2007
+}
+
+@book{dennis05,
+ author = {Dennis, A. and Wixom, B. H. and Roth, R. M.},
+ title = {Systems Analysis and Design},
+ edition = {Third},
+ year = {2005},
+ isbn = {9780470228548},
+ publisher = {Wiley Publishing},
+ }
+
+@BOOK{whittaker04,
+author = {Whittaker, J. and Thompson, H.},
+title = {{How to Break Software Security - Effective Techniques 
+for Security Testing}},
+publisher = {Pearson Education, Inc.},
+year = {2004}
+}
+
+@BOOK{xu08a,
+author = {Xu, D.},
+title = {Software security},
+publisher = {Wiley Encyclopedia of Computer Science and Engineering,
+John Wiley \& Sons, Inc.},
+year = {2008}
+}
+
+@INPROCEEDINGS{xu07,
+author = {Xu, D. and He, X.},
+title = {Generation of test requirements from aspectual use cases},
+booktitle = {Proceedings of the 3rd Workshop on Testing 
+Aspect-Oriented Programs},
+month = mar,
+year = 2007,
+pages = {17-22}
+}
+
+@INPROCEEDINGS{xu06,
+author = {Xu, D. and Goel, V. and Nygard, K.},
+title = {An aspect-oriented approach to security requirements analysis},
+booktitle = {Proceedings of COMPSAC}, 
+month = sep,
+year = 2006,
+pages = {79-82}
+}
+
+@article{xu08b,
+author = {Xu, D. and Goel, V. and Nygard, K. and Wong, W.},
+title = {Aspect-oriented specification of threat-driven 
+security requirements},
+journal = {International Journal of Computer Applications in 
+Technology, Special Issue on Concern Oriented Software Evolution},
+volume = {31},
+year = 2008,
+pages = {131-140}
+}
+
+@article{xu03b,
+author = {Xu, D. and Yin, J. and Deng, Y. and Ding, J.},
+title = {A formal architectural model for logical agent mobility},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = {29},
+number = 1,
+year = 2003,
+pages = {31-45}
+}
+
+@article{xu03a,
+author = {Xu, D. and Volz, R. and Ioerger, T. and Yen, J.},
+title = { Modeling and analyzing multi-agent behaviors using 
+Predicate/Transition nets},
+journal = {International Journal of Software Engineering and 
+Knowledge Engineering},
+volume = {13},
+number = 1,
+year = 2003,
+pages = {103-124}
+}
+
+@article{zhu02,
+author = {Zhu, H. and He, X.},
+title = {{A methodology for testing high-level Petri nets}},
+journal = {Information and Software Technology},
+volume = {44},
+year = 2002,
+pages = {473-489}
+}
+
+@article{xu06apra,
+author = {D. Xu and K. Nygard},
+title = {Threat-Driven Modeling and Verification of Secure Software
+         Using Aspect-Oriented Petri Nets},
+journal = {{IEEE Transactions on Software Engineering}},
+volume = {32},
+number = 4,
+year = 2006,
+pages = {265-278}
+}
+
+@article{xu06aprb,
+author = {D. Xu and Pauli, J.},
+title = {Threat-Driven Modeling and Verification of Secure Software
+         Using Aspect-Oriented Petri Nets},
+journal = {{Journal of Information Assurance and Security}},
+volume = {1},
+number = 3,
+year = 2006,
+pages = {171-180}
+}
+
+@INPROCEEDINGS{xu06mar,
+author = {D. Xu and W. Xu},
+title = {State-Based Incremental Testing of Aspect-Oriented Programs},
+booktitle = {Proceedings of the 5th International Conference 
+on Aspect-Oriented Software Development}, 
+month = mar,
+year = 2006
+}
+
+@INPROCEEDINGS{xu05nov,
+author = {D. Xu and K. Nygard},
+title = {A Threat-Driven Approach to Modeling and Verifying Secure Software},
+booktitle = {Proceedings of the International Conference on Automated 
+Software Engineering}, 
+month = nov,
+year = 2005,
+pages = {342-346}
+}
+
+@INPROCEEDINGS{xu07julb,
+author = {D. Xu and W. Xu and W. Wong},
+title = {{Automated test code generation from UML protocol state machines}},
+booktitle = {Proceedings of the 19th International Conference 
+      on Software Engineering and Knowledge Engineering},
+month = jul,
+year = 2007,
+address = {Boston, MA},
+pages = {99-104}
+}
+
+@INPROCEEDINGS{xu07jula,
+author = {D. Xu and I. Alsmadi and W. Xu},
+title = {Model Checking Aspect-Oriented Design Specification},
+booktitle = {Proceedings of the 31st IEEE International 
+Computer Software and Applications Conference},
+month = jul,
+year = 2007
+}
+
+@article{xu09,
+author = {D. Xu and W. Xu and W. Wong},
+title = {Automated Test Code Generation from Class State Models},
+journal = {{International Journal of Software Engineering and 
+            Knowledge Engineering}},
+volume = 19,
+number = 4,
+year = 2009,
+month = jun,
+pages = {599-623}
+}
+
+
+@inproceedings{gould04,
+author = {C. Gould and Z. Su and P. Devanbu},
+title = {Static checking of dynamically generated queries in
+database applications},
+booktitle = {Proceedings of the International Conference on 
+Software Engineering},
+pages = {645-654},
+month=may,
+year = 2004
+}
+
+@inproceedings{halfond05,
+author = {W. Halfond and A. Orso},
+title = {{AMNESIA: Analysis and Monitoring for NEutralizing
+SQL-Injection Attacks}},
+booktitle = {{Proceedings of the IEEE and ACM International 
+Conference on Automated Software Engineering}}, 
+pages = {174-183},
+month = nov,
+year = 2005
+}
+
+@inproceedings{halfond06,
+author = {W. Halfond and A. Orso and P. Manolios},
+title = {{Using positive tainting and synrax-aware
+evaluation to counter SQL injection attacks}},
+booktitle = {{Proceedings of the ACM SIGSOFT Symposium on 
+Foundations of Software Engineering}}, 
+month=nov,
+year = 2006
+}
+
+@inproceedings{halfond07,
+author = {W. Halfond and A. Orso},
+title = {Improving test case generation for web applications using
+automated interface discovery},
+booktitle = {{Proceedings of the ACM SIGSOFT Symposium on 
+Foundations of Software Engineering}}, 
+month=sep,
+year = 2007
+}
+
+@INPROCEEDINGS{huang04,
+author = {Y. Huang and F. Yu and C. Hang and C. Tsai
+and D. Lee and S. Kuo},
+title = {Security web application code by static analysis
+and runtime protection},
+booktitle = {Proceedings of the 13th international conference 
+on World Wide Web},
+month = may,
+year = 2004,
+pages = {40-52}
+}
+
+@INPROCEEDINGS{lam08,
+author = {M. Lam and M. Martin and B. Livshits and J. Whaley},
+title = {Securing web applications with static and dynamic
+information flow tracking},
+booktitle = {Proceedings of PEPM},
+month = jan,
+year = 2008
+}
+
+@INPROCEEDINGS{jovanovic06,
+author = {N. Jovanovic and C. Kruegel and E. Kirda},
+title = {Precise alias analysis for static detection of
+web application vulnerabilities},
+booktitle = {Proceedings of PLAS},
+month = jun,
+year = 2006
+}
+
+@INPROCEEDINGS{minamide05,
+author = {Y. Minamide},
+title = {Static approximation of dynamically generated web pages},
+booktitle = {WWW},
+month = may,
+year = 2005
+}
+
+@INPROCEEDINGS{su06,
+author = {Z. Su and G. Wassermann},
+title = {The essence of command injection attacks in web applications},
+booktitle = {Proceedings of POPL},
+month = jan,
+year = 2006
+}
+
+@INPROCEEDINGS{wassermann07,
+author = {G. Wassermann and Z. Su},
+title = {Sound and precise analysis of web applications for
+injection vulnerabilities},
+booktitle = {Proceedings of PLDI},
+month = jun,
+year = 2007
+}
+
+@INPROCEEDINGS{wassermann08jul,
+author = {G. Wassermann and D. Yu and A. Chander and D. Dhurjati
+and H. Inamura and Z. Su},
+title = {Dynamic test input generation for web applications},
+booktitle = {{Proceedings of the International Conference on 
+Software Testing and Analysis}},
+month = jul,
+year = 2008,
+pages = {249--260}
+}
+
+@INPROCEEDINGS{wassermann08,
+author = {G. Wassermann and Z. Su},
+title = {Static detection of cross-site scripting vulnerabilities},
+booktitle = {Proceedings of the International Conference on 
+Software Engineering},
+month = may,
+year = 2008
+}
+
+@INPROCEEDINGS{devanbu00,
+author = {Devanbu, P. and Stubblebine, S.},
+title = {Software Engineering for Security: a Roadmap},
+booktitle = {The future of Software Engineering},
+year = {2000},
+pages = {227--239},
+publisher = {ACM Press}
+}
+
+
+@INPROCEEDINGS{mcdermott01,
+author = {McDermott, J.},
+title = {Abuse-Case-Based Assurance Arguments},
+booktitle = {ACSAC '01: Proceedings of the 17th Annual 
+Computer Security Applications Conference},
+year = {2001},
+isbn = {0-7695-1405-7},
+pages = {366},
+publisher = {IEEE Computer Society},
+address = {Washington, DC, USA}
+}
+
+@INPROCEEDINGS{sindre00,
+author = {Sindre, G. and Opdahl, A},
+title = {Eliciting security requirements with misuse cases},
+booktitle = {Proceedings of TOOLS Pacific},
+year = {2000},
+pages = {120-131}
+}
+
+
+@INPROCEEDINGS{wing98,
+author = {Wing, J},
+title = {A Symbiotic Relationship Between Formal Methods and Security},
+booktitle = {CSDA '98: Proceedings of the Conference on 
+Computer Security, Dependability, and Assurance},
+year = {1998},
+isbn = {0-7695-0337-3},
+pages = {26},
+publisher = {IEEE Computer Society},
+address = {Washington, DC, USA}
+}
+
+@ARTICLE{alexander03,
+author = {Alexander, I.},
+title = {Misuse Cases: Use Cases with Hostile Intent},
+journal = {IEEE Softw.},
+volume = {20},
+number = {1},
+year = {2003},
+issn = {0740-7459},
+pages = {58--66},
+publisher = {IEEE Computer Society Press},
+address = {Los Alamitos, CA, USA},
+}
+
+@ARTICLE{chess04,
+author = {Chess, B and McGraw, G},
+title = {Static Analysis for Security},
+journal = {IEEE Security and Privacy},
+volume = {2},
+number = {6},
+year = {2004},
+issn = {1540-7993},
+pages = {76-79},
+publisher = {IEEE Educational Activities Department},
+address = {Piscataway, NJ, USA},
+}
+
+@ARTICLE{helmer02,
+author = {Helmer, G. and Wong, J. and Slagell, M. and 
+Honavar, V. and Miller, L. and Lutz, R.},
+title = {A Software Fault Tree Approach to Requirements 
+Analysis of an Intrusion Detection System},
+journal = {Requirements Engineering}, 
+volume = {7},
+number = {4},
+year = {2002},
+}
+
+@TECHREPORT{neumann04, 
+author = {Neumann, P.G.},
+title = {Principled assuredly trustworthy composable architectures},
+institution = {Computer Science Laboratory. SRI International}, 
+type = {Project Report}, 
+year = 2004
+}
+
+@BOOK{amoroso94,
+author = {Amoroso, E.G.},
+title = {Fundamentals of Computer Security Technology},
+publisher = {Prentice Hall PTR},
+address = { Englewood Cliffs, NJ},
+year = {1994}
+}
+
+@BOOK{ammann08,
+author = {Ammann, P. and Offutt, J.},
+title = {{Introduction to Software Testing}},
+publisher = {Cambridge University Press},
+year = 2008
+}
+
+@misc{cenzic08,
+author = {Cenzic},
+title = {{Application security trends report Q1 2008}},
+howpublished = "http://www.cenzic.com"
+}
+
+@INPROCEEDINGS{shostack08,
+author = {Shostack, A},
+title = {{Experiences threat modeling at Microsoft}},
+booktitle = {Proceedings of the Workshop on Modeling Security},
+month = sep,
+year = {2008}
+}
+
+@ARTICLE{jurjens08,
+author = {J\"{u}rjens, J},
+title = {Model-based Security Testing Using UMLsec},
+journal = {Electronic Notes in Theoretical Computer Science (ENTCS)},
+volume = {220},
+number = {1},
+month = dec,
+year = {2008},
+pages = {93-104},
+}
+
+@inproceedings{kiezun09,
+author = {A. Kiezun and P. Guo and K. Jayaraman and M. Ernst},
+title = {{Automatic creation of SQL injection and cross-site
+scripting attacks}},
+booktitle = {Proceedings of the International Conference on
+Software Engineering},
+pages = {199-209},
+month=may,
+year = 2009
+}
+
+@inproceedings{kiezun09b,
+ author = {Kiezun, A. and Ganesh, V. and Guo, P. and Hooimeijer, P. 
+           and Ernst, M.},
+ title = {HAMPI: a solver for string constraints},
+booktitle = {{Proceedings of the International Conference
+on Software Testing and Analysis}},
+pages = {105-115},
+month = jul,
+ year = {2009}
+ }
+
+@INPROCEEDINGS{artzi08,
+author = {Artzi, S. and Kiezun, A. and Dolby, J. and Tip, F.
+and Dig, D. and Paradkar, A. and Ernst, M.},
+title = {Finding bugs in dynamic web applications},
+booktitle = {{Proceedings of the International Conference
+on Software Testing and Analysis}},
+month = jul,
+year = 2008
+}
+
+@INPROCEEDINGS{hernan06,
+author = {Hernan, S. and Lambert, S. and Ostwald, T. and Shostack, A.},
+title = {{Uncover security design flaws using the STRIDE approach}},
+booktitle = {{MSDN magazine}},
+month = nov,
+year = 2006
+}
+
+@book{wysopal06,
+ author = {Wysopal, C. and Nelson, L. and Zovi, D. D. and Dustin, E.},
+ title = {The Art of Software Security Testing: Identifying Software Security Flaws (Symantec Press)},
+ year = {2006},
+ isbn = {0321304861},
+ publisher = {Addison-Wesley Professional},
+ }
+ 
+ 
+@inproceedings{weiser81,
+ author = {Weiser, M.},
+ title = {Program slicing},
+ booktitle = {ICSE '81: Proceedings of the 5th international conference on Software engineering},
+ year = {1981},
+ isbn = {0-89791-146-6},
+ pages = {439--449},
+ location = {San Diego, California, United States},
+ publisher = {IEEE Press},
+ address = {Piscataway, NJ, USA},
+ }
+
+@inproceedings{kieyzun09,
+ author = {Kieyzun, Adam and Guo, Philip J. and Jayaraman, Karthick and Ernst, Michael D.},
+ title = {Automatic creation of SQL Injection and cross-site scripting attacks},
+ booktitle = {Proceedings of the 31st International Conference on Software Engineering},
+ year = {2009},
+ pages = {199--209}
+ }
+ 
+ @inproceedings{ricca01,
+ author = {Ricca, F. and Tonella, P.},
+ title = {Analysis and testing of Web applications},
+ booktitle = {Proceedings of the 23rd International Conference on Software Engineering},
+ year = {2001},
+ pages = {25--34},
+ location = {Toronto, Ontario, Canada}
+ }
+ 
+ 
+@MISC{phc,
+  author =       "PHC",
+  title =        "phc - the open source php compiler",
+  howpublished =  "http://www.phpcompiler.org/"
+}
+
+@MISC{webchess,
+  author =       "WebChess",
+  title =        "WebChess Homepage",
+  howpublished =  "http://webchess.sourceforge.net/"
+}
+
+@MISC{faqforge,
+  author =       "FaqForge",
+  title =        "FaqForge Homepage",
+  howpublished =  "http://sourceforge.net/projects/faqforge/"
+}
+
+
+@MISC{sqlix,
+  author =       "OWASP",
+  title =        "Category:OWASP SQLiX Projectt",
+  howpublished =  "http://www.owasp.org/index.php/Category:OWASP\_SQLiX\_Project\#tab=Main"
+}
+
+@MISC{hiphop,
+  author =       {Zhao, Haiping},
+  title =        "HipHop for PHP: Move Fast",
+  howpublished =  "http://developers.facebook.com/news.php?blog=1\&story=358"
+}
+
+@MISC{lwp,
+  author =       {Aas, Gisle},
+  title =        "Perl WWW::LWP Library",
+  howpublished =  "http://search.cpan.org/~gaas/libwww-perl-5.800/lib/LWP.pm"
+}
+
+@MISC{yacc,
+  author =       "YACC",
+  title =        "The LEX and YACC and page",
+  howpublished =  "http://dinosaur.compilertools.net/"
+}
+
+@MISC{mech,
+  author =       {Lester, Andy},
+  title =        "Perl WWW::Mechanize Library",
+  howpublished =  "http://search.cpan.org/dist/WWW-Mechanize/lib/WWW/Mechanize.pm"
+}
+
+@MISC{choco,
+  title =        "CHOCO Solver Website",
+  howpublished =  "http://www.emn.fr/z-info/choco-solver/"
+}
+
+@inproceedings{halfond07,
+ author = {Halfond, William G. J. and Orso, Alessandro},
+ title = {Improving test case generation for web applications 
+          using automated interface discovery},
+ booktitle = {ACM SIGSOFT symposium on the Foundations of Foftware Engineering},
+ year = {2007},
+ isbn = {978-1-59593-811-4},
+ pages = {145--154},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+ 
+ @article{Deng04,
+ author = {Deng, Y. and Frankl, P. and Wang, J.},
+ title = {Testing web database applications},
+ journal = {SIGSOFT Softw. Eng. Notes},
+ volume = {29},
+ number = {5},
+ year = {2004},
+ issn = {0163-5948},
+ pages = {1--10},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+ 
+ 
+@INPROCEEDINGS{marback09,
+    author = {A. Marback and H. Do and K. He and S. Kondamarri and D. Xu},
+    title = {Security Test Generation using Threat Trees},
+    booktitle = {Proceedings of the Automation of Software Test},
+    year = {2009},
+    month = {May},
+    pages = {62--69}
+}
+
+
+@INPROCEEDINGS{horwitz92,
+    author = {Susan Horwitz and Thomas Reps},
+    title = {The use of program dependence graphs in software engineering},
+    booktitle = {Proceedings of the Fourteenth International Conference on Software Engineering},
+    year = {1992},
+    pages = {392--411}
+}
+
+@ARTICLE{kopri96aug,
+author = {Korpi, J. and Koskinen, J.},
+title = {Supporting impact analysis by program dependence graph based forward slicing.},
+journal = {Advances and Innovations in Systems, Computing Sciences and Software Engineering},
+volume = {1},
+month = {aug},
+year = {2007},
+pages = {197--202}
+}
+
+@INPROCEEDINGS{apiwattanapong06,
+author = {Apiwattanapong, T. and Santelices, R.
+and Chittimalli, P. K. and Orso, A. and Harrold, M. J.},
+title = {{MATRIX: Maintenance-oriented testing requirements
+identifier and examiner}},
+booktitle = {{TAIC PART}},
+year = 2006,
+pages = {137--146}
+}
+
+@INPROCEEDINGS{santelices08,
+author = {Santelices, R. and Chittimalli, P. K. and Apiwattanapong, T.
+and Orso, A. and Harrold, M. J.},
+title = {{Test-suite augmentation for evolving software}},
+booktitle = {{ASE}},
+month = sep,
+year = 2008
+}
+
+@INPROCEEDINGS{santelices11,
+author = {Santelices, R. and Harrold, M. J.},
+title = {{Applying aggressive propagation-based strategies 
+for testing changes}},
+booktitle = {{International Conference on Software Testing, Verification
+  and Validation}},
+month = apr,
+year = 2011,
+pages = {11--20}
+}
+
+@inproceedings{xu09dec,
+author = {Xu, Z. and Rothermel, G.},
+title = {Directed test suite augmentation},
+booktitle = {{APSEC}},
+year = 2009,
+month = dec
+}
+
+
+@techreport{boggs09,
+author = {Boggs, R. and Bozman, J. and Perry, R.},
+title = {{Reducing downtime and business loss: Adressing business
+risk with effective technology}},
+institution = {IDC},
+month = aug,
+year = 2009
+}
+
+@INPROCEEDINGS{xu10,
+author = {Xu, Z. and Kim, Y. and Kim, M. and Rothermel, G. and Cohen, M.},
+title = {{Directed test suite augmentation: Techniques and tradeoffs}},
+booktitle = {{Proceedings of the ACM SIGSOFT Symposium on
+Foundations of Software Engineering}},
+month = nov,
+year = 2010,
+pages = {257-266}
+}
+
+@INPROCEEDINGS{walcott06,
+author = {Walcott, A. and Soffa, M. L. and Kapfhammer, G. M. and Roos, R. S.},
+title = {{Time-aware test suite prioritization}},
+booktitle = {{Proceedings of the International Conference
+on Software Testing and Analysis}},
+month = jul,
+pages = {1-12},
+year = 2006,
+}
+
+@INPROCEEDINGS{yoo07,
+author = {Yoo, S. and Harman, M.},
+title = {{Pareto efficient multi-objective test case selection}},
+booktitle = {{Proceedings of the International Conference
+on Software Testing and Analysis}},
+month = jul,
+pages = {140-150},
+year = 2007
+}
+
+@ARTICLE{gallagher91,
+author = {Gallagher, K.B. and  Lyle, J.R. },
+title = {Using program slicing in software maintenance},
+journal = {IEEE Transactions on Software Engineering},
+month = aug,
+volume = 17,
+number = 8,
+pages = {751-761},
+year =  1991
+}
+
+@INPROCEEDINGS{korpi07,
+author = {Korpi, J. and Koskinen, J.},
+title = {Supporting impact analysis by program dependence graph based
+forward slicing},
+booktitle = {{Advances and Innovations in Systems, Computing Sciences
+and Software Engineering, Springer Netherlands}},
+pages = {197-202},
+year = 2007
+}
+@INPROCEEDINGS{orso03,
+author = {Orso, A. and Apiwattanapong, T. and Harrold, M. J.},
+title = {Leveraging field data for impact analysis and regression testing},
+booktitle = {{Proceedings of the ACM SIGSOFT Symposium
+on Foundations of Software Engineering}},
+month = nov,
+pages = {128-137},
+year = 2003
+}
+
+@INPROCEEDINGS{ren04,
+author = {Ren, X. and Shah, F. and Tip, F. and Ryder, B. and Chesley, O.},
+title = {{Chianti: A tool for change impact analysis of Java programs}},
+booktitle = {{Proceedings of the ACM Conference on Object Oriented
+Programming Systems, Languages, and Applications}},
+pages = {432-448},
+month = oct,
+year = 2004
+}
+
+@inproceedings{sen05,
+author = {Sen, K. and Marinov, D. and Agha, G.},
+title = {{CUTE: A concolic unit testing engine for C}},
+booktitle = {{Proceedings of the ACM SIGSOFT Symposium on
+Foundations of Software Engineering}},
+pages = {263-272},
+month=sep,
+year = 2005
+}
+
+@INPROCEEDINGS{marback10,
+author = {Marback, A. and Do, H.},
+title = {{A Regression Testing Engine for PHP Web Applications: PARTE (fast abstract)}},
+booktitle = {Proceedings of the International Symposium on
+Software Reliability Engineering},
+pages = {404-405},
+year = 2010,
+month = nov
+}
+
+@INPROCEEDINGS{emmi07,
+author = {M. Emmi and R. Majumdar and K. Sen},
+title = {Dynamic test input generation for database applications},
+booktitle = {{Proceedings of the International Conference on
+Software Testing and Analysis}},
+month = jul,
+year = 2007
+}
+
+@INPROCEEDINGS{elbaum03,
+author = {S. Elbaum and S. Karre and G. Rothermel},
+title = {Improving Web Application Testing with User Session Data},
+booktitle = {Proceedings of the Fourteenth International
+             Conference on Software Engineering},
+year = {2003},
+pages = {49--59}
+}
+
+@inproceedings{dobolyi09,
+author = {K. Dobolyi and W. Weimer},
+title = {Harnessing web-based application similarities to aid
+in regression testing},
+booktitle = {{Proceedings of the International Symposium
+on Software Reliability Engineering}},
+month = nov,
+year = 2009,
+pages = {71--80}
+}
+
+@ARTICLE{demillo91,
+author = {DeMillo, R. and Offutt, J.},
+title = {Constraint-based automatic test data generation},
+journal = {IEEE Transactions on Software Engineering},
+month = sep,
+volume = 17,
+number = 9,
+pages = {900-910},
+year =  1991
+}
+
+@INPROCEEDINGS{edvardsson99,
+author = {Edvardsson, J.},
+title = {A survey on automatic test data generation},
+booktitle = {{Proceedings of the International Conference
+on Computer Science and Engineering}},
+month = oct,
+pages = {21-28},
+year = 1999
+}
+
+@ARTICLE{korel90,
+author = {Korel, B.},
+title = {Automated software test data generation},
+journal = {IEEE Transactions on Software Engineering},
+month = aug,
+volume = 16,
+number = 8,
+pages = {870-879},
+year =  1990
+}
+
+@ARTICLE{samuel09,
+author={P. Samuel and R. Mall},
+title={{Slicing-based test case generation from UML activity diagrams}},
+journal={ACM SIGSOFT Software Engineering Notes},
+year=2009,
+volume=34,
+number=6,
+pages = {1-14}
+} 
+
+
+@ARTICLE{jeffrey08,
+author = {D. Jeffrey and N. Gupta},
+title = {Experiments with test case prioritization using relevant slice},
+journal = {Journal of Systems and Software},
+volume = 81,
+number = 2,
+pages = {196-221},
+year =  2008
+}
+
+@article{kusumoto02,
+author = {S. Kusumoto and A. Nishimatsu and K. Nishie and K. Inoue},
+title = {Experimental Evaluation of Program Slicing for Fault
+Localization},
+journal = {{Empirical Software Engineering}},
+volume = 7,
+number = 1,
+pages = {49-76},
+month = mar,
+year = 2002
+}
+
+@ARTICLE{gupta96jun,
+author = {Gupta, R. and Harrold, M. and Soffa, M.},
+title = {{Program slicing-based regression testing techniques}},
+journal = {{Journal of Software Testing, Verification, and Reliability}},
+volume = 6,
+number = 2,
+month = jun,
+pages = {270-285},
+year = 1996
+}
+
+@inproceedings{artzi10,
+author = {Artzi, S. and Dolby, J. and Tip, F. and Pistoia, M.},
+title = {Practical fault localization for dynamic web applications},
+booktitle = {Proceedings of the International Conference on
+Software Engineering},
+month=may,
+year = 2010,
+pages = {265--274}
+}
+
+
+@INPROCEEDINGS{halfond09,
+author = {W. Halfond and S. Anand and A. Orso},
+title = {Precise interface identification to improve testing
+and analysis of web applications},
+booktitle = {{Proceedings of the International Conference on
+Software Testing and Analysis}},
+month = jul,
+year = 2009,
+pages = {285--296}
+}
+
+@article{harrold93,
+ author = {Harrold, M. J. and Malloy, B. and Rothermel, G.},
+ title = {Efficient construction of program dependence graphs},
+ journal = {SIGSOFT Softw. Eng. Notes},
+ volume = {18},
+ issue = {3},
+ month = {July},
+ year = {1993},
+ pages = {160--170}
+} 
+
+@inproceedings{fourneret11,
+inhal = {no},
+domainehal = {INFO:INFO_SE, INFO:INFO_MO},
+equipe = {vesontio},
+classement = {ACTI},
+author = {Fourneret, E. and Bouquet, F. and Dadeau, 
+F. and Debricon, S.},
+title = {Selective Test Generation Method for Evolving Critical Systems},
+booktitle = {1st Int. Workshop on Regression Testing 
+- co-located with ICST'2011},
+address = {Berlin, Germany},
+publisher = {IEEE Computer Society Press},
+month = mar,
+year = 2011,
+pages = {125--134}
+}
+
+@inproceedings{horwitz88,
+ author = {Horwitz, S. and Reps, T. and Binkley, D.},
+ title = {Interprocedural slicing using dependence graphs},
+ booktitle = {Proceedings of the ACM SIGPLAN 1988 conference 
+ on Programming Language design and  Implementation},
+ year = {1988},
+ location = {Atlanta, Georgia, United States},
+ pages = {35--46},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/53990.53994},
+ doi = {http://doi.acm.org/10.1145/53990.53994},
+ acmid = {53994},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+
+@inproceedings{korel02,
+ author = {Korel, B. and Tahat, L.H. and Vaysburg, B.},
+ title = {Model Based Regression Test Reduction Using Dependence Analysis},
+ booktitle = {Proceedings of the International Conference 
+ on Software Maintenance (ICSM'02)},
+ year = {2002},
+ pages = {214--223},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+} 
+
+@INPROCEEDINGS{xu11,
+author = {Xu, Z. and Kim, Y. and Kim, M. and Rothermel, G.},
+title = {{A hybrid directed test suite augmentation technique}},
+booktitle = {{Proceedings of the International Symposium 
+on Software Reliability Engineering}},
+month = nov,
+year = 2011
+pages = {150--159},
+}
+
+@INPROCEEDINGS{naslavsky10,
+author = {Naslavsky, L. and Ziv, H. and Richardson, D.},
+title = {{$MbSRT^2$: Model-based selective regression testing 
+with traceability}},
+booktitle = {{International Conference on Software Testing, Verification
+  and Validation}},
+month = apr,
+year = 2010,
+pages = {89--98},
+}
+
+@inproceedings{huang14,
+ author = {P. Huang and X. Ma and D. Shen and Y. Zhou},
+ title = {{Performance Regression Testing Target Prioritization via Performance Risk Analysis}},
+ booktitle = {Proceedings of the International Conference on Software Engineering},
+ month = apr,
+ year = {2014},
+ pages = {221-230}
+}
+
+
+@INPROCEEDINGS{ricca02,
+ author = {Shihab, E. and Hassan, A. and Adams , B. and Jiang , Zh.},
+title = {An Industrial Study on the Risk of Software Changes},
+booktitle = {{Proceedings of the International Workshop 
+on Source Code Analysis and Manipulation}},
+year = 2012,
+pages = {123-132}
+}
+
+
+@INPROCEEDINGS{hangal02may,
+author = "",
+title = "An Industrial Study on the Risk of Software Changes",
+booktitle = " International Symposium on the Foundations of Software Engineering",
+publisher = "IEEE-ACM",
+pages = {291-301},
+month=may,
+year = "2002"
+}
+
+
+@article{marksurvey,
+author = {S. Yoo and M. Harman},
+title = {Regression testing minimization, selection and prioritization: a survey},
+journal = {{Software Testing, Verification and Reliability}},
+volume = 22,
+number = 2,
+year = 2012,
+pages = {67-120}
+}
+
+@article{catal13,
+title={Test case prioritization: a systematic mapping study.},
+author={C. Catal and D. Mishra.},
+booktitle={Software Quality Journal archive},
+volume={21},
+number={3},
+pages={445-478},
+year={2013}
+}
+
+@article{cost1,
+title={The Effects of Time Constraints on Test Case Prioritization: A Series of Controlled Experiments.},
+author={H. Do and S. Mirarab and L. Tahvildari and G. Rothermel.},
+booktitle={IEEE Transactions on Software Engineering},
+volume={36},
+number={5},
+pages={},
+year={2010}
+}	
+
+@INPROCEEDINGS{cost3,
+title={An Empirical Study of the Effect of Time Constraints on the Cost-Benefits of Regression Testing.},
+author={H. Do and S. Mirarab and L. Tahvildari and G. Rothermel.},
+booktitle={Proceedings of the ACM SIGSOFT Symposium on Foundations of Software Engineering (FSE)},
+pages={},
+publisher = "IEEE-ACM",
+year={2008}
+}
+
+@INPROCEEDINGS{myra,
+title={Configuration-aware regression testing: an empirical study of sampling and prioritization},
+author={X. Qu and M.B. Cohen and G.Rothermel},
+booktitle={International Symposium on Software Testing and Analysis (ISSTA)},
+pages={75-85},
+year={2008},
+publisher = "IEEE-ACM",
+}
+
+
+@INPROCEEDINGS{wang15,
+author = {R. Wang and Sh. Jiang and D. Chen},
+title = {Similarity-based regression test case prioritization},
+booktitle = {{Proceedings of the Software Reliability Engineering (ISSRE)}},
+year = 2015,
+pages = {}
+}
+
+@INPROCEEDINGS{hemmati11,
+author = {H. Hemmati and A. Arcuri and L. C. Briand},
+title = {Empirical Investigation of the Effects of Test Suite 
+Properties on Similarity Based Test Case Selection},
+booktitle = {{Proceedings of the International Conference on 
+Software Testing, Verification and Validation (ICST)}},
+year = 2011,
+pages = {}
+}
+
+
+@article{Ledru12,
+author = {Y. Ledru and A. Petrenko and S. Boroday and N. Mandran},
+title = {Prioritizing test cases with string distances},
+journal = {Journal of Automated Software Engineering.},
+volume = 19,
+number = 1,
+year = 2012,
+pages = {65-95}
+}
+
+
+@INPROCEEDINGS{ramanathan08,
+author = {Murali K. Ramanathan and Mehmet Koyuturk and 
+Ananth Grama and Suresh Jagannathan},
+title = {PHALANX: A Graph-Theoretic Framework for Test Case Prioritization},
+booktitle = {{Proceedings of the ACM 
+symposium on Applied computing (SAC)}},
+year = 2008,
+pages = {16-20}
+}
+
+
+@INPROCEEDINGS{harman15,
+author = {M G. Epitropakis and Sh. Yoo and 
+M. Harman and E.K. Burke},
+title = {Empirical Evaluation of Pareto Efficient Multi-objective
+Regression Test Case Prioritisation},
+booktitle = {{Proceedings of the International Symposium on Software Testing and Analysis(ISSTA)}},
+year = 2015,
+pages = {234-245}
+}
+
+
+
+@INPROCEEDINGS{islam12,
+author = {Md. Mahfuzul Islam and Alessandro Marchetto and Angelo Susi and
+Giuseppe Scanniello },
+title = {A Multi-Objective Technique to Prioritize Test Cases
+based on Latent Semantic Indexing},
+booktitle = {{Proceedings of the European Conference on Software Maintenance and Reengineering}},
+year = 2012,
+pages = {234-245}
+}
+
+
+@INPROCEEDINGS{Wang14,
+author = {Shuai Wang and David Buchmann and Shaukat Ali	Simula and
+Arnaud Gotlieb and Dipesh Pradhan and  Marius Liaaen},
+title = {Multi-Objective Test Prioritization in Software Product
+Line Testing: An Industrial Case Study},
+booktitle = {{Proceedings of the International Software Product Line Conference }},
+year = 2014,
+pages = {32-41}
+}
+
+
+@INPROCEEDINGS{ledru09,
+author = {Yves Ledru and Alexandre Petrenko and Sergiy Boroday},
+title = {Using String Distances for Test Case Prioritisation},
+booktitle = {{Proceedings of the International Conference on Automated Software Engineering }},
+year = 2009,
+pages = {}
+}
+
+@article{fang14,
+author = {Chunrong Fang and Zhenyu Chen and Kun Wu and Zhihong Zhao},
+title = {Similarity-based test case prioritization using ordered
+sequences of program entities},
+journal = {Journal of Software Quality.},
+volume = 22,
+number = 2,
+year = 2014,
+pages = {65-95}
+}
+
+@article{lerdu12,
+author = {Yves Ledru and Alexandre Petrenko and Sergiy Boroday and Nadine Mandran},
+title = {Prioritizing test cases with string distances},
+journal = {Journal of Automated Software Engineering.},
+volume = `9,
+number = 1,
+year = 2012,
+pages = {65–95}
+}
+
+@INPROCEEDINGS{hajjaji14,
+author = {M. Al-Hajjaji and Th. Thüm and J. Meinicke and 
+M. Lochau and G. Saake},
+title = {Similarity-Based Prioritization
+in Software Product-Line Testing},
+booktitle = {{Proceedings of the International Software Product Line Conference }},
+year = 2014,
+pages = {}
+}
+
+
+@INPROCEEDINGS{Wang16,
+author = {Shuai Wang and Shaukat Ali and Tao Yue and 
+Øyvind Bakkeli and Marius Liaaen},
+title = {Enhancing Test Case Prioritization in an Industrial Setting
+with Resource Awareness and Multi-Objective Search},
+booktitle = {{Proceedings of the International Conference of Software Engineering Companion}},
+year = 2016,
+pages = {}
+}
+
+@INPROCEEDINGS{jeff14,
+title={Improving the Effectiveness of Test Suite through Mining Historical Data.},
+author={J. Anderson and S. Salem and H. Do.},
+booktitle={Working Conference on Mining Software Repositories (MSR)},
+pages={},
+year={2014}
+}
+
+@INPROCEEDINGS{jeff16,
+author = {J. Anderson and H. Do and S. Salem},
+title = {Customized Regression Testing Using Telemetry Usage Patterns},
+booktitle = {{Software Maintenance and Evolution (ICSME), 2016 IEEE International Conference on}},
+year = 2016 ,
+publisher = "IEEE",
+pages = {}
+}
+
+@INPROCEEDINGS{apfd,
+title={Test case prioritization: An empirical study },
+author={G. Rothermel and R. Untch and C. Chu and and M. J. Harrold},
+booktitle={Proceedings of the IEEE International Conference on Software Maintenance},
+pages={179-188},
+publisher = "IEEE-ACM", 
+year={1999}
+}
+
+@INPROCEEDINGS{ryan,
+author = {R. Carlson and H. Do and and A. Denton.},
+title = {A Clustering Approach to Improving Test Case Prioritization: An Industrial Case Study},
+booktitle = {{ICSM '11 Proceedings of the 2011 27th IEEE International Conference on Software Maintenanc}},
+year = 2011,
+publisher = "IEEE-ACM",
+pages = {382-391}
+}
+
+
+
+@misc{jacoco,	
+howpublished = "http://www.eclemma.org/jacoco/trunk/doc/maven.html/",
+url = {http://www.eclemma.org/jacoco/trunk/doc/maven.html/},
+urldate = {2017-10-06},
+note = {[\relax{Accessed: Feb. 08, 2018}]}
+}
+
+@misc{nopCommerece,	
+howpublished = "http://www.nopcommerce.com/",
+url = {http://www.nopcommerce.com/},
+urldate = {2017-10-06},
+note = {[\relax{Accessed: Oct. 06, 2017}]}
+}
+
+@misc{umbraco,	
+howpublished = "https://umbraco.com/",
+url = {https://umbraco.com//},
+urldate = {2017-10-06},
+note = {[\relax{Accessed: Oct. 06, 2017}]}
+}
+
+
+@misc{sir,	
+howpublished = "http://sir.unl.edu//",
+url = {http://sir.unl.edu//},
+urldate = {2017-10-06},
+note = {[\relax{Accessed: Oct. 06, 2017}]}
+}
+
+@misc{defects4j,	
+howpublished = "https://github.com/rjust/defects4j",
+url = {https://github.com/rjust/defects4j},
+urldate = {2018-01-25},
+note = {[\relax{Accessed: Jan. 25, 2018}]}
+}
+
+
+
+@misc{junitPlugin,	
+howpublished = "http://plugins.netbeans.org/plugin/5620/unit-tests-code-coverage-plugin//",
+url = {http://plugins.netbeans.org/plugin/5620/unit-tests-code-coverage-pluginu//},
+urldate = {2017-10-06},
+note = {[\relax{Accessed: Oct. 06, 2017}]}
+}
+
+
+@misc{umbracoIssues,	
+howpublished = "http://issues.umbraco.org/issues//",
+url = {http://issues.umbraco.org/issues//},
+urldate = {2017-10-06},
+note = {[\relax{Accessed: Oct. 06, 2017}]}
+}
+
+
+@misc{nopCommerceIssues,	
+howpublished = "https://github.com/nopSolutions/nopCommerce/issues//",
+url = {https://github.com/nopSolutions/nopCommerce/issues//},
+urldate = {2017-10-06},
+note = {[\relax{Accessed: Oct. 06, 2017}]}
+}
+
+@misc{nop,	
+howpublished = "hhttp://www.nopcommerce.com/",
+url = {http://www.nopcommerce.com/},
+urldate = {2017-01-26},
+note = {[\relax{Accessed: Jan. 26, 2017}]}
+}
+
+
+
+
+@article{hemmati13,
+author = {H. Hemmati and A. Arcuri and L. C. Briand},
+title = {Achieving scalable model based testing through test case diversity},
+journal = {ACM Transactions on Software Engineering and Methodology (TOSEM)},
+volume = `22,
+number = 1,
+year = 2013,
+pages = {1-43}
+}
+
+
+@INPROCEEDINGS{cartaxo09,
+author = {E. G. Cartaxo and P. D. L. Machado and F. G. O. Neto},
+title = {On the use of a similarity function for test case 
+selection in the context of model-based testing},
+booktitle = {{Proceedings of the International Conference of Software Testing, Verification and
+Reliability}},
+year = 2009,
+publisher = "IEEE-ACM",
+pages = {}
+}
+
+
+@INPROCEEDINGS{thomas12,
+author = {S. W. Thomas and H. Hemmati and A. E. Hassan and D. Blostein},
+title = {Static test case prioritization using topic},
+booktitle = {{Empirical Software Engineering}},
+year = 2012,
+publisher = "IEEE-ACM",
+pages = {1-31}
+}
+
+
+@article{marchetto16,
+author = {Alessandro Marchetto and Md. Mahfuzul Islam and Waseem Asghar and
+Angelo Susi and Giuseppe Scanniello},
+title = {A Multi-Objective Technique to Prioritize Test Cases},
+journal = {IEEE Transaction on Software Engineering.},
+volume = 42,
+number = 10,
+year = 2016,
+pages = {}
+}
+
+
+@INPROCEEDINGS{durbin99,
+author = {R. Durbin and S. R. Eddy and A. Kroghand G. Mitchison},
+title = {Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids},
+booktitle = {{Cambridge University Press}},
+year = 1999,
+publisher = "IEEE-ACM",
+pages = {1-31}
+}
+
+@INPROCEEDINGS{gusfield97,
+author = {D. Gusfield },
+title = {Algorithms on Strings, Trees and Sequences},
+booktitle = {{Cambridge University Press}},
+year = 1997,
+publisher = "",
+pages = {}
+}
+
+
+@BOOK{graphBook,
+author =       {A. Corradini and H. Ehrig and H. J. Kreowsky and  G. Rozenbreg},
+title =        "Graph Transformation",
+publisher =    "Springer ",
+year =         "2002",
+edition =      "2002",
+isbn =         "3-540-44310-X",
+}
+
+
+@INPROCEEDINGS{gusfield97,
+author = {D. Gusfield },
+title = {Algorithms on Strings, Trees and Sequences},
+booktitle = {{Cambridge University Press}},
+year = 1997,
+publisher = "",
+pages = {}
+}
+
+
+@INPROCEEDINGS{deSouza10,
+author = {J. T. de Souza and C. L. Maia and F. G. de Freitas and D. P. Coutinho. },
+title = {The human competitiveness of search based
+software engineering. },
+booktitle = {{Proceedings of 2nd International Symposium on Search based Software
+Engineering (SSBSE)}},
+year = 2010,
+publisher = "IEEE",
+pages = {143-152}
+}
+
+
+@INPROCEEDINGS{gu10,
+author = {Q. Gu and B. Tang and D. Chen.},
+title = {Optimal regression testing based on selective coverage of test
+requirements. },
+booktitle = {{International Symposium on Parallel
+and Distributed Processing with Applications (ISPA
+10)}},
+year = 2010,
+publisher = "IEEE",
+pages = {419-426}
+}
+
+
+@INPROCEEDINGS{harman11,
+author = {M. Harman.},
+title = {Making the case for MORTO: Multi
+Objective Regression Test Optimization. },
+booktitle = {{ In
+Proceedings of the 2011 IEEE Fourth International
+Conference on Software Testing, Verification and
+Validation Workshops, ICSTW}},
+year = 2011,
+publisher = "IEEE",
+pages = {111-114}
+}
+
+
+@INPROCEEDINGS{yoo07,
+author = {S. Yoo and M. Harman.},
+title = {Pareto efficient
+multi-objective test case selection. },
+booktitle = {{ Proceedings of
+International Symposium on Software Testing and
+Analysis}},
+year = 2007,
+publisher = "ACM",
+pages = {140-150}
+}
+
+
+@INPROCEEDINGS{li13,
+author = {Z. Li and Y. Bian and R. Zhao and J. Cheng.},
+title = {A fine-grained parallel multi-objective test case prioritization on gpu. },
+booktitle = {{ In G. Ruhe and Y. Zhang, editors, Search Based
+Software Engineering, volume 8084 of Lecture Notes in
+Computer Science}},
+year = 2013,
+publisher = "Springer",
+pages = {111-125}
+}
+
+
+@INPROCEEDINGS{aggrawal04,
+author = {K. K. Aggrawal and Yogesh Singh and A. Kaur.},
+title = {Code coverage based technique for prioritizing test cases for regression testing.},
+booktitle = {{ ACM SIGSOFT Software Engineering Notes}},
+year = 2004,
+publisher = "ACM",
+pages = {}
+}
+
+
+@article{biswas011,
+author = {S. Biswas and R. Mall and M. Satpathy and and S. Sukumaran},
+title = {Regression test selection techniques: A survey},
+journal = {Informatica (Slovenia)},
+volume = 35,
+number = 3,
+year = 2011,
+pages = {289-321}
+}
+
+@INPROCEEDINGS{leon03,
+author = {D. Leon and A. Podgurski},
+title = {A comparison of coverage-based and
+distribution-based techniques for filtering and prioritizing test cases},
+booktitle = {{ in Proceedings of the 14th International Symposium on Software
+Reliability Engineering (ISSRE)}},
+year = 2003,
+publisher = "IEEE",
+pages = {442-456}
+}
+
+
+@article{mei12,
+author = {H. Mei and D. Hao and L. Zhang and L. Zhang and J. Zhou and G. Rothermel},
+title = {A static approach to prioritizing junit test cases},
+journal = {IEEE Transactions on Software Engineering},
+volume = 38,
+number = 6,
+year = 2012,
+pages = {1258-1275}
+}
+
+
+
+@INPROCEEDINGS{tsai07,
+author = {W. T. Tsai and X. Zhou and R. A. Paul and Y. Chen and X. Bai.},
+title = {A coverage relationship model for test case selection .
+and ranking for multi-version software},
+booktitle = {{in Proceedings of the 10th IEEE High Assurance Systems
+Engineering Symposium (HASE)}},
+year = 2007,
+publisher = "IEEE",
+pages = {105-112}
+}
+
+
+
+@INPROCEEDINGS{vega07,
+author = {D. Vega and I. Schieferdecker and G. Din}
+title = {Test data variance as a test
+quality measure: Exemplified for TTCN-3},
+booktitle = {{  in Proceedings of the 19th
+IFIP International Conference on Testing of Communication Systems
+and 7th International Workshop on Formal Approaches to Testing of
+Software (TestCom/FATES)}},
+year = 2007,
+publisher = "Springer",
+pages = {351-364}
+}
+
+
+@article{rogstad13,
+author = {E. Rogstad and L. C. Briand  and R. Torkar},
+title = {Test case selection for blackbox regression testing of database applications},
+journal = {Information and Software Technology},
+volume = 55,
+number = 10,
+year = 2013,
+pages = {1781-1795}
+}
+
+
+
+
+@INPROCEEDINGS{park08,
+author = {H. Park and H. Ryu and J. Baik}
+title = {Historical value-based approach for
+cost-cognizant test case prioritization to improve the effectiveness of
+regression testing},
+booktitle = {{ International Conference on Secure System
+Integration and Reliability Improvement (SSIRI)}},
+year = 2008,
+publisher = "IEEE",
+pages = {39-46}
+}
+
+
+
+@INPROCEEDINGS{saha15,
+author = {R. K. Saha and L. Zhang and S. Khurshid and D. E. Perry.},
+title = {An information retrieval approach for regression test
+prioritization based on program changes},
+booktitle = {{International Conference on Software Engineering (ICSE)}},
+year = 2015,
+publisher = "IEEE-ACM",
+pages = {268-279}
+}
+
+
+@INPROCEEDINGS{arafin13,
+author = {Md. Arafeen and H. Do.},
+title = {Test Case Prioritization Using Requirements-Based Clustering},
+booktitle = {{International Conference in Software Testing Verification and Validation (ICST)}},
+year = 2013,
+publisher = "IEEE",
+pages = {}
+}
+
+
+
+
+@INPROCEEDINGS{hemmati15,
+author = {H. Hemmati and Z. Fang and M. V. Mantyla}
+title = {Prioritizing manual test
+cases in traditional and rapid release environments},
+booktitle = {{Proceedings
+of the International Conference on Software Testing, Verification and
+Validation}},
+year = 2015,
+publisher = "IEEE",
+pages = {1-10}
+}
+
+
+@BOOK{agile07,
+author = {K. Beck and M. Beedle and A. van Bennekum and A. Cockburn and W. Cunningham and
+M. Fowler and J. Grenning and J. Highsmith and A. Hunt and R. Jeffries and J. Kern and
+B. Marick and R. C. Martin and S. Mellor and K. Schwaber and J. Sutherland and
+D. Thomas},
+title = {Manifesto for agile software development},
+publisher = {},
+address = {},
+year = {2007},
+}
+
+@BOOK{agile99,
+author = {E. S. Raymond},
+title = {The Cathedral and the Bazaar},
+publisher = {O’Reill},
+address = {Sebastopol, CA, USA},
+year = {1999},
+}
+
+
+@INPROCEEDINGS{who,
+author = {J. Anvik and L. Hiew and G. C. Murphy.},
+title = {Who should fix this bug?},
+booktitle = {{Proceedings of the 28th international conference on Software engineering}},
+year = 2006,
+publisher = "IEEE-ACM",
+pages = {361-370}
+}
+
+
+
+@INPROCEEDINGS{mondal15,
+author = {D. Mondal and H. Hemmati and S. Durocher.},
+title = {Exploring Test Suite Diversification and Code Coverage in Multi-Objective Test Case Selection},
+booktitle = {{International Conference in Software Testing Verification and Validation (ICST)}},
+year = 2015,
+publisher = "IEEE",
+pages = {}
+}
+
+
+
+@INPROCEEDINGS{jenkins11,
+author = {J. Jenkins.},
+title = {Velocity culture (the unmet challenge in ops)},
+booktitle = {{Presentationat O'Reilly Velocity Conference}},
+year = 2011,
+publisher = "IEEE",
+pages = {}
+}
+
+
+@INPROCEEDINGS{noor15,
+author = {T. Bin Noor and H. Hemmati.},
+title = {A similarity-based approach for test case prioritization using historical failure data},
+booktitle = {{ International Conference in Software Reliability Engineering (ISSRE)}},
+year = 2015,
+publisher = "IEEE",
+pages = {}
+}
+
+
+
+@INPROCEEDINGS{lease09,
+author = {M. Lease and J. Allan and W. B. Croft},
+title = {Regression Rank: Learning to Meet
+the Opportunity of Descriptive Queries},
+booktitle = {{ECIR}},
+year = 2009,
+publisher = "IEEE",
+pages = {90-101}
+}
+
+
+@INPROCEEDINGS{ambros10,
+author = {M. D'Ambros and M. Lanza and R. Robbes},
+title = {An extensive comparison of
+bug prediction approaches},
+booktitle = {{Conference on Mining
+Software Repositories (MSR)}},
+year = 2010,
+publisher = "IEEE",
+pages = {31-41}
+}
+
+
+@INPROCEEDINGS{zimmermann07,
+author = {T. Zimmermann and R. Premraj and A. Zeller},
+title = {Predicting defects for eclipse},
+booktitle = {{International Workshop on Predictor Models in Software
+Engineering, PROMISE}},
+year = 2007,
+publisher = "IEEE",
+pages = {}
+}
+
+
+@INPROCEEDINGS{murakami,
+title={Code recommendation based on a degree-of-interest model.},
+author={N. Murakami and H. Masuhara and T. Aotani.},
+booktitle={Proceedings of the 4th International Workshop on Recommendation Systems for Software Engineering},
+pages={28-29},
+year={2014},
+publisher = "IEEE-ACM",
+}
+
+
+
+@INPROCEEDINGS{contextawar,
+title={Context-aware recommender systems for non-functional requirements.},
+author={A. Danylenko and W. Lowe.},
+booktitle={Proceedings of the Third International Workshop on Recommendation Systems for Software Engineering},
+pages={80-84},
+year={2012},
+publisher = "IEEE-ACM",
+}
+
+
+
+@INPROCEEDINGS{nguyen11,
+author = {C. D. Nguyen and A. Marchetto and P. Tonella.},
+title = {Test case prioritization for audit testing of evolving web services using information retrieval techniques},
+booktitle = {{Proceedings of ICWS}},
+year = 2011
+publisher = "IEEE",
+pages = {636-643}
+}
+
+
+@INPROCEEDINGS{zhang13,
+author = {L. Zhang and D. Hao and L. Zhang and G. Rothermel and H. Mei},
+title = {Bridging the Gap between the Total and Additional Test-Case Prioritization Strategies},
+booktitle = {{Proceedings of ICSE}},
+year = 2013
+publisher = "IEEE",
+pages = {192-201}
+}
+
+
+
+
+
+
+@INPROCEEDINGS{moreno15,
+author = {Laura Moreno and Gabriele Bavota and Sonia Haiduc and 
+Massimiliano Di Penta and Rocco Oliveto and Barbara Russo and Andrian Marcus.},
+title = {Query-Based Configuration of Text Retrieval Solutions for Software Engineering Tasks},
+booktitle = {{Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering}},
+year = 2015
+publisher = "ACM",
+pages = {567-578 }
+}
+
+
+
+@INPROCEEDINGS{binkley10,
+author = {D. Binkley and D. Lawrie.},
+title = {Applications of information retrieval to software maintenance and evolution},
+booktitle = {{Proceedings of ESE}},
+year = 2010
+publisher = "ACM",
+pages = {}
+}
+
+
+
+
+@article{treeedit,
+author = {P. Bille.},
+title = {{A Survey on Tree Edit Distance and Related Problems}},
+journal = {Theoretical Computer Science},
+month = jun,
+year = 2005,
+}
+
+
+@article{xml,
+author = {J. Tekli and R. Chbeir and K. Yetongnon.},
+title = {{Structural Similarity Evaluation between XML Documents and DTDs}},
+journal = {Theoretical Computer Science},
+month = ,
+year = ,
+}
+
+
+
+@INPROCEEDINGS{spieker17,
+author = {Helge Spieker and Arnaud Gotlieb and Dusica Marijan and Morten Mossige.},
+title = {Reinforcement Learning for Automatic Test Case Prioritization and Selection in Continuous Integration},
+booktitle = {{In Proceedings of 26th International Symposium on Software Testing and Analysis}},
+year = 2017
+publisher = "ACM",
+pages = {}
+}
+
+
+@INPROCEEDINGS{marijan13,
+author = {Dusica Marijan and Arnaud Gotlieb and Sagar Sen.},
+title = {Test Case Prioritization for Continuous Regression Testing An Industrial Case Study},
+booktitle = {{International Conference on Software Maintenance}},
+year = 2013
+publisher = "IEEE",
+pages = {}
+}
+
+
+
+@article{qusef13,
+author = {Abdallah Qusef and Gabriele Bavota and Rocco Oliveto and Andrea De Lucia and Dave Binkley.},
+title = {{Recovering test-to-code traceability using slicing and textual analysis}},
+journal = {The Journal of Systems and Software},
+month = Sep,
+year = 2013 ,
+}
+
+
+@article{spanoudakis04,
+author = {George Spanoudakis and Andrea Zisman and Elena Perez-Minana and Paul Krause.},
+title = {{Rule-based generation of requirements traceability relations}},
+journal = {The Journal of Systems and Software},
+month = ,
+year = 2004 ,
+}
+
+
+@article{mader11,
+author = {Patrick Mader and Orlena Gotel.},
+title = {{Towards automated traceability maintenance}},
+journal = {The Journal of Systems and Software},
+month = Oct,
+year = 2011 ,
+}
+
+
+@article{bavota13,
+author = {Gabriele Bavota and Andrea De Lucia and Rocco Oliveto and Genoveffa Tortora.},
+title = {{Enhancing software artefact traceability recovery processes with link count information}},
+journal = {Information and Software Technology},
+month = Aug,
+year = 2013 ,
+}
+
+
+
+
+@INPROCEEDINGS{Rodriguez19,
+author = {Danissa V. Rodriguez and Doris L. Carver},
+title = {Comparison of Information Retrieval Techniques for Traceability Link Recovery},
+booktitle = {{International Conference on Information and Computer Technologies}},
+year = 2019
+publisher = "IEEE",
+pages = {}
+}
+
+@INPROCEEDINGS{Zimmermann04, 
+author = {Thomas Zimmermann and Peter Weißgerber and Stephan Diehl and Andreas Zeller},
+title = {Mining Version Histories to Guide Software Changes},
+booktitle = {{International Conference on Software Engineering}},
+year = 2005,
+publisher = "ACM",
+pages = {563-572 }
+}
+
+
+@article{Ying04,
+author = {Annie T.T. Ying and Gail C. Murphy},
+title = {{Predicting Source Code Changes by Mining Change History}},
+journal = {IEEE  RANSACTIONS ON SOFTWARE ENGINEERING},
+month = Sep,
+year = 2004,
+}
+
+
+
+
+
+
+
+
